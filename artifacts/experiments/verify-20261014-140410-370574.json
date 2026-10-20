@@ -1,0 +1,513 @@
+{
+ "experiment_id": "verify-20261014-140410-370574",
+ "kind": "visual_regression",
+ "trace_id": "loop-20261014-140254-292656",
+ "code_revision": "6dedccdfd2e5d07a312bed23cd407bde1260fb50040f01d0f90c7e5ddcabf8c5",
+ "candidate": "candidates\\scanner_v4.py",
+ "dataset_id": "1.0:targeted-shadow",
+ "configuration_hash": "18fa2f256c85bed3",
+ "configuration": {
+  "work_max_side": 500,
+  "epsilon": 0.02,
+  "probe": 5,
+  "samples_per_edge": 40
+ },
+ "runtime": {
+  "python": "3.13.2",
+  "python_executable": "D:\\cool\\.venv\\Scripts\\python.exe",
+  "opencv_version": "5.0.0",
+  "opencv_is_v5": true,
+  "opencv_module_path": "D:\\cool\\.venv\\Lib\\site-packages\\cv2\\__init__.py",
+  "platform": "Windows-11-10.0.26300-SP0",
+  "architecture": "AMD64",
+  "cpu_baseline": "SSE SSE2 SSE3",
+  "available_ops": {
+   "resize": true,
+   "adaptiveThreshold": true,
+   "findContours": true,
+   "getPerspectiveTransform": true,
+   "warpPerspective": true,
+   "createCLAHE": true,
+   "Canny": true,
+   "GaussianBlur": true,
+   "threshold": true,
+   "approxPolyDP": true,
+   "intersectConvexConvex": true
+  },
+  "num_threads": 16,
+  "cool": {
+   "verified": false,
+   "evidence": {
+    "cv2_file_under_opt_cool": false,
+    "build_mentions_kleidicv": false,
+    "custom_hal": "YES (ipp (ver 0.0.1))"
+   },
+   "note": "COOL is considered verified only when cv2 is imported from /opt/cool on an aarch64 host; this does not by itself prove which kernels accelerated a given workload."
+  },
+  "aws_instance_type": "not-applicable-or-unset"
+ },
+ "command": "D:\\cool\\.venv\\Scripts\\python.exe -m coolguard.worker --candidate D:\\cool\\candidates\\scanner_v4.py --corpus D:\\cool\\artifacts\\corpora\\targeted-shadow --out D:\\cool\\artifacts\\experiments\\verify-20261014-140410-370574.artifacts --config {} --save-stages failures",
+ "results": [
+  {
+   "case_id": "shadow-L0-s300",
+   "category": "shadow",
+   "level": 0,
+   "seed": 300,
+   "status": "ok",
+   "latency_ms": 26.238299999022274,
+   "detected_corners": [
+    [
+     437.760009765625,
+     48.63999938964844
+    ],
+    [
+     163.83999633789062,
+     65.27999877929688
+    ],
+    [
+     194.55999755859375,
+     440.32000732421875
+    ],
+    [
+     458.239990234375,
+     410.8800048828125
+    ]
+   ],
+   "detected": true,
+   "iou": 0.9839168099340172,
+   "corner_err": 0.002414023969322443,
+   "ncc": 0.8051104545593262,
+   "ncc_oracle": 0.8819723725318909,
+   "ncc_ratio": 0.9128522384982241,
+   "accepted": true,
+   "failure_reasons": []
+  },
+  {
+   "case_id": "shadow-L0-s301",
+   "category": "shadow",
+   "level": 0,
+   "seed": 301,
+   "status": "ok",
+   "latency_ms": 8.796500000244123,
+   "detected_corners": [
+    [
+     204.8000030517578,
+     57.599998474121094
+    ],
+    [
+     469.760009765625,
+     65.27999877929688
+    ],
+    [
+     444.1600036621094,
+     435.20001220703125
+    ],
+    [
+     183.0399932861328,
+     428.79998779296875
+    ]
+   ],
+   "detected": true,
+   "iou": 0.9874917293068127,
+   "corner_err": 0.0018898589769378304,
+   "ncc": 0.7490633726119995,
+   "ncc_oracle": 0.8872929215431213,
+   "ncc_ratio": 0.8442120459039365,
+   "accepted": true,
+   "failure_reasons": []
+  },
+  {
+   "case_id": "shadow-L0-s302",
+   "category": "shadow",
+   "level": 0,
+   "seed": 302,
+   "status": "ok",
+   "latency_ms": 9.54499999897962,
+   "detected_corners": [
+    [
+     444.1600036621094,
+     53.7599983215332
+    ],
+    [
+     183.0399932861328,
+     61.439998626708984
+    ],
+    [
+     183.0399932861328,
+     424.9599914550781
+    ],
+    [
+     460.79998779296875,
+     427.5199890136719
+    ]
+   ],
+   "detected": true,
+   "iou": 0.9816175823097172,
+   "corner_err": 0.002763480180874467,
+   "ncc": 0.7859289646148682,
+   "ncc_oracle": 0.8771510720252991,
+   "ncc_ratio": 0.8960018287388015,
+   "accepted": true,
+   "failure_reasons": []
+  },
+  {
+   "case_id": "shadow-L0-s303",
+   "category": "shadow",
+   "level": 0,
+   "seed": 303,
+   "status": "ok",
+   "latency_ms": 9.54490000003716,
+   "detected_corners": [
+    [
+     183.0399932861328,
+     46.08000183105469
+    ],
+    [
+     455.67999267578125,
+     66.55999755859375
+    ],
+    [
+     433.9200134277344,
+     440.32000732421875
+    ],
+    [
+     176.63999938964844,
+     424.9599914550781
+    ]
+   ],
+   "detected": true,
+   "iou": 0.9875914544080157,
+   "corner_err": 0.0019916852470487356,
+   "ncc": 0.7290381789207458,
+   "ncc_oracle": 0.8805089592933655,
+   "ncc_ratio": 0.8279736068850686,
+   "accepted": true,
+   "failure_reasons": []
+  },
+  {
+   "case_id": "shadow-L1-s300",
+   "category": "shadow",
+   "level": 1,
+   "seed": 300,
+   "status": "ok",
+   "latency_ms": 11.274399999820162,
+   "detected_corners": [
+    [
+     188.16000366210938,
+     55.040000915527344
+    ],
+    [
+     449.2799987792969,
+     61.439998626708984
+    ],
+    [
+     446.7200012207031,
+     433.9200134277344
+    ],
+    [
+     197.1199951171875,
+     421.1199951171875
+    ]
+   ],
+   "detected": true,
+   "iou": 0.9880339406053881,
+   "corner_err": 0.0017686225473880768,
+   "ncc": 0.6658203601837158,
+   "ncc_oracle": 0.7119673490524292,
+   "ncc_ratio": 0.9351838410425264,
+   "accepted": true,
+   "failure_reasons": []
+  },
+  {
+   "case_id": "shadow-L1-s301",
+   "category": "shadow",
+   "level": 1,
+   "seed": 301,
+   "status": "ok",
+   "latency_ms": 10.886699999900884,
+   "detected_corners": [
+    [
+     206.0800018310547,
+     53.7599983215332
+    ],
+    [
+     458.239990234375,
+     58.880001068115234
+    ],
+    [
+     435.20001220703125,
+     427.5199890136719
+    ],
+    [
+     181.75999450683594,
+     424.9599914550781
+    ]
+   ],
+   "detected": true,
+   "iou": 0.9867052403459812,
+   "corner_err": 0.0018861404387280345,
+   "ncc": 0.746691107749939,
+   "ncc_oracle": 0.7904368042945862,
+   "ncc_ratio": 0.944656301038908,
+   "accepted": true,
+   "failure_reasons": []
+  },
+  {
+   "case_id": "shadow-L1-s302",
+   "category": "shadow",
+   "level": 1,
+   "seed": 302,
+   "status": "ok",
+   "latency_ms": 10.647600000083912,
+   "detected_corners": [
+    [
+     202.24000549316406,
+     42.2400016784668
+    ],
+    [
+     473.6000061035156,
+     55.040000915527344
+    ],
+    [
+     441.6000061035156,
+     440.32000732421875
+    ],
+    [
+     163.83999633789062,
+     423.67999267578125
+    ]
+   ],
+   "detected": true,
+   "iou": 0.9883106247653383,
+   "corner_err": 0.0018585785292088985,
+   "ncc": 0.672845184803009,
+   "ncc_oracle": 0.7197424173355103,
+   "ncc_ratio": 0.9348416441730432,
+   "accepted": true,
+   "failure_reasons": []
+  },
+  {
+   "case_id": "shadow-L1-s303",
+   "category": "shadow",
+   "level": 1,
+   "seed": 303,
+   "status": "ok",
+   "latency_ms": 11.1732999994274,
+   "detected_corners": [
+    [
+     289.2799987792969,
+     57.599998474121094
+    ],
+    [
+     177.9199981689453,
+     65.27999877929688
+    ],
+    [
+     199.67999267578125,
+     430.0799865722656
+    ],
+    [
+     271.3599853515625,
+     422.3999938964844
+    ]
+   ],
+   "detected": true,
+   "iou": 0.33304454385084586,
+   "corner_err": 0.11096646636724472,
+   "ncc": -0.005739860702306032,
+   "ncc_oracle": 0.7078794836997986,
+   "ncc_ratio": -0.008108528124457162,
+   "accepted": false,
+   "failure_reasons": [
+    "low_iou",
+    "corner_error"
+   ],
+   "artifact_dir": "D:\\cool\\artifacts\\experiments\\verify-20261014-140410-370574.artifacts\\stages\\shadow-L1-s303"
+  },
+  {
+   "case_id": "shadow-L2-s300",
+   "category": "shadow",
+   "level": 2,
+   "seed": 300,
+   "status": "ok",
+   "latency_ms": 12.648100000660634,
+   "detected_corners": [
+    [
+     444.1600036621094,
+     44.79999923706055
+    ],
+    [
+     469.760009765625,
+     424.9599914550781
+    ],
+    [
+     184.32000732421875,
+     432.6400146484375
+    ],
+    [
+     189.44000244140625,
+     58.880001068115234
+    ]
+   ],
+   "detected": true,
+   "iou": 0.9878412434644643,
+   "corner_err": 0.0017284995410591364,
+   "ncc": 0.6392375230789185,
+   "ncc_oracle": 0.663465678691864,
+   "ncc_ratio": 0.9634824281178862,
+   "accepted": true,
+   "failure_reasons": []
+  },
+  {
+   "case_id": "shadow-L2-s301",
+   "category": "shadow",
+   "level": 2,
+   "seed": 301,
+   "status": "ok",
+   "latency_ms": 11.964799999987008,
+   "detected_corners": [
+    [
+     200.9600067138672,
+     46.08000183105469
+    ],
+    [
+     189.44000244140625,
+     303.3599853515625
+    ],
+    [
+     446.7200012207031,
+     212.47999572753906
+    ],
+    [
+     455.67999267578125,
+     52.47999954223633
+    ]
+   ],
+   "detected": true,
+   "iou": 0.5466563505635669,
+   "corner_err": 0.10470510274171829,
+   "ncc": 0.08911372721195221,
+   "ncc_oracle": 0.5998793840408325,
+   "ncc_ratio": 0.14855274173897337,
+   "accepted": false,
+   "failure_reasons": [
+    "low_iou",
+    "corner_error"
+   ],
+   "artifact_dir": "D:\\cool\\artifacts\\experiments\\verify-20261014-140410-370574.artifacts\\stages\\shadow-L2-s301"
+  },
+  {
+   "case_id": "shadow-L2-s302",
+   "category": "shadow",
+   "level": 2,
+   "seed": 302,
+   "status": "ok",
+   "latency_ms": 11.100300000180141,
+   "detected_corners": [
+    [
+     193.27999877929688,
+     51.20000076293945
+    ],
+    [
+     192.0,
+     261.1199951171875
+    ],
+    [
+     444.1600036621094,
+     318.7200012207031
+    ],
+    [
+     450.55999755859375,
+     62.720001220703125
+    ]
+   ],
+   "detected": true,
+   "iou": 0.617829347293199,
+   "corner_err": 0.08727860450744629,
+   "ncc": 0.09792274236679077,
+   "ncc_oracle": 0.6343502402305603,
+   "ncc_ratio": 0.15436699816051125,
+   "accepted": false,
+   "failure_reasons": [
+    "low_iou",
+    "corner_error"
+   ],
+   "artifact_dir": "D:\\cool\\artifacts\\experiments\\verify-20261014-140410-370574.artifacts\\stages\\shadow-L2-s302"
+  },
+  {
+   "case_id": "shadow-L2-s303",
+   "category": "shadow",
+   "level": 2,
+   "seed": 303,
+   "status": "ok",
+   "latency_ms": 8.486400000037975,
+   "detected_corners": [
+    [
+     455.67999267578125,
+     47.36000061035156
+    ],
+    [
+     174.0800018310547,
+     57.599998474121094
+    ],
+    [
+     177.9199981689453,
+     181.75999450683594
+    ],
+    [
+     450.55999755859375,
+     194.55999755859375
+    ]
+   ],
+   "detected": true,
+   "iou": 0.36558847355279556,
+   "corner_err": 0.1504116952419281,
+   "ncc": 0.07645320147275925,
+   "ncc_oracle": 0.553908109664917,
+   "ncc_ratio": 0.13802506253069502,
+   "accepted": false,
+   "failure_reasons": [
+    "low_iou",
+    "corner_error"
+   ],
+   "artifact_dir": "D:\\cool\\artifacts\\experiments\\verify-20261014-140410-370574.artifacts\\stages\\shadow-L2-s303"
+  }
+ ],
+ "summary": {
+  "n": 12,
+  "passed": 8,
+  "pass_rate": 0.6666666666666666,
+  "by_category": {
+   "shadow": {
+    "n": 12,
+    "passed": 8,
+    "pass_rate": 0.6666666666666666
+   }
+  },
+  "failure_reasons": {
+   "low_iou": 4,
+   "corner_error": 4
+  },
+  "failed_case_ids": [
+   "shadow-L1-s303",
+   "shadow-L2-s301",
+   "shadow-L2-s302",
+   "shadow-L2-s303"
+  ]
+ },
+ "artifact_dir": "D:\\cool\\artifacts\\experiments\\verify-20261014-140410-370574.artifacts",
+ "execution": {
+  "status": "completed"
+ },
+ "correctness": {
+  "evaluated": true,
+  "acceptance_passed": false,
+  "metrics": {
+   "pass_rate": 0.6666666666666666
+  }
+ },
+ "measurements": {
+  "latency_ms_median": 11.100300000180141,
+  "note": "single-pass latency; use benchmark for steady state"
+ }
+}

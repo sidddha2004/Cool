@@ -1,0 +1,8 @@
+{
+  "host": "ec2-xx-xx-xx-xx.compute-1.amazonaws.com",
+  "user": "ubuntu",
+  "key_file": "~/.ssh/your-key.pem",
+  "cool_venv": "/opt/cool/venvs/python_3.12",
+  "instance_type": "m8g.xlarge (informational; the real value is read from IMDS on the instance)",
+  "region": "us-east-1"
+}

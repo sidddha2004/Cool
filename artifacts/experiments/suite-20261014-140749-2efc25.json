@@ -1,0 +1,100 @@
+{
+ "experiment_id": "suite-20261014-140749-2efc25",
+ "kind": "visual_regression",
+ "trace_id": null,
+ "code_revision": "04277b597ec2fad86ab0183fae6e46d51f97f6263e78a25cd991281e3422f326",
+ "candidate": "candidates\\_t_forge.py",
+ "dataset_id": "1.0:unit-forge",
+ "configuration_hash": "44136fa355b3678a",
+ "configuration": {},
+ "runtime": {
+  "python": "3.13.2",
+  "python_executable": "D:\\cool\\.venv\\Scripts\\python.exe",
+  "opencv_version": "5.0.0",
+  "opencv_is_v5": true,
+  "opencv_module_path": "D:\\cool\\.venv\\Lib\\site-packages\\cv2\\__init__.py",
+  "platform": "Windows-11-10.0.26300-SP0",
+  "architecture": "AMD64",
+  "cpu_baseline": "SSE SSE2 SSE3",
+  "available_ops": {
+   "resize": true,
+   "adaptiveThreshold": true,
+   "findContours": true,
+   "getPerspectiveTransform": true,
+   "warpPerspective": true,
+   "createCLAHE": true,
+   "Canny": true,
+   "GaussianBlur": true,
+   "threshold": true,
+   "approxPolyDP": true,
+   "intersectConvexConvex": true
+  },
+  "num_threads": 16,
+  "cool": {
+   "verified": false,
+   "evidence": {
+    "cv2_file_under_opt_cool": false,
+    "build_mentions_kleidicv": false,
+    "custom_hal": "YES (ipp (ver 0.0.1))"
+   },
+   "note": "COOL is considered verified only when cv2 is imported from /opt/cool on an aarch64 host; this does not by itself prove which kernels accelerated a given workload."
+  },
+  "aws_instance_type": "not-applicable-or-unset"
+ },
+ "command": "D:\\cool\\.venv\\Scripts\\python.exe -m coolguard.worker --candidate D:\\cool\\candidates\\_t_forge.py --corpus D:\\cool\\artifacts\\corpora\\unit-forge --out D:\\cool\\artifacts\\experiments\\suite-20261014-140749-2efc25.artifacts --config {} --save-stages failures",
+ "results": [
+  {
+   "case_id": "clean-L0-s0",
+   "category": "clean",
+   "level": 0,
+   "seed": 0,
+   "status": "ok",
+   "latency_ms": 0.0037999998312443495,
+   "detected_corners": null,
+   "detected": false,
+   "iou": 0.0,
+   "corner_err": null,
+   "ncc": null,
+   "ncc_oracle": null,
+   "ncc_ratio": null,
+   "accepted": false,
+   "failure_reasons": [
+    "no_detection"
+   ],
+   "artifact_dir": "D:\\cool\\artifacts\\experiments\\suite-20261014-140749-2efc25.artifacts\\stages\\clean-L0-s0"
+  }
+ ],
+ "summary": {
+  "n": 1,
+  "passed": 0,
+  "pass_rate": 0.0,
+  "by_category": {
+   "clean": {
+    "n": 1,
+    "passed": 0,
+    "pass_rate": 0.0
+   }
+  },
+  "failure_reasons": {
+   "no_detection": 1
+  },
+  "failed_case_ids": [
+   "clean-L0-s0"
+  ]
+ },
+ "artifact_dir": "D:\\cool\\artifacts\\experiments\\suite-20261014-140749-2efc25.artifacts",
+ "execution": {
+  "status": "completed"
+ },
+ "correctness": {
+  "evaluated": true,
+  "acceptance_passed": false,
+  "metrics": {
+   "pass_rate": 0.0
+  }
+ },
+ "measurements": {
+  "latency_ms_median": 0.0037999998312443495,
+  "note": "single-pass latency; use benchmark for steady state"
+ }
+}

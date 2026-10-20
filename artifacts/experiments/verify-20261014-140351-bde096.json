@@ -1,0 +1,492 @@
+{
+ "experiment_id": "verify-20261014-140351-bde096",
+ "kind": "visual_regression",
+ "trace_id": "loop-20261014-140254-292656",
+ "code_revision": "3d2f05195235fdd9bb8995d45c527dd2b613cd1531759ec3d4cbc79d154b6a7f",
+ "candidate": "candidates\\scanner_v2.py",
+ "dataset_id": "1.0:targeted-shadow",
+ "configuration_hash": "1f7244c5c726266f",
+ "configuration": {
+  "work_max_side": 500,
+  "blur": 5,
+  "canny_lo": 30,
+  "canny_hi": 90,
+  "close": 7,
+  "epsilon": 0.02,
+  "clahe_clip": 2.0
+ },
+ "runtime": {
+  "python": "3.13.2",
+  "python_executable": "D:\\cool\\.venv\\Scripts\\python.exe",
+  "opencv_version": "5.0.0",
+  "opencv_is_v5": true,
+  "opencv_module_path": "D:\\cool\\.venv\\Lib\\site-packages\\cv2\\__init__.py",
+  "platform": "Windows-11-10.0.26300-SP0",
+  "architecture": "AMD64",
+  "cpu_baseline": "SSE SSE2 SSE3",
+  "available_ops": {
+   "resize": true,
+   "adaptiveThreshold": true,
+   "findContours": true,
+   "getPerspectiveTransform": true,
+   "warpPerspective": true,
+   "createCLAHE": true,
+   "Canny": true,
+   "GaussianBlur": true,
+   "threshold": true,
+   "approxPolyDP": true,
+   "intersectConvexConvex": true
+  },
+  "num_threads": 16,
+  "cool": {
+   "verified": false,
+   "evidence": {
+    "cv2_file_under_opt_cool": false,
+    "build_mentions_kleidicv": false,
+    "custom_hal": "YES (ipp (ver 0.0.1))"
+   },
+   "note": "COOL is considered verified only when cv2 is imported from /opt/cool on an aarch64 host; this does not by itself prove which kernels accelerated a given workload."
+  },
+  "aws_instance_type": "not-applicable-or-unset"
+ },
+ "command": "D:\\cool\\.venv\\Scripts\\python.exe -m coolguard.worker --candidate D:\\cool\\candidates\\scanner_v2.py --corpus D:\\cool\\artifacts\\corpora\\targeted-shadow --out D:\\cool\\artifacts\\experiments\\verify-20261014-140351-bde096.artifacts --config {} --save-stages failures",
+ "results": [
+  {
+   "case_id": "shadow-L0-s300",
+   "category": "shadow",
+   "level": 0,
+   "seed": 300,
+   "status": "ok",
+   "latency_ms": 11.32080000024871,
+   "detected_corners": [
+    [
+     437.760009765625,
+     48.63999938964844
+    ],
+    [
+     456.9599914550781,
+     410.8800048828125
+    ],
+    [
+     192.0,
+     440.32000732421875
+    ],
+    [
+     162.55999755859375,
+     64.0
+    ]
+   ],
+   "detected": true,
+   "iou": 0.9898358777866941,
+   "corner_err": 0.001677589607425034,
+   "ncc": 0.8122192025184631,
+   "ncc_oracle": 0.8819723725318909,
+   "ncc_ratio": 0.9209122959110541,
+   "accepted": true,
+   "failure_reasons": []
+  },
+  {
+   "case_id": "shadow-L0-s301",
+   "category": "shadow",
+   "level": 0,
+   "seed": 301,
+   "status": "ok",
+   "latency_ms": 3.9622000003873836,
+   "detected_corners": [
+    [
+     204.8000030517578,
+     57.599998474121094
+    ],
+    [
+     469.760009765625,
+     65.27999877929688
+    ],
+    [
+     444.1600036621094,
+     435.20001220703125
+    ],
+    [
+     183.0399932861328,
+     428.79998779296875
+    ]
+   ],
+   "detected": true,
+   "iou": 0.9874917293068127,
+   "corner_err": 0.0018898589769378304,
+   "ncc": 0.7490633726119995,
+   "ncc_oracle": 0.8872929215431213,
+   "ncc_ratio": 0.8442120459039365,
+   "accepted": true,
+   "failure_reasons": []
+  },
+  {
+   "case_id": "shadow-L0-s302",
+   "category": "shadow",
+   "level": 0,
+   "seed": 302,
+   "status": "ok",
+   "latency_ms": 3.4451999999873806,
+   "detected_corners": [
+    [
+     444.1600036621094,
+     53.7599983215332
+    ],
+    [
+     460.79998779296875,
+     430.0799865722656
+    ],
+    [
+     181.75999450683594,
+     424.9599914550781
+    ],
+    [
+     183.0399932861328,
+     61.439998626708984
+    ]
+   ],
+   "detected": true,
+   "iou": 0.9872511769719765,
+   "corner_err": 0.001776717253960669,
+   "ncc": 0.8407474160194397,
+   "ncc_oracle": 0.8771510720252991,
+   "ncc_ratio": 0.9584978492680798,
+   "accepted": true,
+   "failure_reasons": []
+  },
+  {
+   "case_id": "shadow-L0-s303",
+   "category": "shadow",
+   "level": 0,
+   "seed": 303,
+   "status": "ok",
+   "latency_ms": 3.469399998721201,
+   "detected_corners": [
+    [
+     183.0399932861328,
+     46.08000183105469
+    ],
+    [
+     455.67999267578125,
+     66.55999755859375
+    ],
+    [
+     433.9200134277344,
+     440.32000732421875
+    ],
+    [
+     176.63999938964844,
+     424.9599914550781
+    ]
+   ],
+   "detected": true,
+   "iou": 0.9875914544080157,
+   "corner_err": 0.0019916852470487356,
+   "ncc": 0.7290381789207458,
+   "ncc_oracle": 0.8805089592933655,
+   "ncc_ratio": 0.8279736068850686,
+   "accepted": true,
+   "failure_reasons": []
+  },
+  {
+   "case_id": "shadow-L1-s300",
+   "category": "shadow",
+   "level": 1,
+   "seed": 300,
+   "status": "ok",
+   "latency_ms": 3.664599998955964,
+   "detected_corners": [
+    [
+     188.16000366210938,
+     55.040000915527344
+    ],
+    [
+     449.2799987792969,
+     61.439998626708984
+    ],
+    [
+     446.7200012207031,
+     433.9200134277344
+    ],
+    [
+     197.1199951171875,
+     421.1199951171875
+    ]
+   ],
+   "detected": true,
+   "iou": 0.9880339406053881,
+   "corner_err": 0.0017686225473880768,
+   "ncc": 0.6658203601837158,
+   "ncc_oracle": 0.7119673490524292,
+   "ncc_ratio": 0.9351838410425264,
+   "accepted": true,
+   "failure_reasons": []
+  },
+  {
+   "case_id": "shadow-L1-s301",
+   "category": "shadow",
+   "level": 1,
+   "seed": 301,
+   "status": "ok",
+   "latency_ms": 5.573100001129205,
+   "detected_corners": [
+    [
+     206.0800018310547,
+     53.7599983215332
+    ],
+    [
+     458.239990234375,
+     58.880001068115234
+    ],
+    [
+     435.20001220703125,
+     427.5199890136719
+    ],
+    [
+     181.75999450683594,
+     424.9599914550781
+    ]
+   ],
+   "detected": true,
+   "iou": 0.9867052403459812,
+   "corner_err": 0.0018861404387280345,
+   "ncc": 0.746691107749939,
+   "ncc_oracle": 0.7904368042945862,
+   "ncc_ratio": 0.944656301038908,
+   "accepted": true,
+   "failure_reasons": []
+  },
+  {
+   "case_id": "shadow-L1-s302",
+   "category": "shadow",
+   "level": 1,
+   "seed": 302,
+   "status": "ok",
+   "latency_ms": 6.405300000551506,
+   "detected_corners": [
+    [
+     202.24000549316406,
+     42.2400016784668
+    ],
+    [
+     473.6000061035156,
+     55.040000915527344
+    ],
+    [
+     441.6000061035156,
+     440.32000732421875
+    ],
+    [
+     163.83999633789062,
+     423.67999267578125
+    ]
+   ],
+   "detected": true,
+   "iou": 0.9883106247653383,
+   "corner_err": 0.0018585785292088985,
+   "ncc": 0.672845184803009,
+   "ncc_oracle": 0.7197424173355103,
+   "ncc_ratio": 0.9348416441730432,
+   "accepted": true,
+   "failure_reasons": []
+  },
+  {
+   "case_id": "shadow-L1-s303",
+   "category": "shadow",
+   "level": 1,
+   "seed": 303,
+   "status": "ok",
+   "latency_ms": 6.358700000419049,
+   "detected_corners": [
+    [
+     448.0,
+     44.79999923706055
+    ],
+    [
+     459.5199890136719,
+     423.67999267578125
+    ],
+    [
+     198.39999389648438,
+     428.79998779296875
+    ],
+    [
+     177.9199981689453,
+     64.0
+    ]
+   ],
+   "detected": true,
+   "iou": 0.9866852194371081,
+   "corner_err": 0.0019847950898110867,
+   "ncc": 0.642508864402771,
+   "ncc_oracle": 0.7078794836997986,
+   "ncc_ratio": 0.9076528974178459,
+   "accepted": true,
+   "failure_reasons": []
+  },
+  {
+   "case_id": "shadow-L2-s300",
+   "category": "shadow",
+   "level": 2,
+   "seed": 300,
+   "status": "ok",
+   "latency_ms": 4.7505999991699355,
+   "detected_corners": [
+    [
+     444.1600036621094,
+     44.79999923706055
+    ],
+    [
+     469.760009765625,
+     424.9599914550781
+    ],
+    [
+     184.32000732421875,
+     432.6400146484375
+    ],
+    [
+     189.44000244140625,
+     58.880001068115234
+    ]
+   ],
+   "detected": true,
+   "iou": 0.9878412434644643,
+   "corner_err": 0.0017284995410591364,
+   "ncc": 0.6392375230789185,
+   "ncc_oracle": 0.663465678691864,
+   "ncc_ratio": 0.9634824281178862,
+   "accepted": true,
+   "failure_reasons": []
+  },
+  {
+   "case_id": "shadow-L2-s301",
+   "category": "shadow",
+   "level": 2,
+   "seed": 301,
+   "status": "ok",
+   "latency_ms": 4.76150000031339,
+   "detected_corners": [
+    [
+     202.24000549316406,
+     44.79999923706055
+    ],
+    [
+     456.9599914550781,
+     52.47999954223633
+    ],
+    [
+     437.760009765625,
+     426.239990234375
+    ],
+    [
+     181.75999450683594,
+     418.55999755859375
+    ]
+   ],
+   "detected": true,
+   "iou": 0.9863855604387428,
+   "corner_err": 0.0018947195494547486,
+   "ncc": 0.5780757665634155,
+   "ncc_oracle": 0.5998793840408325,
+   "ncc_ratio": 0.9636533308903763,
+   "accepted": true,
+   "failure_reasons": []
+  },
+  {
+   "case_id": "shadow-L2-s302",
+   "category": "shadow",
+   "level": 2,
+   "seed": 302,
+   "status": "ok",
+   "latency_ms": 4.310499998609885,
+   "detected_corners": [
+    [
+     193.27999877929688,
+     51.20000076293945
+    ],
+    [
+     450.55999755859375,
+     61.439998626708984
+    ],
+    [
+     444.1600036621094,
+     418.55999755859375
+    ],
+    [
+     188.16000366210938,
+     433.9200134277344
+    ]
+   ],
+   "detected": true,
+   "iou": 0.9860947136129351,
+   "corner_err": 0.001964705064892769,
+   "ncc": 0.603316605091095,
+   "ncc_oracle": 0.6343502402305603,
+   "ncc_ratio": 0.9510780745851284,
+   "accepted": true,
+   "failure_reasons": []
+  },
+  {
+   "case_id": "shadow-L2-s303",
+   "category": "shadow",
+   "level": 2,
+   "seed": 303,
+   "status": "ok",
+   "latency_ms": 5.817499999466236,
+   "detected_corners": [
+    [
+     455.67999267578125,
+     46.08000183105469
+    ],
+    [
+     450.55999755859375,
+     416.0
+    ],
+    [
+     188.16000366210938,
+     433.9200134277344
+    ],
+    [
+     171.52000427246094,
+     58.880001068115234
+    ]
+   ],
+   "detected": true,
+   "iou": 0.9907927834939038,
+   "corner_err": 0.0016217848751693964,
+   "ncc": 0.5053198933601379,
+   "ncc_oracle": 0.553908109664917,
+   "ncc_ratio": 0.9122810887636721,
+   "accepted": true,
+   "failure_reasons": []
+  }
+ ],
+ "summary": {
+  "n": 12,
+  "passed": 12,
+  "pass_rate": 1.0,
+  "by_category": {
+   "shadow": {
+    "n": 12,
+    "passed": 12,
+    "pass_rate": 1.0
+   }
+  },
+  "failure_reasons": {},
+  "failed_case_ids": []
+ },
+ "artifact_dir": "D:\\cool\\artifacts\\experiments\\verify-20261014-140351-bde096.artifacts",
+ "execution": {
+  "status": "completed"
+ },
+ "correctness": {
+  "evaluated": true,
+  "acceptance_passed": true,
+  "metrics": {
+   "pass_rate": 1.0
+  }
+ },
+ "measurements": {
+  "latency_ms_median": 4.76150000031339,
+  "note": "single-pass latency; use benchmark for steady state"
+ }
+}

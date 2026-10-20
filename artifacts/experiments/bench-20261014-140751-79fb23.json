@@ -1,0 +1,127 @@
+{
+ "experiment_id": "bench-20261014-140751-79fb23",
+ "kind": "benchmark",
+ "trace_id": null,
+ "code_revision": "3580d6c7a7ffaa6f0e16a76095d9aa1dcbc75b74de81ca68e43d045373643056",
+ "candidate": "candidates\\scanner_v1.py",
+ "dataset_id": "unit-bench",
+ "configuration_hash": "0494f21bddec3a06",
+ "runtime": {
+  "python": "3.13.2",
+  "python_executable": "D:\\cool\\.venv\\Scripts\\python.exe",
+  "opencv_version": "5.0.0",
+  "opencv_is_v5": true,
+  "opencv_module_path": "D:\\cool\\.venv\\Lib\\site-packages\\cv2\\__init__.py",
+  "platform": "Windows-11-10.0.26300-SP0",
+  "architecture": "AMD64",
+  "cpu_baseline": "SSE SSE2 SSE3",
+  "available_ops": {
+   "resize": true,
+   "adaptiveThreshold": true,
+   "findContours": true,
+   "getPerspectiveTransform": true,
+   "warpPerspective": true,
+   "createCLAHE": true,
+   "Canny": true,
+   "GaussianBlur": true,
+   "threshold": true,
+   "approxPolyDP": true,
+   "intersectConvexConvex": true
+  },
+  "num_threads": 16,
+  "cool": {
+   "verified": false,
+   "evidence": {
+    "cv2_file_under_opt_cool": false,
+    "build_mentions_kleidicv": false,
+    "custom_hal": "YES (ipp (ver 0.0.1))"
+   },
+   "note": "COOL is considered verified only when cv2 is imported from /opt/cool on an aarch64 host; this does not by itself prove which kernels accelerated a given workload."
+  },
+  "aws_instance_type": "not-applicable-or-unset"
+ },
+ "command": "D:\\cool\\.venv\\Scripts\\python.exe -m coolguard.worker --mode bench --candidate D:\\cool\\candidates\\scanner_v1.py --corpus D:\\cool\\artifacts\\corpora\\unit-bench --out D:\\cool\\artifacts\\experiments --warmup 2 --repeats 4",
+ "environment": "local-developer-workstation",
+ "workload": {
+  "n_images": 2,
+  "warmup": 2,
+  "repeats": 4,
+  "threads": 16,
+  "config": {
+   "work_max_side": 500,
+   "blur": 5,
+   "epsilon": 0.02
+  }
+ },
+ "measurements": {
+  "latency_ms": {
+   "median": 3.566,
+   "p95": 4.1983,
+   "mean": 3.4279625,
+   "min": 2.4696,
+   "max": 4.1983
+  },
+  "throughput_img_per_s": 287.5556689884491,
+  "cpu_percent_of_one_core": 842.448248989597,
+  "peak_memory_mb": 49.627136,
+  "raw_latency_ms": [
+   3.566,
+   3.7153,
+   3.2478,
+   4.1983,
+   2.4696,
+   3.0843,
+   4.0442,
+   3.0982
+  ],
+  "clock": "time.perf_counter_ns (monotonic)"
+ },
+ "output_checksum": "74b13ef8e38dc351",
+ "detected_corners": [
+  [
+   [
+    200.9600067138672,
+    46.08000183105469
+   ],
+   [
+    186.8800048828125,
+    426.239990234375
+   ],
+   [
+    437.760009765625,
+    428.79998779296875
+   ],
+   [
+    467.20001220703125,
+    66.55999755859375
+   ]
+  ],
+  [
+   [
+    234.24000549316406,
+    25.600000381469727
+   ],
+   [
+    143.36000061035156,
+    403.20001220703125
+   ],
+   [
+    422.3999938964844,
+    445.44000244140625
+   ],
+   [
+    481.2799987792969,
+    74.23999786376953
+   ]
+  ]
+ ],
+ "correctness": {
+  "evaluated": true,
+  "accepted": 2,
+  "n": 2,
+  "acceptance_passed": true
+ },
+ "execution": {
+  "status": "completed"
+ }
+}

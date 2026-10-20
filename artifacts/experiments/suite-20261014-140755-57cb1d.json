@@ -1,0 +1,235 @@
+{
+ "experiment_id": "suite-20261014-140755-57cb1d",
+ "kind": "visual_regression",
+ "trace_id": null,
+ "code_revision": "3580d6c7a7ffaa6f0e16a76095d9aa1dcbc75b74de81ca68e43d045373643056",
+ "candidate": "candidates\\scanner_v1.py",
+ "dataset_id": "1.0:mcp-test",
+ "configuration_hash": "0494f21bddec3a06",
+ "configuration": {
+  "work_max_side": 500,
+  "blur": 5,
+  "epsilon": 0.02
+ },
+ "runtime": {
+  "python": "3.13.2",
+  "python_executable": "D:\\cool\\.venv\\Scripts\\python.exe",
+  "opencv_version": "5.0.0",
+  "opencv_is_v5": true,
+  "opencv_module_path": "D:\\cool\\.venv\\Lib\\site-packages\\cv2\\__init__.py",
+  "platform": "Windows-11-10.0.26300-SP0",
+  "architecture": "AMD64",
+  "cpu_baseline": "SSE SSE2 SSE3",
+  "available_ops": {
+   "resize": true,
+   "adaptiveThreshold": true,
+   "findContours": true,
+   "getPerspectiveTransform": true,
+   "warpPerspective": true,
+   "createCLAHE": true,
+   "Canny": true,
+   "GaussianBlur": true,
+   "threshold": true,
+   "approxPolyDP": true,
+   "intersectConvexConvex": true
+  },
+  "num_threads": 16,
+  "cool": {
+   "verified": false,
+   "evidence": {
+    "cv2_file_under_opt_cool": false,
+    "build_mentions_kleidicv": false,
+    "custom_hal": "YES (ipp (ver 0.0.1))"
+   },
+   "note": "COOL is considered verified only when cv2 is imported from /opt/cool on an aarch64 host; this does not by itself prove which kernels accelerated a given workload."
+  },
+  "aws_instance_type": "not-applicable-or-unset"
+ },
+ "command": "D:\\cool\\.venv\\Scripts\\python.exe -m coolguard.worker --candidate D:\\cool\\candidates\\scanner_v1.py --corpus D:\\cool\\artifacts\\corpora\\mcp-test --out D:\\cool\\artifacts\\experiments\\suite-20261014-140755-57cb1d.artifacts --config {} --save-stages failures",
+ "results": [
+  {
+   "case_id": "clean-L0-s0",
+   "category": "clean",
+   "level": 0,
+   "seed": 0,
+   "status": "ok",
+   "latency_ms": 16.170799999599694,
+   "detected_corners": [
+    [
+     200.9600067138672,
+     46.08000183105469
+    ],
+    [
+     186.8800048828125,
+     426.239990234375
+    ],
+    [
+     437.760009765625,
+     428.79998779296875
+    ],
+    [
+     467.20001220703125,
+     66.55999755859375
+    ]
+   ],
+   "detected": true,
+   "iou": 0.9815155676810166,
+   "corner_err": 0.002618140773847699,
+   "ncc": 0.8872120976448059,
+   "ncc_oracle": 0.970450222492218,
+   "ncc_ratio": 0.9142273112848098,
+   "accepted": true,
+   "failure_reasons": []
+  },
+  {
+   "case_id": "shadow-L0-s0",
+   "category": "shadow",
+   "level": 0,
+   "seed": 0,
+   "status": "ok",
+   "latency_ms": 3.1178000008367235,
+   "detected_corners": [
+    [
+     167.67999267578125,
+     48.63999938964844
+    ],
+    [
+     183.0399932861328,
+     433.9200134277344
+    ],
+    [
+     460.79998779296875,
+     414.7200012207031
+    ],
+    [
+     439.0400085449219,
+     55.040000915527344
+    ]
+   ],
+   "detected": true,
+   "iou": 0.9804912067625726,
+   "corner_err": 0.0028115296736359596,
+   "ncc": 0.7640674114227295,
+   "ncc_oracle": 0.873208224773407,
+   "ncc_ratio": 0.8750116979498229,
+   "accepted": true,
+   "failure_reasons": []
+  },
+  {
+   "case_id": "shadow-L1-s0",
+   "category": "shadow",
+   "level": 1,
+   "seed": 0,
+   "status": "ok",
+   "latency_ms": 4.09620000027644,
+   "detected_corners": [
+    [
+     465.9200134277344,
+     51.20000076293945
+    ],
+    [
+     177.9199981689453,
+     56.31999969482422
+    ],
+    [
+     190.72000122070312,
+     299.5199890136719
+    ],
+    [
+     454.3999938964844,
+     203.52000427246094
+    ]
+   ],
+   "detected": true,
+   "iou": 0.5260276470206823,
+   "corner_err": 0.11475677788257599,
+   "ncc": 0.06902043521404266,
+   "ncc_oracle": 0.7368351221084595,
+   "ncc_ratio": 0.09367147838520529,
+   "accepted": false,
+   "failure_reasons": [
+    "low_iou",
+    "corner_error"
+   ],
+   "artifact_dir": "D:\\cool\\artifacts\\experiments\\suite-20261014-140755-57cb1d.artifacts\\stages\\shadow-L1-s0"
+  },
+  {
+   "case_id": "shadow-L2-s0",
+   "category": "shadow",
+   "level": 2,
+   "seed": 0,
+   "status": "ok",
+   "latency_ms": 5.7018999996216735,
+   "detected_corners": [
+    [
+     190.2344970703125,
+     369.3462219238281
+    ],
+    [
+     171.90402221679688,
+     57.7280158996582
+    ],
+    [
+     448.18096923828125,
+     41.476436614990234
+    ],
+    [
+     466.5114440917969,
+     353.0946350097656
+    ]
+   ],
+   "detected": true,
+   "iou": 0.8013284034342288,
+   "corner_err": 0.045707445591688156,
+   "ncc": 0.018065443262457848,
+   "ncc_oracle": 0.6104273200035095,
+   "ncc_ratio": 0.029594748908607145,
+   "accepted": false,
+   "failure_reasons": [
+    "low_iou",
+    "corner_error"
+   ],
+   "artifact_dir": "D:\\cool\\artifacts\\experiments\\suite-20261014-140755-57cb1d.artifacts\\stages\\shadow-L2-s0"
+  }
+ ],
+ "summary": {
+  "n": 4,
+  "passed": 2,
+  "pass_rate": 0.5,
+  "by_category": {
+   "clean": {
+    "n": 1,
+    "passed": 1,
+    "pass_rate": 1.0
+   },
+   "shadow": {
+    "n": 3,
+    "passed": 1,
+    "pass_rate": 0.3333333333333333
+   }
+  },
+  "failure_reasons": {
+   "low_iou": 2,
+   "corner_error": 2
+  },
+  "failed_case_ids": [
+   "shadow-L1-s0",
+   "shadow-L2-s0"
+  ]
+ },
+ "artifact_dir": "D:\\cool\\artifacts\\experiments\\suite-20261014-140755-57cb1d.artifacts",
+ "execution": {
+  "status": "completed"
+ },
+ "correctness": {
+  "evaluated": true,
+  "acceptance_passed": false,
+  "metrics": {
+   "pass_rate": 0.5
+  }
+ },
+ "measurements": {
+  "latency_ms_median": 5.7018999996216735,
+  "note": "single-pass latency; use benchmark for steady state"
+ }
+}

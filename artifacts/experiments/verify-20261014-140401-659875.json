@@ -1,0 +1,6032 @@
+{
+ "experiment_id": "verify-20261014-140401-659875",
+ "kind": "visual_regression",
+ "trace_id": "loop-20261014-140254-292656",
+ "code_revision": "a27fdccf930d887115b9333085b002928bad7394493202110489a814fb8c88ec",
+ "candidate": "candidates\\scanner_v3.py",
+ "dataset_id": "1.0:heldout",
+ "configuration_hash": "65fac4cbebff5739",
+ "configuration": {
+  "work_max_side": 500,
+  "epsilon": 0.02,
+  "clahe_clip": 2.0,
+  "canny_hi_pct": 92.0,
+  "canny_ratio": 0.4,
+  "noise_blur_gain": 0.25,
+  "close": 7
+ },
+ "runtime": {
+  "python": "3.13.2",
+  "python_executable": "D:\\cool\\.venv\\Scripts\\python.exe",
+  "opencv_version": "5.0.0",
+  "opencv_is_v5": true,
+  "opencv_module_path": "D:\\cool\\.venv\\Lib\\site-packages\\cv2\\__init__.py",
+  "platform": "Windows-11-10.0.26300-SP0",
+  "architecture": "AMD64",
+  "cpu_baseline": "SSE SSE2 SSE3",
+  "available_ops": {
+   "resize": true,
+   "adaptiveThreshold": true,
+   "findContours": true,
+   "getPerspectiveTransform": true,
+   "warpPerspective": true,
+   "createCLAHE": true,
+   "Canny": true,
+   "GaussianBlur": true,
+   "threshold": true,
+   "approxPolyDP": true,
+   "intersectConvexConvex": true
+  },
+  "num_threads": 16,
+  "cool": {
+   "verified": false,
+   "evidence": {
+    "cv2_file_under_opt_cool": false,
+    "build_mentions_kleidicv": false,
+    "custom_hal": "YES (ipp (ver 0.0.1))"
+   },
+   "note": "COOL is considered verified only when cv2 is imported from /opt/cool on an aarch64 host; this does not by itself prove which kernels accelerated a given workload."
+  },
+  "aws_instance_type": "not-applicable-or-unset"
+ },
+ "command": "D:\\cool\\.venv\\Scripts\\python.exe -m coolguard.worker --candidate D:\\cool\\candidates\\scanner_v3.py --corpus D:\\cool\\artifacts\\corpora\\heldout --out D:\\cool\\artifacts\\experiments\\verify-20261014-140401-659875.artifacts --config {} --save-stages failures",
+ "results": [
+  {
+   "case_id": "clean-L0-s100",
+   "category": "clean",
+   "level": 0,
+   "seed": 100,
+   "status": "ok",
+   "latency_ms": 30.091900000115857,
+   "detected_corners": [
+    [
+     436.4800109863281,
+     60.15999984741211
+    ],
+    [
+     451.8399963378906,
+     417.2799987792969
+    ],
+    [
+     204.8000030517578,
+     437.760009765625
+    ],
+    [
+     189.44000244140625,
+     64.0
+    ]
+   ],
+   "detected": true,
+   "iou": 0.9772725632726638,
+   "corner_err": 0.0032668912317603827,
+   "ncc": 0.7779274582862854,
+   "ncc_oracle": 0.9703727960586548,
+   "ncc_ratio": 0.8016789644618841,
+   "accepted": true,
+   "failure_reasons": []
+  },
+  {
+   "case_id": "clean-L0-s101",
+   "category": "clean",
+   "level": 0,
+   "seed": 101,
+   "status": "ok",
+   "latency_ms": 13.463399998727255,
+   "detected_corners": [
+    [
+     211.1999969482422,
+     79.36000061035156
+    ],
+    [
+     427.5199890136719,
+     97.27999877929688
+    ],
+    [
+     433.9200134277344,
+     396.79998779296875
+    ],
+    [
+     193.27999877929688,
+     387.8399963378906
+    ]
+   ],
+   "detected": true,
+   "iou": 0.6991617701878183,
+   "corner_err": 0.046612534672021866,
+   "ncc": 0.045042138546705246,
+   "ncc_oracle": 0.9695466160774231,
+   "ncc_ratio": 0.046456908620790244,
+   "accepted": false,
+   "failure_reasons": [
+    "low_iou",
+    "corner_error"
+   ],
+   "artifact_dir": "D:\\cool\\artifacts\\experiments\\verify-20261014-140401-659875.artifacts\\stages\\clean-L0-s101"
+  },
+  {
+   "case_id": "clean-L0-s102",
+   "category": "clean",
+   "level": 0,
+   "seed": 102,
+   "status": "ok",
+   "latency_ms": 12.033900000460562,
+   "detected_corners": [
+    [
+     188.16000366210938,
+     43.52000045776367
+    ],
+    [
+     451.8399963378906,
+     62.720001220703125
+    ],
+    [
+     453.1199951171875,
+     428.79998779296875
+    ],
+    [
+     175.36000061035156,
+     421.1199951171875
+    ]
+   ],
+   "detected": true,
+   "iou": 0.979404956758251,
+   "corner_err": 0.003229692578315735,
+   "ncc": 0.7859441041946411,
+   "ncc_oracle": 0.9709862470626831,
+   "ncc_ratio": 0.809428667576075,
+   "accepted": true,
+   "failure_reasons": []
+  },
+  {
+   "case_id": "clean-L0-s103",
+   "category": "clean",
+   "level": 0,
+   "seed": 103,
+   "status": "ok",
+   "latency_ms": 16.3827999986097,
+   "detected_corners": [
+    [
+     175.36000061035156,
+     52.47999954223633
+    ],
+    [
+     439.0400085449219,
+     56.31999969482422
+    ],
+    [
+     469.760009765625,
+     426.239990234375
+    ],
+    [
+     200.9600067138672,
+     433.9200134277344
+    ]
+   ],
+   "detected": true,
+   "iou": 0.9791280479537816,
+   "corner_err": 0.003106290940195322,
+   "ncc": 0.8546047806739807,
+   "ncc_oracle": 0.9729319214820862,
+   "ncc_ratio": 0.8783808628379102,
+   "accepted": true,
+   "failure_reasons": []
+  },
+  {
+   "case_id": "clean-L0-s104",
+   "category": "clean",
+   "level": 0,
+   "seed": 104,
+   "status": "ok",
+   "latency_ms": 14.078599999265862,
+   "detected_corners": [
+    [
+     456.9599914550781,
+     60.15999984741211
+    ],
+    [
+     446.7200012207031,
+     430.0799865722656
+    ],
+    [
+     194.55999755859375,
+     436.4800109863281
+    ],
+    [
+     185.60000610351562,
+     61.439998626708984
+    ]
+   ],
+   "detected": true,
+   "iou": 0.9773976692006796,
+   "corner_err": 0.0031799122225493193,
+   "ncc": 0.8096004128456116,
+   "ncc_oracle": 0.970665693283081,
+   "ncc_ratio": 0.8340671957894189,
+   "accepted": true,
+   "failure_reasons": []
+  },
+  {
+   "case_id": "clean-L0-s105",
+   "category": "clean",
+   "level": 0,
+   "seed": 105,
+   "status": "ok",
+   "latency_ms": 12.422399999195477,
+   "detected_corners": [
+    [
+     435.20001220703125,
+     37.119998931884766
+    ],
+    [
+     471.0400085449219,
+     417.2799987792969
+    ],
+    [
+     211.1999969482422,
+     442.8800048828125
+    ],
+    [
+     168.9600067138672,
+     61.439998626708984
+    ]
+   ],
+   "detected": true,
+   "iou": 0.9810558980923437,
+   "corner_err": 0.0026770257391035557,
+   "ncc": 0.8616498708724976,
+   "ncc_oracle": 0.971605658531189,
+   "ncc_ratio": 0.886830848818938,
+   "accepted": true,
+   "failure_reasons": []
+  },
+  {
+   "case_id": "rotation-L0-s100",
+   "category": "rotation",
+   "level": 0,
+   "seed": 100,
+   "status": "ok",
+   "latency_ms": 18.604099999720347,
+   "detected_corners": [
+    [
+     413.44000244140625,
+     30.719999313354492
+    ],
+    [
+     483.8399963378906,
+     394.239990234375
+    ],
+    [
+     230.39999389648438,
+     451.8399963378906
+    ],
+    [
+     158.72000122070312,
+     84.4800033569336
+    ]
+   ],
+   "detected": true,
+   "iou": 0.9794835604304618,
+   "corner_err": 0.0028377987910062075,
+   "ncc": 0.8351523876190186,
+   "ncc_oracle": 0.9716280698776245,
+   "ncc_ratio": 0.8595391729720253,
+   "accepted": true,
+   "failure_reasons": []
+  },
+  {
+   "case_id": "rotation-L0-s101",
+   "category": "rotation",
+   "level": 0,
+   "seed": 101,
+   "status": "ok",
+   "latency_ms": 13.361699999222765,
+   "detected_corners": [
+    [
+     426.239990234375,
+     28.15999984741211
+    ],
+    [
+     480.0,
+     398.0799865722656
+    ],
+    [
+     215.0399932861328,
+     446.7200012207031
+    ],
+    [
+     153.60000610351562,
+     85.76000213623047
+    ]
+   ],
+   "detected": true,
+   "iou": 0.9797784845480528,
+   "corner_err": 0.002939879195764661,
+   "ncc": 0.8399408459663391,
+   "ncc_oracle": 0.9739298820495605,
+   "ncc_ratio": 0.8624243505073981,
+   "accepted": true,
+   "failure_reasons": []
+  },
+  {
+   "case_id": "rotation-L0-s102",
+   "category": "rotation",
+   "level": 0,
+   "seed": 102,
+   "status": "ok",
+   "latency_ms": 21.283699999912642,
+   "detected_corners": [
+    [
+     414.7200012207031,
+     28.15999984741211
+    ],
+    [
+     471.0400085449219,
+     405.760009765625
+    ],
+    [
+     229.1199951171875,
+     442.8800048828125
+    ],
+    [
+     167.67999267578125,
+     89.5999984741211
+    ]
+   ],
+   "detected": true,
+   "iou": 0.9778342007145934,
+   "corner_err": 0.003098228247836232,
+   "ncc": 0.8206437230110168,
+   "ncc_oracle": 0.9732795357704163,
+   "ncc_ratio": 0.8431737161322539,
+   "accepted": true,
+   "failure_reasons": []
+  },
+  {
+   "case_id": "rotation-L0-s103",
+   "category": "rotation",
+   "level": 0,
+   "seed": 103,
+   "status": "ok",
+   "latency_ms": 14.010900000357651,
+   "detected_corners": [
+    [
+     417.2799987792969,
+     25.600000381469727
+    ],
+    [
+     487.67999267578125,
+     404.4800109863281
+    ],
+    [
+     216.32000732421875,
+     454.3999938964844
+    ],
+    [
+     153.60000610351562,
+     88.31999969482422
+    ]
+   ],
+   "detected": true,
+   "iou": 0.983843779572862,
+   "corner_err": 0.0025121858343482018,
+   "ncc": 0.8653073310852051,
+   "ncc_oracle": 0.9724635481834412,
+   "ncc_ratio": 0.8898095282867892,
+   "accepted": true,
+   "failure_reasons": []
+  },
+  {
+   "case_id": "rotation-L0-s104",
+   "category": "rotation",
+   "level": 0,
+   "seed": 104,
+   "status": "ok",
+   "latency_ms": 20.52229999935662,
+   "detected_corners": [
+    [
+     428.79998779296875,
+     33.279998779296875
+    ],
+    [
+     488.9599914550781,
+     398.0799865722656
+    ],
+    [
+     211.1999969482422,
+     454.3999938964844
+    ],
+    [
+     158.72000122070312,
+     89.5999984741211
+    ]
+   ],
+   "detected": true,
+   "iou": 0.9789625512986846,
+   "corner_err": 0.003118670079857111,
+   "ncc": 0.8235032558441162,
+   "ncc_oracle": 0.9734143018722534,
+   "ncc_ratio": 0.8459946132496717,
+   "accepted": true,
+   "failure_reasons": []
+  },
+  {
+   "case_id": "rotation-L0-s105",
+   "category": "rotation",
+   "level": 0,
+   "seed": 105,
+   "status": "ok",
+   "latency_ms": 15.24740000058955,
+   "detected_corners": [
+    [
+     410.8800048828125,
+     25.600000381469727
+    ],
+    [
+     480.0,
+     404.4800109863281
+    ],
+    [
+     224.0,
+     436.4800109863281
+    ],
+    [
+     151.0399932861328,
+     87.04000091552734
+    ]
+   ],
+   "detected": true,
+   "iou": 0.9816766814535067,
+   "corner_err": 0.0026500732637941837,
+   "ncc": 0.8255788683891296,
+   "ncc_oracle": 0.9703400135040283,
+   "ncc_ratio": 0.8508140001439839,
+   "accepted": true,
+   "failure_reasons": []
+  },
+  {
+   "case_id": "rotation-L1-s100",
+   "category": "rotation",
+   "level": 1,
+   "seed": 100,
+   "status": "ok",
+   "latency_ms": 14.052599999558879,
+   "detected_corners": [
+    [
+     270.0799865722656,
+     10.239999771118164
+    ],
+    [
+     529.9199829101562,
+     121.5999984741211
+    ],
+    [
+     357.1199951171875,
+     467.20001220703125
+    ],
+    [
+     129.27999877929688,
+     362.239990234375
+    ]
+   ],
+   "detected": true,
+   "iou": 0.9843124112789736,
+   "corner_err": 0.002690059132874012,
+   "ncc": 0.8773193359375,
+   "ncc_oracle": 0.975843608379364,
+   "ncc_ratio": 0.8990368214785066,
+   "accepted": true,
+   "failure_reasons": []
+  },
+  {
+   "case_id": "rotation-L1-s101",
+   "category": "rotation",
+   "level": 1,
+   "seed": 101,
+   "status": "ok",
+   "latency_ms": 25.577599999451195,
+   "detected_corners": [
+    [
+     270.0799865722656,
+     14.079999923706055
+    ],
+    [
+     528.6400146484375,
+     117.76000213623047
+    ],
+    [
+     355.8399963378906,
+     463.3599853515625
+    ],
+    [
+     119.04000091552734,
+     359.67999267578125
+    ]
+   ],
+   "detected": true,
+   "iou": 0.9820513388847578,
+   "corner_err": 0.0026425542309880257,
+   "ncc": 0.8990112543106079,
+   "ncc_oracle": 0.9745064377784729,
+   "ncc_ratio": 0.9225298258265311,
+   "accepted": true,
+   "failure_reasons": []
+  },
+  {
+   "case_id": "rotation-L1-s102",
+   "category": "rotation",
+   "level": 1,
+   "seed": 102,
+   "status": "ok",
+   "latency_ms": 14.008500000272761,
+   "detected_corners": [
+    [
+     268.79998779296875,
+     12.800000190734863
+    ],
+    [
+     510.7200012207031,
+     126.72000122070312
+    ],
+    [
+     373.760009765625,
+     467.20001220703125
+    ],
+    [
+     128.0,
+     353.2799987792969
+    ]
+   ],
+   "detected": true,
+   "iou": 0.984073892421902,
+   "corner_err": 0.002347580622881651,
+   "ncc": 0.8940834999084473,
+   "ncc_oracle": 0.9733595848083496,
+   "ncc_ratio": 0.9185541642192679,
+   "accepted": true,
+   "failure_reasons": []
+  },
+  {
+   "case_id": "rotation-L1-s103",
+   "category": "rotation",
+   "level": 1,
+   "seed": 103,
+   "status": "ok",
+   "latency_ms": 12.74579999881098,
+   "detected_corners": [
+    [
+     284.1600036621094,
+     11.520000457763672
+    ],
+    [
+     505.6000061035156,
+     135.67999267578125
+    ],
+    [
+     352.0,
+     454.3999938964844
+    ],
+    [
+     113.91999816894531,
+     349.44000244140625
+    ]
+   ],
+   "detected": true,
+   "iou": 0.9795966952216273,
+   "corner_err": 0.0031963286455720663,
+   "ncc": 0.8054637908935547,
+   "ncc_oracle": 0.9739898443222046,
+   "ncc_ratio": 0.8269735003798458,
+   "accepted": true,
+   "failure_reasons": []
+  },
+  {
+   "case_id": "rotation-L1-s104",
+   "category": "rotation",
+   "level": 1,
+   "seed": 104,
+   "status": "ok",
+   "latency_ms": 12.749999999869033,
+   "detected_corners": [
+    [
+     371.20001220703125,
+     10.239999771118164
+    ],
+    [
+     508.1600036621094,
+     348.1600036621094
+    ],
+    [
+     286.7200012207031,
+     458.239990234375
+    ],
+    [
+     122.87999725341797,
+     129.27999877929688
+    ]
+   ],
+   "detected": true,
+   "iou": 0.9814033637305349,
+   "corner_err": 0.0028390302322804928,
+   "ncc": 0.8415800333023071,
+   "ncc_oracle": 0.973215639591217,
+   "ncc_ratio": 0.8647415835362025,
+   "accepted": true,
+   "failure_reasons": []
+  },
+  {
+   "case_id": "rotation-L1-s105",
+   "category": "rotation",
+   "level": 1,
+   "seed": 105,
+   "status": "ok",
+   "latency_ms": 13.232899998911307,
+   "detected_corners": [
+    [
+     364.79998779296875,
+     10.239999771118164
+    ],
+    [
+     519.6799926757812,
+     355.8399963378906
+    ],
+    [
+     286.7200012207031,
+     456.9599914550781
+    ],
+    [
+     120.31999969482422,
+     134.39999389648438
+    ]
+   ],
+   "detected": true,
+   "iou": 0.9813428493079039,
+   "corner_err": 0.003346976125612855,
+   "ncc": 0.664078950881958,
+   "ncc_oracle": 0.9752699732780457,
+   "ncc_ratio": 0.6809180730232856,
+   "accepted": true,
+   "failure_reasons": []
+  },
+  {
+   "case_id": "rotation-L2-s100",
+   "category": "rotation",
+   "level": 2,
+   "seed": 100,
+   "status": "ok",
+   "latency_ms": 12.573100000736304,
+   "detected_corners": [
+    [
+     328.9599914550781,
+     20.479999542236328
+    ],
+    [
+     536.3200073242188,
+     181.75999450683594
+    ],
+    [
+     305.9200134277344,
+     459.5199890136719
+    ],
+    [
+     89.5999984741211,
+     288.0
+    ]
+   ],
+   "detected": true,
+   "iou": 0.9760981110646547,
+   "corner_err": 0.004436563700437546,
+   "ncc": 0.6174342036247253,
+   "ncc_oracle": 0.9765762090682983,
+   "ncc_ratio": 0.6322437490196365,
+   "accepted": true,
+   "failure_reasons": []
+  },
+  {
+   "case_id": "rotation-L2-s101",
+   "category": "rotation",
+   "level": 2,
+   "seed": 101,
+   "status": "ok",
+   "latency_ms": 12.291500001083477,
+   "detected_corners": [
+    [
+     340.4800109863281,
+     20.479999542236328
+    ],
+    [
+     545.280029296875,
+     194.55999755859375
+    ],
+    [
+     298.239990234375,
+     469.760009765625
+    ],
+    [
+     102.4000015258789,
+     300.79998779296875
+    ]
+   ],
+   "detected": true,
+   "iou": 0.9769211818469801,
+   "corner_err": 0.004668682813644409,
+   "ncc": 0.7592142224311829,
+   "ncc_oracle": 0.9761964082717896,
+   "ncc_ratio": 0.7777269164258233,
+   "accepted": true,
+   "failure_reasons": []
+  },
+  {
+   "case_id": "rotation-L2-s102",
+   "category": "rotation",
+   "level": 2,
+   "seed": 102,
+   "status": "ok",
+   "latency_ms": 13.042200000199955,
+   "detected_corners": [
+    [
+     346.8800048828125,
+     10.239999771118164
+    ],
+    [
+     533.760009765625,
+     180.47999572753906
+    ],
+    [
+     307.20001220703125,
+     469.760009765625
+    ],
+    [
+     106.23999786376953,
+     290.55999755859375
+    ]
+   ],
+   "detected": true,
+   "iou": 0.978626111374409,
+   "corner_err": 0.004136515315622091,
+   "ncc": 0.1999831199645996,
+   "ncc_oracle": 0.9750635027885437,
+   "ncc_ratio": 0.20509753405052714,
+   "accepted": true,
+   "failure_reasons": []
+  },
+  {
+   "case_id": "rotation-L2-s103",
+   "category": "rotation",
+   "level": 2,
+   "seed": 103,
+   "status": "ok",
+   "latency_ms": 11.976800000411458,
+   "detected_corners": [
+    [
+     289.2799987792969,
+     21.760000228881836
+    ],
+    [
+     550.4000244140625,
+     307.20001220703125
+    ],
+    [
+     349.44000244140625,
+     458.239990234375
+    ],
+    [
+     110.08000183105469,
+     177.9199981689453
+    ]
+   ],
+   "detected": true,
+   "iou": 0.9718353550334128,
+   "corner_err": 0.005040758289396763,
+   "ncc": 0.40625616908073425,
+   "ncc_oracle": 0.9745141267776489,
+   "ncc_ratio": 0.41688073873702614,
+   "accepted": true,
+   "failure_reasons": []
+  },
+  {
+   "case_id": "rotation-L2-s104",
+   "category": "rotation",
+   "level": 2,
+   "seed": 104,
+   "status": "ok",
+   "latency_ms": 15.98290000038105,
+   "detected_corners": [
+    [
+     346.8800048828125,
+     10.239999771118164
+    ],
+    [
+     529.9199829101562,
+     183.0399932861328
+    ],
+    [
+     302.0799865722656,
+     469.760009765625
+    ],
+    [
+     108.80000305175781,
+     289.2799987792969
+    ]
+   ],
+   "detected": true,
+   "iou": 0.9793420400128359,
+   "corner_err": 0.004415516275912523,
+   "ncc": 0.7599287629127502,
+   "ncc_oracle": 0.9744141101837158,
+   "ncc_ratio": 0.7798827572083018,
+   "accepted": true,
+   "failure_reasons": []
+  },
+  {
+   "case_id": "rotation-L2-s105",
+   "category": "rotation",
+   "level": 2,
+   "seed": 105,
+   "status": "ok",
+   "latency_ms": 13.748900000791764,
+   "detected_corners": [
+    [
+     289.2799987792969,
+     10.239999771118164
+    ],
+    [
+     533.760009765625,
+     285.44000244140625
+    ],
+    [
+     352.0,
+     469.760009765625
+    ],
+    [
+     106.23999786376953,
+     174.0800018310547
+    ]
+   ],
+   "detected": true,
+   "iou": 0.9773976210005683,
+   "corner_err": 0.0038807422388345003,
+   "ncc": 0.5605018734931946,
+   "ncc_oracle": 0.9751585721969604,
+   "ncc_ratio": 0.5747802352087468,
+   "accepted": true,
+   "failure_reasons": []
+  },
+  {
+   "case_id": "perspective-L0-s100",
+   "category": "perspective",
+   "level": 0,
+   "seed": 100,
+   "status": "ok",
+   "latency_ms": 12.781600000380422,
+   "detected_corners": [
+    [
+     436.4800109863281,
+     48.63999938964844
+    ],
+    [
+     442.8800048828125,
+     442.8800048828125
+    ],
+    [
+     180.47999572753906,
+     410.8800048828125
+    ],
+    [
+     163.83999633789062,
+     74.23999786376953
+    ]
+   ],
+   "detected": true,
+   "iou": 0.9778716524203128,
+   "corner_err": 0.003108102595433593,
+   "ncc": 0.8466739654541016,
+   "ncc_oracle": 0.970099925994873,
+   "ncc_ratio": 0.8727698485141171,
+   "accepted": true,
+   "failure_reasons": []
+  },
+  {
+   "case_id": "perspective-L0-s101",
+   "category": "perspective",
+   "level": 0,
+   "seed": 101,
+   "status": "ok",
+   "latency_ms": 12.21570000052452,
+   "detected_corners": [
+    [
+     423.67999267578125,
+     89.5999984741211
+    ],
+    [
+     391.67999267578125,
+     400.6400146484375
+    ],
+    [
+     174.0800018310547,
+     404.4800109863281
+    ],
+    [
+     215.0399932861328,
+     70.4000015258789
+    ]
+   ],
+   "detected": true,
+   "iou": 0.6885850531497173,
+   "corner_err": 0.047056056559085846,
+   "ncc": 0.06152653321623802,
+   "ncc_oracle": 0.9711911082267761,
+   "ncc_ratio": 0.06335162327482037,
+   "accepted": false,
+   "failure_reasons": [
+    "low_iou",
+    "corner_error"
+   ],
+   "artifact_dir": "D:\\cool\\artifacts\\experiments\\verify-20261014-140401-659875.artifacts\\stages\\perspective-L0-s101"
+  },
+  {
+   "case_id": "perspective-L0-s102",
+   "category": "perspective",
+   "level": 0,
+   "seed": 102,
+   "status": "ok",
+   "latency_ms": 12.667799999690033,
+   "detected_corners": [
+    [
+     460.79998779296875,
+     26.8799991607666
+    ],
+    [
+     430.0799865722656,
+     436.4800109863281
+    ],
+    [
+     235.52000427246094,
+     440.32000732421875
+    ],
+    [
+     208.63999938964844,
+     37.119998931884766
+    ]
+   ],
+   "detected": true,
+   "iou": 0.9792586709271149,
+   "corner_err": 0.0029998281970620155,
+   "ncc": 0.7329626083374023,
+   "ncc_oracle": 0.9719647765159607,
+   "ncc_ratio": 0.754104084887449,
+   "accepted": true,
+   "failure_reasons": []
+  },
+  {
+   "case_id": "perspective-L0-s103",
+   "category": "perspective",
+   "level": 0,
+   "seed": 103,
+   "status": "ok",
+   "latency_ms": 14.911000000211061,
+   "detected_corners": [
+    [
+     218.8800048828125,
+     58.880001068115234
+    ],
+    [
+     405.760009765625,
+     110.08000183105469
+    ],
+    [
+     390.3999938964844,
+     417.2799987792969
+    ],
+    [
+     176.63999938964844,
+     398.0799865722656
+    ]
+   ],
+   "detected": true,
+   "iou": 0.666740118019052,
+   "corner_err": 0.05164560303092003,
+   "ncc": 0.07694756239652634,
+   "ncc_oracle": 0.9717085361480713,
+   "ncc_ratio": 0.07918790412354769,
+   "accepted": false,
+   "failure_reasons": [
+    "low_iou",
+    "corner_error"
+   ],
+   "artifact_dir": "D:\\cool\\artifacts\\experiments\\verify-20261014-140401-659875.artifacts\\stages\\perspective-L0-s103"
+  },
+  {
+   "case_id": "perspective-L0-s104",
+   "category": "perspective",
+   "level": 0,
+   "seed": 104,
+   "status": "ok",
+   "latency_ms": 12.10449999962293,
+   "detected_corners": [
+    [
+     436.4800109863281,
+     65.27999877929688
+    ],
+    [
+     482.55999755859375,
+     428.79998779296875
+    ],
+    [
+     177.9199981689453,
+     449.2799987792969
+    ],
+    [
+     154.8800048828125,
+     71.68000030517578
+    ]
+   ],
+   "detected": true,
+   "iou": 0.9807418292412216,
+   "corner_err": 0.003156720194965601,
+   "ncc": 0.8286126852035522,
+   "ncc_oracle": 0.9723307490348816,
+   "ncc_ratio": 0.8521922051997416,
+   "accepted": true,
+   "failure_reasons": []
+  },
+  {
+   "case_id": "perspective-L0-s105",
+   "category": "perspective",
+   "level": 0,
+   "seed": 105,
+   "status": "ok",
+   "latency_ms": 12.212999999974272,
+   "detected_corners": [
+    [
+     492.79998779296875,
+     32.0
+    ],
+    [
+     444.1600036621094,
+     431.3599853515625
+    ],
+    [
+     198.39999389648438,
+     421.1199951171875
+    ],
+    [
+     189.44000244140625,
+     72.95999908447266
+    ]
+   ],
+   "detected": true,
+   "iou": 0.9781987922515608,
+   "corner_err": 0.003471546107903123,
+   "ncc": 0.6710649728775024,
+   "ncc_oracle": 0.9711575508117676,
+   "ncc_ratio": 0.6909949598976759,
+   "accepted": true,
+   "failure_reasons": []
+  },
+  {
+   "case_id": "perspective-L1-s100",
+   "category": "perspective",
+   "level": 1,
+   "seed": 100,
+   "status": "ok",
+   "latency_ms": 23.63870000044699,
+   "detected_corners": [
+    [
+     211.1999969482422,
+     62.720001220703125
+    ],
+    [
+     391.67999267578125,
+     96.0
+    ],
+    [
+     350.7200012207031,
+     437.760009765625
+    ],
+    [
+     149.75999450683594,
+     414.7200012207031
+    ]
+   ],
+   "detected": true,
+   "iou": 0.7108048513571836,
+   "corner_err": 0.044334955513477325,
+   "ncc": 0.07113313674926758,
+   "ncc_oracle": 0.9734499454498291,
+   "ncc_ratio": 0.07307323512807544,
+   "accepted": false,
+   "failure_reasons": [
+    "low_iou",
+    "corner_error"
+   ],
+   "artifact_dir": "D:\\cool\\artifacts\\experiments\\verify-20261014-140401-659875.artifacts\\stages\\perspective-L1-s100"
+  },
+  {
+   "case_id": "perspective-L1-s101",
+   "category": "perspective",
+   "level": 1,
+   "seed": 101,
+   "status": "ok",
+   "latency_ms": 14.501199999358505,
+   "detected_corners": [
+    [
+     276.4800109863281,
+     10.239999771118164
+    ],
+    [
+     467.20001220703125,
+     101.12000274658203
+    ],
+    [
+     412.1600036621094,
+     377.6000061035156
+    ],
+    [
+     249.60000610351562,
+     439.0400085449219
+    ]
+   ],
+   "detected": true,
+   "iou": 0.9551393226533799,
+   "corner_err": 0.006106547545641661,
+   "ncc": 0.5078831911087036,
+   "ncc_oracle": 0.961024820804596,
+   "ncc_ratio": 0.5284808260035262,
+   "accepted": true,
+   "failure_reasons": []
+  },
+  {
+   "case_id": "perspective-L1-s102",
+   "category": "perspective",
+   "level": 1,
+   "seed": 102,
+   "status": "ok",
+   "latency_ms": 12.82569999966654,
+   "detected_corners": [
+    [
+     392.9599914550781,
+     12.800000190734863
+    ],
+    [
+     371.20001220703125,
+     469.760009765625
+    ],
+    [
+     101.12000274658203,
+     446.7200012207031
+    ],
+    [
+     225.27999877929688,
+     19.200000762939453
+    ]
+   ],
+   "detected": true,
+   "iou": 0.9761860981107694,
+   "corner_err": 0.003978545777499676,
+   "ncc": 0.6726367473602295,
+   "ncc_oracle": 0.9719208478927612,
+   "ncc_ratio": 0.6920694713140325,
+   "accepted": true,
+   "failure_reasons": []
+  },
+  {
+   "case_id": "perspective-L1-s103",
+   "category": "perspective",
+   "level": 1,
+   "seed": 103,
+   "status": "ok",
+   "latency_ms": 12.129400000048918,
+   "detected_corners": [
+    [
+     526.0800170898438,
+     78.08000183105469
+    ],
+    [
+     423.67999267578125,
+     391.67999267578125
+    ],
+    [
+     106.23999786376953,
+     468.4800109863281
+    ],
+    [
+     224.0,
+     8.960000038146973
+    ]
+   ],
+   "detected": true,
+   "iou": 0.9827828973986996,
+   "corner_err": 0.003054817905649543,
+   "ncc": 0.7489033341407776,
+   "ncc_oracle": 0.9730222821235657,
+   "ncc_ratio": 0.769667198685665,
+   "accepted": true,
+   "failure_reasons": []
+  },
+  {
+   "case_id": "perspective-L1-s104",
+   "category": "perspective",
+   "level": 1,
+   "seed": 104,
+   "status": "ok",
+   "latency_ms": 13.104999999995925,
+   "detected_corners": [
+    [
+     218.8800048828125,
+     53.7599983215332
+    ],
+    [
+     435.20001220703125,
+     75.5199966430664
+    ],
+    [
+     392.9599914550781,
+     424.9599914550781
+    ],
+    [
+     236.8000030517578,
+     412.1600036621094
+    ]
+   ],
+   "detected": true,
+   "iou": 0.9715033485187977,
+   "corner_err": 0.0033742489758878946,
+   "ncc": 0.7446848154067993,
+   "ncc_oracle": 0.9639922380447388,
+   "ncc_ratio": 0.7725008418296399,
+   "accepted": true,
+   "failure_reasons": []
+  },
+  {
+   "case_id": "perspective-L1-s105",
+   "category": "perspective",
+   "level": 1,
+   "seed": 105,
+   "status": "ok",
+   "latency_ms": 13.510099999621161,
+   "detected_corners": [
+    [
+     386.55999755859375,
+     20.479999542236328
+    ],
+    [
+     407.0400085449219,
+     414.7200012207031
+    ],
+    [
+     180.47999572753906,
+     384.0
+    ],
+    [
+     160.0,
+     40.959999084472656
+    ]
+   ],
+   "detected": true,
+   "iou": 0.9748719143203372,
+   "corner_err": 0.003262711688876152,
+   "ncc": 0.839770495891571,
+   "ncc_oracle": 0.9692288041114807,
+   "ncc_ratio": 0.8664316334071522,
+   "accepted": true,
+   "failure_reasons": []
+  },
+  {
+   "case_id": "perspective-L2-s100",
+   "category": "perspective",
+   "level": 2,
+   "seed": 100,
+   "status": "ok",
+   "latency_ms": 15.743100000690902,
+   "detected_corners": [
+    [
+     463.3599853515625,
+     69.12000274658203
+    ],
+    [
+     387.8399963378906,
+     396.79998779296875
+    ],
+    [
+     170.24000549316406,
+     468.4800109863281
+    ],
+    [
+     232.9600067138672,
+     79.36000061035156
+    ]
+   ],
+   "detected": true,
+   "iou": 0.9764810615807118,
+   "corner_err": 0.003196805715560913,
+   "ncc": 0.7762053608894348,
+   "ncc_oracle": 0.9663131237030029,
+   "ncc_ratio": 0.8032648443342493,
+   "accepted": true,
+   "failure_reasons": []
+  },
+  {
+   "case_id": "perspective-L2-s101",
+   "category": "perspective",
+   "level": 2,
+   "seed": 101,
+   "status": "ok",
+   "latency_ms": 26.064300000143703,
+   "detected_corners": [
+    [
+     414.7200012207031,
+     32.0
+    ],
+    [
+     435.20001220703125,
+     471.0400085449219
+    ],
+    [
+     176.63999938964844,
+     471.0400085449219
+    ],
+    [
+     154.8800048828125,
+     99.83999633789062
+    ]
+   ],
+   "detected": true,
+   "iou": 0.9808509576778116,
+   "corner_err": 0.0027231667190790176,
+   "ncc": 0.8885027766227722,
+   "ncc_oracle": 0.9738298654556274,
+   "ncc_ratio": 0.9123798808604693,
+   "accepted": true,
+   "failure_reasons": []
+  },
+  {
+   "case_id": "perspective-L2-s102",
+   "category": "perspective",
+   "level": 2,
+   "seed": 102,
+   "status": "ok",
+   "latency_ms": 17.037300000083633,
+   "detected_corners": [
+    [
+     524.7999877929688,
+     10.239999771118164
+    ],
+    [
+     433.9200134277344,
+     424.9599914550781
+    ],
+    [
+     108.80000305175781,
+     448.0
+    ],
+    [
+     294.3999938964844,
+     53.7599983215332
+    ]
+   ],
+   "detected": true,
+   "iou": 0.9794367702600582,
+   "corner_err": 0.0037583268713206053,
+   "ncc": 0.8092538714408875,
+   "ncc_oracle": 0.971651017665863,
+   "ncc_ratio": 0.8328647392197538,
+   "accepted": true,
+   "failure_reasons": []
+  },
+  {
+   "case_id": "perspective-L2-s103",
+   "category": "perspective",
+   "level": 2,
+   "seed": 103,
+   "status": "ok",
+   "latency_ms": 13.469600000462378,
+   "detected_corners": [
+    [
+     241.9199981689453,
+     29.440000534057617
+    ],
+    [
+     464.6400146484375,
+     138.24000549316406
+    ],
+    [
+     508.1600036621094,
+     458.239990234375
+    ],
+    [
+     217.60000610351562,
+     380.1600036621094
+    ]
+   ],
+   "detected": true,
+   "iou": 0.9799723596565756,
+   "corner_err": 0.002833342645317316,
+   "ncc": 0.7579017281532288,
+   "ncc_oracle": 0.9645268321037292,
+   "ncc_ratio": 0.7857756808073131,
+   "accepted": true,
+   "failure_reasons": []
+  },
+  {
+   "case_id": "perspective-L2-s104",
+   "category": "perspective",
+   "level": 2,
+   "seed": 104,
+   "status": "ok",
+   "latency_ms": 11.684999999488355,
+   "detected_corners": [
+    [
+     413.44000244140625,
+     84.4800033569336
+    ],
+    [
+     551.6799926757812,
+     464.6400146484375
+    ],
+    [
+     115.19999694824219,
+     439.0400085449219
+    ],
+    [
+     119.04000091552734,
+     131.83999633789062
+    ]
+   ],
+   "detected": true,
+   "iou": 0.9831581515016309,
+   "corner_err": 0.0027402255218476057,
+   "ncc": 0.8476477861404419,
+   "ncc_oracle": 0.9682430028915405,
+   "ncc_ratio": 0.8754494311955205,
+   "accepted": true,
+   "failure_reasons": []
+  },
+  {
+   "case_id": "perspective-L2-s105",
+   "category": "perspective",
+   "level": 2,
+   "seed": 105,
+   "status": "ok",
+   "latency_ms": 11.014700001396704,
+   "detected_corners": [
+    [
+     85.76000213623047,
+     8.960000038146973
+    ],
+    [
+     551.6799926757812,
+     33.279998779296875
+    ],
+    [
+     352.0,
+     469.760009765625
+    ],
+    [
+     194.55999755859375,
+     439.0400085449219
+    ]
+   ],
+   "detected": true,
+   "iou": 0.9869677146986854,
+   "corner_err": 0.0027850493788719177,
+   "ncc": 0.4201004207134247,
+   "ncc_oracle": 0.9620617032051086,
+   "ncc_ratio": 0.4366668159784971,
+   "accepted": true,
+   "failure_reasons": []
+  },
+  {
+   "case_id": "illumination-L0-s100",
+   "category": "illumination",
+   "level": 0,
+   "seed": 100,
+   "status": "ok",
+   "latency_ms": 11.469900000520283,
+   "detected_corners": [
+    [
+     448.0,
+     56.31999969482422
+    ],
+    [
+     441.6000061035156,
+     419.8399963378906
+    ],
+    [
+     174.0800018310547,
+     418.55999755859375
+    ],
+    [
+     192.0,
+     60.15999984741211
+    ]
+   ],
+   "detected": true,
+   "iou": 0.9771767261653519,
+   "corner_err": 0.0031884820200502872,
+   "ncc": 0.8175436854362488,
+   "ncc_oracle": 0.9560084342956543,
+   "ncc_ratio": 0.8551636744068891,
+   "accepted": true,
+   "failure_reasons": []
+  },
+  {
+   "case_id": "illumination-L0-s101",
+   "category": "illumination",
+   "level": 0,
+   "seed": 101,
+   "status": "ok",
+   "latency_ms": 11.813200000688084,
+   "detected_corners": [
+    [
+     436.4800109863281,
+     55.040000915527344
+    ],
+    [
+     449.2799987792969,
+     418.55999755859375
+    ],
+    [
+     184.32000732421875,
+     426.239990234375
+    ],
+    [
+     179.1999969482422,
+     60.15999984741211
+    ]
+   ],
+   "detected": true,
+   "iou": 0.978233693315597,
+   "corner_err": 0.0031577623449265957,
+   "ncc": 0.7553033828735352,
+   "ncc_oracle": 0.9550902247428894,
+   "ncc_ratio": 0.790818881092478,
+   "accepted": true,
+   "failure_reasons": []
+  },
+  {
+   "case_id": "illumination-L0-s102",
+   "category": "illumination",
+   "level": 0,
+   "seed": 102,
+   "status": "ok",
+   "latency_ms": 11.437899998782086,
+   "detected_corners": [
+    [
+     199.67999267578125,
+     46.08000183105469
+    ],
+    [
+     462.0799865722656,
+     52.47999954223633
+    ],
+    [
+     454.3999938964844,
+     428.79998779296875
+    ],
+    [
+     181.75999450683594,
+     416.0
+    ]
+   ],
+   "detected": true,
+   "iou": 0.9795655107008592,
+   "corner_err": 0.003042391501367092,
+   "ncc": 0.7734622955322266,
+   "ncc_oracle": 0.9547245502471924,
+   "ncc_ratio": 0.8101418313082718,
+   "accepted": true,
+   "failure_reasons": []
+  },
+  {
+   "case_id": "illumination-L0-s103",
+   "category": "illumination",
+   "level": 0,
+   "seed": 103,
+   "status": "ok",
+   "latency_ms": 12.049300001308438,
+   "detected_corners": [
+    [
+     193.27999877929688,
+     55.040000915527344
+    ],
+    [
+     445.44000244140625,
+     60.15999984741211
+    ],
+    [
+     458.239990234375,
+     421.1199951171875
+    ],
+    [
+     200.9600067138672,
+     430.0799865722656
+    ]
+   ],
+   "detected": true,
+   "iou": 0.975660181573851,
+   "corner_err": 0.0034250402823090553,
+   "ncc": 0.818526029586792,
+   "ncc_oracle": 0.9575480818748474,
+   "ncc_ratio": 0.8548145467370633,
+   "accepted": true,
+   "failure_reasons": []
+  },
+  {
+   "case_id": "illumination-L0-s104",
+   "category": "illumination",
+   "level": 0,
+   "seed": 104,
+   "status": "ok",
+   "latency_ms": 17.215899999428075,
+   "detected_corners": [
+    [
+     446.7200012207031,
+     53.7599983215332
+    ],
+    [
+     464.6400146484375,
+     418.55999755859375
+    ],
+    [
+     185.60000610351562,
+     428.79998779296875
+    ],
+    [
+     184.32000732421875,
+     58.880001068115234
+    ]
+   ],
+   "detected": true,
+   "iou": 0.9820739359010949,
+   "corner_err": 0.0026836437173187733,
+   "ncc": 0.8088232278823853,
+   "ncc_oracle": 0.9550780653953552,
+   "ncc_ratio": 0.8468660910431153,
+   "accepted": true,
+   "failure_reasons": []
+  },
+  {
+   "case_id": "illumination-L0-s105",
+   "category": "illumination",
+   "level": 0,
+   "seed": 105,
+   "status": "ok",
+   "latency_ms": 16.389099999287282,
+   "detected_corners": [
+    [
+     441.6000061035156,
+     43.52000045776367
+    ],
+    [
+     467.20001220703125,
+     423.67999267578125
+    ],
+    [
+     199.67999267578125,
+     431.3599853515625
+    ],
+    [
+     171.52000427246094,
+     56.31999969482422
+    ]
+   ],
+   "detected": true,
+   "iou": 0.9828654410958245,
+   "corner_err": 0.002491116290912032,
+   "ncc": 0.8550064563751221,
+   "ncc_oracle": 0.9558646082878113,
+   "ncc_ratio": 0.8944848977164758,
+   "accepted": true,
+   "failure_reasons": []
+  },
+  {
+   "case_id": "illumination-L1-s100",
+   "category": "illumination",
+   "level": 1,
+   "seed": 100,
+   "status": "ok",
+   "latency_ms": 12.727799999993294,
+   "detected_corners": [
+    [
+     185.60000610351562,
+     49.91999816894531
+    ],
+    [
+     464.6400146484375,
+     60.15999984741211
+    ],
+    [
+     445.44000244140625,
+     435.20001220703125
+    ],
+    [
+     174.0800018310547,
+     417.2799987792969
+    ]
+   ],
+   "detected": true,
+   "iou": 0.9812370612339946,
+   "corner_err": 0.002696305513381958,
+   "ncc": 0.8336790204048157,
+   "ncc_oracle": 0.9265971183776855,
+   "ncc_ratio": 0.8997211451126098,
+   "accepted": true,
+   "failure_reasons": []
+  },
+  {
+   "case_id": "illumination-L1-s101",
+   "category": "illumination",
+   "level": 1,
+   "seed": 101,
+   "status": "ok",
+   "latency_ms": 18.534499999077525,
+   "detected_corners": [
+    [
+     439.0400085449219,
+     58.880001068115234
+    ],
+    [
+     463.3599853515625,
+     427.5199890136719
+    ],
+    [
+     188.16000366210938,
+     424.9599914550781
+    ],
+    [
+     188.16000366210938,
+     60.15999984741211
+    ]
+   ],
+   "detected": true,
+   "iou": 0.9763191714677156,
+   "corner_err": 0.0034494446590542793,
+   "ncc": 0.7417583465576172,
+   "ncc_oracle": 0.9271662831306458,
+   "ncc_ratio": 0.8000273090745007,
+   "accepted": true,
+   "failure_reasons": []
+  },
+  {
+   "case_id": "illumination-L1-s102",
+   "category": "illumination",
+   "level": 1,
+   "seed": 102,
+   "status": "ok",
+   "latency_ms": 13.87790000080713,
+   "detected_corners": [
+    [
+     194.55999755859375,
+     48.63999938964844
+    ],
+    [
+     451.8399963378906,
+     67.83999633789062
+    ],
+    [
+     435.20001220703125,
+     428.79998779296875
+    ],
+    [
+     180.47999572753906,
+     408.32000732421875
+    ]
+   ],
+   "detected": true,
+   "iou": 0.9808964727242951,
+   "corner_err": 0.002858527936041355,
+   "ncc": 0.7664013504981995,
+   "ncc_oracle": 0.9309375286102295,
+   "ncc_ratio": 0.8232575516021344,
+   "accepted": true,
+   "failure_reasons": []
+  },
+  {
+   "case_id": "illumination-L1-s103",
+   "category": "illumination",
+   "level": 1,
+   "seed": 103,
+   "status": "ok",
+   "latency_ms": 17.622500001380104,
+   "detected_corners": [
+    [
+     421.59027099609375,
+     409.624755859375
+    ],
+    [
+     192.70010375976562,
+     397.57794189453125
+    ],
+    [
+     210.0260772705078,
+     68.38452911376953
+    ],
+    [
+     438.91619873046875,
+     80.43136596679688
+    ]
+   ],
+   "detected": true,
+   "iou": 0.7505070408977066,
+   "corner_err": 0.03775588050484657,
+   "ncc": 0.041232187300920486,
+   "ncc_oracle": 0.9278450012207031,
+   "ncc_ratio": 0.04443865866246418,
+   "accepted": false,
+   "failure_reasons": [
+    "low_iou",
+    "corner_error"
+   ],
+   "artifact_dir": "D:\\cool\\artifacts\\experiments\\verify-20261014-140401-659875.artifacts\\stages\\illumination-L1-s103"
+  },
+  {
+   "case_id": "illumination-L1-s104",
+   "category": "illumination",
+   "level": 1,
+   "seed": 104,
+   "status": "ok",
+   "latency_ms": 12.378900000840076,
+   "detected_corners": [
+    [
+     439.0400085449219,
+     44.79999923706055
+    ],
+    [
+     474.8800048828125,
+     421.1199951171875
+    ],
+    [
+     198.39999389648438,
+     433.9200134277344
+    ],
+    [
+     185.60000610351562,
+     69.12000274658203
+    ]
+   ],
+   "detected": true,
+   "iou": 0.9800420962467437,
+   "corner_err": 0.0028680372051894665,
+   "ncc": 0.7937564253807068,
+   "ncc_oracle": 0.9278396964073181,
+   "ncc_ratio": 0.8554887535575442,
+   "accepted": true,
+   "failure_reasons": []
+  },
+  {
+   "case_id": "illumination-L1-s105",
+   "category": "illumination",
+   "level": 1,
+   "seed": 105,
+   "status": "ok",
+   "latency_ms": 14.313300000139861,
+   "detected_corners": [
+    [
+     193.27999877929688,
+     48.63999938964844
+    ],
+    [
+     460.79998779296875,
+     53.7599983215332
+    ],
+    [
+     441.6000061035156,
+     442.8800048828125
+    ],
+    [
+     165.1199951171875,
+     410.8800048828125
+    ]
+   ],
+   "detected": true,
+   "iou": 0.9817981878355565,
+   "corner_err": 0.0025902327615767717,
+   "ncc": 0.8285046815872192,
+   "ncc_oracle": 0.9288232326507568,
+   "ncc_ratio": 0.8919939257147566,
+   "accepted": true,
+   "failure_reasons": []
+  },
+  {
+   "case_id": "illumination-L2-s100",
+   "category": "illumination",
+   "level": 2,
+   "seed": 100,
+   "status": "ok",
+   "latency_ms": 17.535000000862055,
+   "detected_corners": [
+    [
+     195.83999633789062,
+     42.2400016784668
+    ],
+    [
+     455.67999267578125,
+     58.880001068115234
+    ],
+    [
+     456.9599914550781,
+     428.79998779296875
+    ],
+    [
+     175.36000061035156,
+     422.3999938964844
+    ]
+   ],
+   "detected": true,
+   "iou": 0.9806730076979702,
+   "corner_err": 0.0027214670553803444,
+   "ncc": 0.796989381313324,
+   "ncc_oracle": 0.8902935981750488,
+   "ncc_ratio": 0.8951983738252385,
+   "accepted": true,
+   "failure_reasons": []
+  },
+  {
+   "case_id": "illumination-L2-s101",
+   "category": "illumination",
+   "level": 2,
+   "seed": 101,
+   "status": "ok",
+   "latency_ms": 16.20110000112618,
+   "detected_corners": [
+    [
+     194.55999755859375,
+     58.880001068115234
+    ],
+    [
+     445.44000244140625,
+     64.0
+    ],
+    [
+     445.44000244140625,
+     437.760009765625
+    ],
+    [
+     189.44000244140625,
+     413.44000244140625
+    ]
+   ],
+   "detected": true,
+   "iou": 0.9815508262184972,
+   "corner_err": 0.0027082860469818115,
+   "ncc": 0.7567359209060669,
+   "ncc_oracle": 0.900685727596283,
+   "ncc_ratio": 0.8401775421995594,
+   "accepted": true,
+   "failure_reasons": []
+  },
+  {
+   "case_id": "illumination-L2-s102",
+   "category": "illumination",
+   "level": 2,
+   "seed": 102,
+   "status": "ok",
+   "latency_ms": 18.998600000486476,
+   "detected_corners": [
+    [
+     200.9600067138672,
+     49.91999816894531
+    ],
+    [
+     469.760009765625,
+     67.83999633789062
+    ],
+    [
+     437.760009765625,
+     428.79998779296875
+    ],
+    [
+     174.0800018310547,
+     418.55999755859375
+    ]
+   ],
+   "detected": true,
+   "iou": 0.9844699768663165,
+   "corner_err": 0.002365704160183668,
+   "ncc": 0.7348639369010925,
+   "ncc_oracle": 0.8879955410957336,
+   "ncc_ratio": 0.8275536338778393,
+   "accepted": true,
+   "failure_reasons": []
+  },
+  {
+   "case_id": "illumination-L2-s103",
+   "category": "illumination",
+   "level": 2,
+   "seed": 103,
+   "status": "ok",
+   "latency_ms": 13.060999999652267,
+   "detected_corners": [
+    [
+     216.32000732421875,
+     71.68000030517578
+    ],
+    [
+     432.6400146484375,
+     79.36000061035156
+    ],
+    [
+     408.32000732421875,
+     391.67999267578125
+    ],
+    [
+     188.16000366210938,
+     384.0
+    ]
+   ],
+   "detected": true,
+   "iou": 0.6882464529297297,
+   "corner_err": 0.047822847962379456,
+   "ncc": 0.018197672441601753,
+   "ncc_oracle": 0.8913442492485046,
+   "ncc_ratio": 0.0204159868164789,
+   "accepted": false,
+   "failure_reasons": [
+    "low_iou",
+    "corner_error"
+   ],
+   "artifact_dir": "D:\\cool\\artifacts\\experiments\\verify-20261014-140401-659875.artifacts\\stages\\illumination-L2-s103"
+  },
+  {
+   "case_id": "illumination-L2-s104",
+   "category": "illumination",
+   "level": 2,
+   "seed": 104,
+   "status": "ok",
+   "latency_ms": 12.429899999915506,
+   "detected_corners": [
+    [
+     199.67999267578125,
+     51.20000076293945
+    ],
+    [
+     458.239990234375,
+     66.55999755859375
+    ],
+    [
+     451.8399963378906,
+     439.0400085449219
+    ],
+    [
+     181.75999450683594,
+     412.1600036621094
+    ]
+   ],
+   "detected": true,
+   "iou": 0.9811708942333267,
+   "corner_err": 0.0025872928090393543,
+   "ncc": 0.8064361214637756,
+   "ncc_oracle": 0.8968676328659058,
+   "ncc_ratio": 0.8991696120048844,
+   "accepted": true,
+   "failure_reasons": []
+  },
+  {
+   "case_id": "illumination-L2-s105",
+   "category": "illumination",
+   "level": 2,
+   "seed": 105,
+   "status": "ok",
+   "latency_ms": 15.351399999417481,
+   "detected_corners": [
+    [
+     192.0,
+     40.959999084472656
+    ],
+    [
+     473.6000061035156,
+     66.55999755859375
+    ],
+    [
+     445.44000244140625,
+     435.20001220703125
+    ],
+    [
+     186.8800048828125,
+     409.6000061035156
+    ]
+   ],
+   "detected": true,
+   "iou": 0.9796797777468884,
+   "corner_err": 0.0030594065319746733,
+   "ncc": 0.7362568974494934,
+   "ncc_oracle": 0.8879740834236145,
+   "ncc_ratio": 0.8291423265539797,
+   "accepted": true,
+   "failure_reasons": []
+  },
+  {
+   "case_id": "shadow-L0-s100",
+   "category": "shadow",
+   "level": 0,
+   "seed": 100,
+   "status": "ok",
+   "latency_ms": 12.494699998569558,
+   "detected_corners": [
+    [
+     212.47999572753906,
+     81.91999816894531
+    ],
+    [
+     414.7200012207031,
+     84.4800033569336
+    ],
+    [
+     417.2799987792969,
+     391.67999267578125
+    ],
+    [
+     204.8000030517578,
+     396.79998779296875
+    ]
+   ],
+   "detected": true,
+   "iou": 0.6907745575460109,
+   "corner_err": 0.045758895576000214,
+   "ncc": 0.014151272363960743,
+   "ncc_oracle": 0.8893990516662598,
+   "ncc_ratio": 0.015911049531083715,
+   "accepted": false,
+   "failure_reasons": [
+    "low_iou",
+    "corner_error"
+   ],
+   "artifact_dir": "D:\\cool\\artifacts\\experiments\\verify-20261014-140401-659875.artifacts\\stages\\shadow-L0-s100"
+  },
+  {
+   "case_id": "shadow-L0-s101",
+   "category": "shadow",
+   "level": 0,
+   "seed": 101,
+   "status": "ok",
+   "latency_ms": 10.583199999018689,
+   "detected_corners": [
+    [
+     454.3999938964844,
+     46.08000183105469
+    ],
+    [
+     462.0799865722656,
+     422.3999938964844
+    ],
+    [
+     197.1199951171875,
+     431.3599853515625
+    ],
+    [
+     183.0399932861328,
+     60.15999984741211
+    ]
+   ],
+   "detected": true,
+   "iou": 0.9808587359592527,
+   "corner_err": 0.0027756872586905956,
+   "ncc": 0.716282069683075,
+   "ncc_oracle": 0.8746275901794434,
+   "ncc_ratio": 0.8189566367739652,
+   "accepted": true,
+   "failure_reasons": []
+  },
+  {
+   "case_id": "shadow-L0-s102",
+   "category": "shadow",
+   "level": 0,
+   "seed": 102,
+   "status": "ok",
+   "latency_ms": 11.980499999481253,
+   "detected_corners": [
+    [
+     197.1199951171875,
+     38.400001525878906
+    ],
+    [
+     471.0400085449219,
+     52.47999954223633
+    ],
+    [
+     445.44000244140625,
+     435.20001220703125
+    ],
+    [
+     181.75999450683594,
+     418.55999755859375
+    ]
+   ],
+   "detected": true,
+   "iou": 0.9810733971643164,
+   "corner_err": 0.0028987310361117125,
+   "ncc": 0.7205355763435364,
+   "ncc_oracle": 0.8739984035491943,
+   "ncc_ratio": 0.8244129204556149,
+   "accepted": true,
+   "failure_reasons": []
+  },
+  {
+   "case_id": "shadow-L0-s103",
+   "category": "shadow",
+   "level": 0,
+   "seed": 103,
+   "status": "ok",
+   "latency_ms": 16.61890000104904,
+   "detected_corners": [
+    [
+     446.7200012207031,
+     52.47999954223633
+    ],
+    [
+     441.6000061035156,
+     424.9599914550781
+    ],
+    [
+     190.72000122070312,
+     419.8399963378906
+    ],
+    [
+     183.0399932861328,
+     52.47999954223633
+    ]
+   ],
+   "detected": true,
+   "iou": 0.9788185291856902,
+   "corner_err": 0.003003093646839261,
+   "ncc": 0.7474279999732971,
+   "ncc_oracle": 0.8812800049781799,
+   "ncc_ratio": 0.8481163713589566,
+   "accepted": true,
+   "failure_reasons": []
+  },
+  {
+   "case_id": "shadow-L0-s104",
+   "category": "shadow",
+   "level": 0,
+   "seed": 104,
+   "status": "ok",
+   "latency_ms": 15.608800000336487,
+   "detected_corners": [
+    [
+     206.0800018310547,
+     42.2400016784668
+    ],
+    [
+     467.20001220703125,
+     55.040000915527344
+    ],
+    [
+     448.0,
+     435.20001220703125
+    ],
+    [
+     172.8000030517578,
+     424.9599914550781
+    ]
+   ],
+   "detected": true,
+   "iou": 0.9810069472354496,
+   "corner_err": 0.0028658437076956034,
+   "ncc": 0.7692690491676331,
+   "ncc_oracle": 0.8945201635360718,
+   "ncc_ratio": 0.859979551636582,
+   "accepted": true,
+   "failure_reasons": []
+  },
+  {
+   "case_id": "shadow-L0-s105",
+   "category": "shadow",
+   "level": 0,
+   "seed": 105,
+   "status": "ok",
+   "latency_ms": 21.06209999874409,
+   "detected_corners": [
+    [
+     451.8399963378906,
+     51.20000076293945
+    ],
+    [
+     450.55999755859375,
+     413.44000244140625
+    ],
+    [
+     198.39999389648438,
+     421.1199951171875
+    ],
+    [
+     189.44000244140625,
+     55.040000915527344
+    ]
+   ],
+   "detected": true,
+   "iou": 0.9780663471195062,
+   "corner_err": 0.0031187019776552916,
+   "ncc": 0.7591363787651062,
+   "ncc_oracle": 0.8874508142471313,
+   "ncc_ratio": 0.8554123412564778,
+   "accepted": true,
+   "failure_reasons": []
+  },
+  {
+   "case_id": "shadow-L1-s100",
+   "category": "shadow",
+   "level": 1,
+   "seed": 100,
+   "status": "ok",
+   "latency_ms": 17.687399998976616,
+   "detected_corners": [
+    [
+     440.32000732421875,
+     53.7599983215332
+    ],
+    [
+     473.6000061035156,
+     414.7200012207031
+    ],
+    [
+     199.67999267578125,
+     432.6400146484375
+    ],
+    [
+     177.9199981689453,
+     55.040000915527344
+    ]
+   ],
+   "detected": true,
+   "iou": 0.9835886353341776,
+   "corner_err": 0.002417475450783968,
+   "ncc": 0.7081051468849182,
+   "ncc_oracle": 0.7997763156890869,
+   "ncc_ratio": 0.8853789903428375,
+   "accepted": true,
+   "failure_reasons": []
+  },
+  {
+   "case_id": "shadow-L1-s101",
+   "category": "shadow",
+   "level": 1,
+   "seed": 101,
+   "status": "ok",
+   "latency_ms": 18.047800000204006,
+   "detected_corners": [
+    [
+     445.44000244140625,
+     60.15999984741211
+    ],
+    [
+     459.5199890136719,
+     433.9200134277344
+    ],
+    [
+     176.63999938964844,
+     428.79998779296875
+    ],
+    [
+     179.1999969482422,
+     51.20000076293945
+    ]
+   ],
+   "detected": true,
+   "iou": 0.9769133075914752,
+   "corner_err": 0.003538701217621565,
+   "ncc": 0.6220582127571106,
+   "ncc_oracle": 0.7237501740455627,
+   "ncc_ratio": 0.8594930061017847,
+   "accepted": true,
+   "failure_reasons": []
+  },
+  {
+   "case_id": "shadow-L1-s102",
+   "category": "shadow",
+   "level": 1,
+   "seed": 102,
+   "status": "ok",
+   "latency_ms": 15.542199998890283,
+   "detected_corners": [
+    [
+     207.36000061035156,
+     43.52000045776367
+    ],
+    [
+     456.9599914550781,
+     55.040000915527344
+    ],
+    [
+     436.4800109863281,
+     432.6400146484375
+    ],
+    [
+     177.9199981689453,
+     409.6000061035156
+    ]
+   ],
+   "detected": true,
+   "iou": 0.9820403567191477,
+   "corner_err": 0.0026676931884139776,
+   "ncc": 0.661510169506073,
+   "ncc_oracle": 0.7944487929344177,
+   "ncc_ratio": 0.8326655857360981,
+   "accepted": true,
+   "failure_reasons": []
+  },
+  {
+   "case_id": "shadow-L1-s103",
+   "category": "shadow",
+   "level": 1,
+   "seed": 103,
+   "status": "ok",
+   "latency_ms": 12.555100000099628,
+   "detected_corners": [
+    [
+     190.72000122070312,
+     44.79999923706055
+    ],
+    [
+     462.0799865722656,
+     56.31999969482422
+    ],
+    [
+     451.8399963378906,
+     430.0799865722656
+    ],
+    [
+     174.0800018310547,
+     430.0799865722656
+    ]
+   ],
+   "detected": true,
+   "iou": 0.984629125206564,
+   "corner_err": 0.0022552642039954662,
+   "ncc": 0.645277738571167,
+   "ncc_oracle": 0.7170294523239136,
+   "ncc_ratio": 0.8999319853317083,
+   "accepted": true,
+   "failure_reasons": []
+  },
+  {
+   "case_id": "shadow-L1-s104",
+   "category": "shadow",
+   "level": 1,
+   "seed": 104,
+   "status": "ok",
+   "latency_ms": 10.832999998456216,
+   "detected_corners": [
+    [
+     426.239990234375,
+     81.91999816894531
+    ],
+    [
+     419.8399963378906,
+     387.8399963378906
+    ],
+    [
+     227.83999633789062,
+     403.20001220703125
+    ],
+    [
+     204.8000030517578,
+     83.19999694824219
+    ]
+   ],
+   "detected": true,
+   "iou": 0.6870243087235166,
+   "corner_err": 0.04663252830505371,
+   "ncc": 0.02561246044933796,
+   "ncc_oracle": 0.7855085730552673,
+   "ncc_ratio": 0.0326062137676197,
+   "accepted": false,
+   "failure_reasons": [
+    "low_iou",
+    "corner_error"
+   ],
+   "artifact_dir": "D:\\cool\\artifacts\\experiments\\verify-20261014-140401-659875.artifacts\\stages\\shadow-L1-s104"
+  },
+  {
+   "case_id": "shadow-L1-s105",
+   "category": "shadow",
+   "level": 1,
+   "seed": 105,
+   "status": "ok",
+   "latency_ms": 11.745199999495526,
+   "detected_corners": [
+    [
+     441.6000061035156,
+     40.959999084472656
+    ],
+    [
+     455.67999267578125,
+     413.44000244140625
+    ],
+    [
+     190.72000122070312,
+     432.6400146484375
+    ],
+    [
+     189.44000244140625,
+     64.0
+    ]
+   ],
+   "detected": true,
+   "iou": 0.981559462227918,
+   "corner_err": 0.0025115632452070713,
+   "ncc": 0.6889486908912659,
+   "ncc_oracle": 0.7598443031311035,
+   "ncc_ratio": 0.9066971852684861,
+   "accepted": true,
+   "failure_reasons": []
+  },
+  {
+   "case_id": "shadow-L2-s100",
+   "category": "shadow",
+   "level": 2,
+   "seed": 100,
+   "status": "ok",
+   "latency_ms": 13.6263999993389,
+   "detected_corners": [
+    [
+     0.0,
+     394.239990234375
+    ],
+    [
+     199.67999267578125,
+     52.47999954223633
+    ],
+    [
+     468.4800109863281,
+     66.55999755859375
+    ],
+    [
+     450.55999755859375,
+     427.5199890136719
+    ]
+   ],
+   "detected": true,
+   "iou": 0.7205183303487129,
+   "corner_err": 0.061801064759492874,
+   "ncc": -0.013043398968875408,
+   "ncc_oracle": 0.5760083794593811,
+   "ncc_ratio": -0.022644460452324378,
+   "accepted": false,
+   "failure_reasons": [
+    "low_iou",
+    "corner_error"
+   ],
+   "artifact_dir": "D:\\cool\\artifacts\\experiments\\verify-20261014-140401-659875.artifacts\\stages\\shadow-L2-s100"
+  },
+  {
+   "case_id": "shadow-L2-s101",
+   "category": "shadow",
+   "level": 2,
+   "seed": 101,
+   "status": "ok",
+   "latency_ms": 12.739999998302665,
+   "detected_corners": [
+    [
+     435.20001220703125,
+     40.959999084472656
+    ],
+    [
+     468.4800109863281,
+     410.8800048828125
+    ],
+    [
+     209.9199981689453,
+     440.32000732421875
+    ],
+    [
+     185.60000610351562,
+     69.12000274658203
+    ]
+   ],
+   "detected": true,
+   "iou": 0.9824243736982613,
+   "corner_err": 0.002456430345773697,
+   "ncc": 0.5485031604766846,
+   "ncc_oracle": 0.6119964122772217,
+   "ncc_ratio": 0.8962522483354429,
+   "accepted": true,
+   "failure_reasons": []
+  },
+  {
+   "case_id": "shadow-L2-s102",
+   "category": "shadow",
+   "level": 2,
+   "seed": 102,
+   "status": "ok",
+   "latency_ms": 12.749600000461214,
+   "detected_corners": [
+    [
+     467.20001220703125,
+     53.7599983215332
+    ],
+    [
+     433.9200134277344,
+     426.239990234375
+    ],
+    [
+     193.27999877929688,
+     428.79998779296875
+    ],
+    [
+     189.44000244140625,
+     57.599998474121094
+    ]
+   ],
+   "detected": true,
+   "iou": 0.9767124237413811,
+   "corner_err": 0.0035718996077775955,
+   "ncc": 0.5099936127662659,
+   "ncc_oracle": 0.6062119007110596,
+   "ncc_ratio": 0.8412794472824866,
+   "accepted": true,
+   "failure_reasons": []
+  },
+  {
+   "case_id": "shadow-L2-s103",
+   "category": "shadow",
+   "level": 2,
+   "seed": 103,
+   "status": "ok",
+   "latency_ms": 11.664900001051137,
+   "detected_corners": [
+    [
+     440.32000732421875,
+     47.36000061035156
+    ],
+    [
+     568.3200073242188,
+     478.7200012207031
+    ],
+    [
+     181.75999450683594,
+     422.3999938964844
+    ],
+    [
+     186.8800048828125,
+     57.599998474121094
+    ]
+   ],
+   "detected": true,
+   "iou": 0.771461267719119,
+   "corner_err": 0.04210028052330017,
+   "ncc": -0.0014074392383918166,
+   "ncc_oracle": 0.5911963582038879,
+   "ncc_ratio": -0.0023806629030458746,
+   "accepted": false,
+   "failure_reasons": [
+    "low_iou",
+    "corner_error"
+   ],
+   "artifact_dir": "D:\\cool\\artifacts\\experiments\\verify-20261014-140401-659875.artifacts\\stages\\shadow-L2-s103"
+  },
+  {
+   "case_id": "shadow-L2-s104",
+   "category": "shadow",
+   "level": 2,
+   "seed": 104,
+   "status": "ok",
+   "latency_ms": 10.982599998897058,
+   "detected_corners": [
+    [
+     184.537109375,
+     428.1771240234375
+    ],
+    [
+     177.8791046142578,
+     15.381328582763672
+    ],
+    [
+     448.0126953125,
+     11.024335861206055
+    ],
+    [
+     454.67071533203125,
+     423.820068359375
+    ]
+   ],
+   "detected": true,
+   "iou": 0.8987140219544935,
+   "corner_err": 0.025749744847416878,
+   "ncc": 0.13539205491542816,
+   "ncc_oracle": 0.5871953964233398,
+   "ncc_ratio": 0.23057410827828928,
+   "accepted": false,
+   "failure_reasons": [
+    "low_iou",
+    "corner_error"
+   ],
+   "artifact_dir": "D:\\cool\\artifacts\\experiments\\verify-20261014-140401-659875.artifacts\\stages\\shadow-L2-s104"
+  },
+  {
+   "case_id": "shadow-L2-s105",
+   "category": "shadow",
+   "level": 2,
+   "seed": 105,
+   "status": "ok",
+   "latency_ms": 11.501699998916592,
+   "detected_corners": [
+    [
+     464.6400146484375,
+     47.36000061035156
+    ],
+    [
+     450.55999755859375,
+     435.20001220703125
+    ],
+    [
+     179.1999969482422,
+     426.239990234375
+    ],
+    [
+     174.0800018310547,
+     60.15999984741211
+    ]
+   ],
+   "detected": true,
+   "iou": 0.9815481865968991,
+   "corner_err": 0.0026982121635228395,
+   "ncc": 0.4669889211654663,
+   "ncc_oracle": 0.586159884929657,
+   "ncc_ratio": 0.7966920513871536,
+   "accepted": true,
+   "failure_reasons": []
+  },
+  {
+   "case_id": "blur-L0-s100",
+   "category": "blur",
+   "level": 0,
+   "seed": 100,
+   "status": "ok",
+   "latency_ms": 9.190300001137075,
+   "detected_corners": [
+    [
+     190.72000122070312,
+     51.20000076293945
+    ],
+    [
+     441.6000061035156,
+     55.040000915527344
+    ],
+    [
+     453.1199951171875,
+     432.6400146484375
+    ],
+    [
+     197.1199951171875,
+     427.5199890136719
+    ]
+   ],
+   "detected": true,
+   "iou": 0.9797979114442337,
+   "corner_err": 0.0029437800403684378,
+   "ncc": 0.8611724972724915,
+   "ncc_oracle": 0.9084509015083313,
+   "ncc_ratio": 0.9479571167166636,
+   "accepted": true,
+   "failure_reasons": []
+  },
+  {
+   "case_id": "blur-L0-s101",
+   "category": "blur",
+   "level": 0,
+   "seed": 101,
+   "status": "ok",
+   "latency_ms": 10.35779999983788,
+   "detected_corners": [
+    [
+     450.55999755859375,
+     56.31999969482422
+    ],
+    [
+     441.6000061035156,
+     428.79998779296875
+    ],
+    [
+     181.75999450683594,
+     430.0799865722656
+    ],
+    [
+     184.32000732421875,
+     53.7599983215332
+    ]
+   ],
+   "detected": true,
+   "iou": 0.9801039151320925,
+   "corner_err": 0.0030080731958150864,
+   "ncc": 0.8400338292121887,
+   "ncc_oracle": 0.903532862663269,
+   "ncc_ratio": 0.9297213902503674,
+   "accepted": true,
+   "failure_reasons": []
+  },
+  {
+   "case_id": "blur-L0-s102",
+   "category": "blur",
+   "level": 0,
+   "seed": 102,
+   "status": "ok",
+   "latency_ms": 11.242399999900954,
+   "detected_corners": [
+    [
+     440.32000732421875,
+     38.400001525878906
+    ],
+    [
+     464.6400146484375,
+     422.3999938964844
+    ],
+    [
+     189.44000244140625,
+     436.4800109863281
+    ],
+    [
+     189.44000244140625,
+     69.12000274658203
+    ]
+   ],
+   "detected": true,
+   "iou": 0.9837065351660369,
+   "corner_err": 0.002298685722053051,
+   "ncc": 0.8691457509994507,
+   "ncc_oracle": 0.9048492908477783,
+   "ncc_ratio": 0.9605420038348309,
+   "accepted": true,
+   "failure_reasons": []
+  },
+  {
+   "case_id": "blur-L0-s103",
+   "category": "blur",
+   "level": 0,
+   "seed": 103,
+   "status": "ok",
+   "latency_ms": 10.44259999980568,
+   "detected_corners": [
+    [
+     455.67999267578125,
+     48.63999938964844
+    ],
+    [
+     454.3999938964844,
+     410.8800048828125
+    ],
+    [
+     186.8800048828125,
+     440.32000732421875
+    ],
+    [
+     172.8000030517578,
+     70.4000015258789
+    ]
+   ],
+   "detected": true,
+   "iou": 0.9803489438107789,
+   "corner_err": 0.0029739022720605135,
+   "ncc": 0.8306083679199219,
+   "ncc_oracle": 0.9024500846862793,
+   "ncc_ratio": 0.9203925868195448,
+   "accepted": true,
+   "failure_reasons": []
+  },
+  {
+   "case_id": "blur-L0-s104",
+   "category": "blur",
+   "level": 0,
+   "seed": 104,
+   "status": "ok",
+   "latency_ms": 11.513100000229315,
+   "detected_corners": [
+    [
+     197.1199951171875,
+     51.20000076293945
+    ],
+    [
+     459.5199890136719,
+     56.31999969482422
+    ],
+    [
+     451.8399963378906,
+     433.9200134277344
+    ],
+    [
+     188.16000366210938,
+     423.67999267578125
+    ]
+   ],
+   "detected": true,
+   "iou": 0.9818472969184139,
+   "corner_err": 0.002722388133406639,
+   "ncc": 0.8732721209526062,
+   "ncc_oracle": 0.9050126075744629,
+   "ncc_ratio": 0.9649281276788786,
+   "accepted": true,
+   "failure_reasons": []
+  },
+  {
+   "case_id": "blur-L0-s105",
+   "category": "blur",
+   "level": 0,
+   "seed": 105,
+   "status": "ok",
+   "latency_ms": 10.914000000411761,
+   "detected_corners": [
+    [
+     436.4800109863281,
+     51.20000076293945
+    ],
+    [
+     451.8399963378906,
+     417.2799987792969
+    ],
+    [
+     189.44000244140625,
+     427.5199890136719
+    ],
+    [
+     166.39999389648438,
+     70.4000015258789
+    ]
+   ],
+   "detected": true,
+   "iou": 0.9799020245652316,
+   "corner_err": 0.00285272765904665,
+   "ncc": 0.8253276944160461,
+   "ncc_oracle": 0.9051743745803833,
+   "ncc_ratio": 0.9117886206164949,
+   "accepted": true,
+   "failure_reasons": []
+  },
+  {
+   "case_id": "blur-L1-s100",
+   "category": "blur",
+   "level": 1,
+   "seed": 100,
+   "status": "ok",
+   "latency_ms": 9.603200000128709,
+   "detected_corners": [
+    [
+     448.0,
+     51.20000076293945
+    ],
+    [
+     465.9200134277344,
+     421.1199951171875
+    ],
+    [
+     200.9600067138672,
+     435.20001220703125
+    ],
+    [
+     190.72000122070312,
+     52.47999954223633
+    ]
+   ],
+   "detected": true,
+   "iou": 0.9748551730567804,
+   "corner_err": 0.003961822483688593,
+   "ncc": 0.7228691577911377,
+   "ncc_oracle": 0.7752025723457336,
+   "ncc_ratio": 0.9324906593172969,
+   "accepted": true,
+   "failure_reasons": []
+  },
+  {
+   "case_id": "blur-L1-s101",
+   "category": "blur",
+   "level": 1,
+   "seed": 101,
+   "status": "ok",
+   "latency_ms": 9.022899999763467,
+   "detected_corners": [
+    [
+     455.67999267578125,
+     57.599998474121094
+    ],
+    [
+     460.79998779296875,
+     426.239990234375
+    ],
+    [
+     179.1999969482422,
+     427.5199890136719
+    ],
+    [
+     193.27999877929688,
+     62.720001220703125
+    ]
+   ],
+   "detected": true,
+   "iou": 0.9731452420515783,
+   "corner_err": 0.004025403410196304,
+   "ncc": 0.70524662733078,
+   "ncc_oracle": 0.7576218843460083,
+   "ncc_ratio": 0.9308688699502926,
+   "accepted": true,
+   "failure_reasons": []
+  },
+  {
+   "case_id": "blur-L1-s102",
+   "category": "blur",
+   "level": 1,
+   "seed": 102,
+   "status": "ok",
+   "latency_ms": 14.678100000310224,
+   "detected_corners": [
+    [
+     440.32000732421875,
+     84.4800033569336
+    ],
+    [
+     444.1600036621094,
+     391.67999267578125
+    ],
+    [
+     209.9199981689453,
+     401.9200134277344
+    ],
+    [
+     209.9199981689453,
+     87.04000091552734
+    ]
+   ],
+   "detected": true,
+   "iou": 0.7004928952503461,
+   "corner_err": 0.04946206510066986,
+   "ncc": 0.16833588480949402,
+   "ncc_oracle": 0.7836335301399231,
+   "ncc_ratio": 0.21481455085189693,
+   "accepted": false,
+   "failure_reasons": [
+    "low_iou",
+    "corner_error"
+   ],
+   "artifact_dir": "D:\\cool\\artifacts\\experiments\\verify-20261014-140401-659875.artifacts\\stages\\blur-L1-s102"
+  },
+  {
+   "case_id": "blur-L1-s103",
+   "category": "blur",
+   "level": 1,
+   "seed": 103,
+   "status": "ok",
+   "latency_ms": 12.213899999551359,
+   "detected_corners": [
+    [
+     192.0,
+     40.959999084472656
+    ],
+    [
+     449.2799987792969,
+     58.880001068115234
+    ],
+    [
+     441.6000061035156,
+     422.3999938964844
+    ],
+    [
+     167.67999267578125,
+     422.3999938964844
+    ]
+   ],
+   "detected": true,
+   "iou": 0.9726485853711565,
+   "corner_err": 0.003973994869738817,
+   "ncc": 0.7285507321357727,
+   "ncc_oracle": 0.7800753712654114,
+   "ncc_ratio": 0.9339491528285823,
+   "accepted": true,
+   "failure_reasons": []
+  },
+  {
+   "case_id": "blur-L1-s104",
+   "category": "blur",
+   "level": 1,
+   "seed": 104,
+   "status": "ok",
+   "latency_ms": 12.395600000672857,
+   "detected_corners": [
+    [
+     437.760009765625,
+     51.20000076293945
+    ],
+    [
+     465.9200134277344,
+     413.44000244140625
+    ],
+    [
+     180.47999572753906,
+     423.67999267578125
+    ],
+    [
+     174.0800018310547,
+     61.439998626708984
+    ]
+   ],
+   "detected": true,
+   "iou": 0.973381485226395,
+   "corner_err": 0.0038849851116538048,
+   "ncc": 0.7071918845176697,
+   "ncc_oracle": 0.7619165778160095,
+   "ncc_ratio": 0.9281749539362891,
+   "accepted": true,
+   "failure_reasons": []
+  },
+  {
+   "case_id": "blur-L1-s105",
+   "category": "blur",
+   "level": 1,
+   "seed": 105,
+   "status": "ok",
+   "latency_ms": 14.193099999829428,
+   "detected_corners": [
+    [
+     455.67999267578125,
+     65.27999877929688
+    ],
+    [
+     440.32000732421875,
+     431.3599853515625
+    ],
+    [
+     179.1999969482422,
+     410.8800048828125
+    ],
+    [
+     208.63999938964844,
+     38.400001525878906
+    ]
+   ],
+   "detected": true,
+   "iou": 0.9683655457311716,
+   "corner_err": 0.004642401821911335,
+   "ncc": 0.726753294467926,
+   "ncc_oracle": 0.7754039764404297,
+   "ncc_ratio": 0.9372576315692376,
+   "accepted": true,
+   "failure_reasons": []
+  },
+  {
+   "case_id": "blur-L2-s100",
+   "category": "blur",
+   "level": 2,
+   "seed": 100,
+   "status": "ok",
+   "latency_ms": 10.654899999281042,
+   "detected_corners": [
+    [
+     429.78485107421875,
+     417.51171875
+    ],
+    [
+     181.70045471191406,
+     402.3846130371094
+    ],
+    [
+     202.1351318359375,
+     67.25605773925781
+    ],
+    [
+     450.21954345703125,
+     82.38316345214844
+    ]
+   ],
+   "detected": true,
+   "iou": 0.782010917530461,
+   "corner_err": 0.03382351994514465,
+   "ncc": 0.3078990578651428,
+   "ncc_oracle": 0.5486254096031189,
+   "ncc_ratio": 0.5612190986339478,
+   "accepted": false,
+   "failure_reasons": [
+    "low_iou",
+    "corner_error"
+   ],
+   "artifact_dir": "D:\\cool\\artifacts\\experiments\\verify-20261014-140401-659875.artifacts\\stages\\blur-L2-s100"
+  },
+  {
+   "case_id": "blur-L2-s101",
+   "category": "blur",
+   "level": 2,
+   "seed": 101,
+   "status": "ok",
+   "latency_ms": 10.184600001593935,
+   "detected_corners": [
+    [
+     463.3599853515625,
+     51.20000076293945
+    ],
+    [
+     441.6000061035156,
+     427.5199890136719
+    ],
+    [
+     193.27999877929688,
+     422.3999938964844
+    ],
+    [
+     197.1199951171875,
+     57.599998474121094
+    ]
+   ],
+   "detected": true,
+   "iou": 0.9523546911362165,
+   "corner_err": 0.006646260153502226,
+   "ncc": 0.5236663818359375,
+   "ncc_oracle": 0.5380526781082153,
+   "ncc_ratio": 0.9732622903711587,
+   "accepted": true,
+   "failure_reasons": []
+  },
+  {
+   "case_id": "blur-L2-s102",
+   "category": "blur",
+   "level": 2,
+   "seed": 102,
+   "status": "ok",
+   "latency_ms": 12.37070000024687,
+   "detected_corners": [
+    [
+     434.7950439453125,
+     405.677978515625
+    ],
+    [
+     208.2755889892578,
+     404.2710266113281
+    ],
+    [
+     210.35964965820312,
+     68.7411117553711
+    ],
+    [
+     436.87908935546875,
+     70.14806365966797
+    ]
+   ],
+   "detected": true,
+   "iou": 0.8022444897953992,
+   "corner_err": 0.03070954792201519,
+   "ncc": 0.2705325782299042,
+   "ncc_oracle": 0.5119500756263733,
+   "ncc_ratio": 0.5284354688275147,
+   "accepted": false,
+   "failure_reasons": [
+    "low_iou",
+    "corner_error"
+   ],
+   "artifact_dir": "D:\\cool\\artifacts\\experiments\\verify-20261014-140401-659875.artifacts\\stages\\blur-L2-s102"
+  },
+  {
+   "case_id": "blur-L2-s103",
+   "category": "blur",
+   "level": 2,
+   "seed": 103,
+   "status": "ok",
+   "latency_ms": 13.70640000095591,
+   "detected_corners": [
+    [
+     446.7200012207031,
+     52.47999954223633
+    ],
+    [
+     460.79998779296875,
+     426.239990234375
+    ],
+    [
+     194.55999755859375,
+     426.239990234375
+    ],
+    [
+     175.36000061035156,
+     61.439998626708984
+    ]
+   ],
+   "detected": true,
+   "iou": 0.9549106115876513,
+   "corner_err": 0.006718957331031561,
+   "ncc": 0.5321447253227234,
+   "ncc_oracle": 0.5563479065895081,
+   "ncc_ratio": 0.956496320054202,
+   "accepted": true,
+   "failure_reasons": []
+  },
+  {
+   "case_id": "blur-L2-s104",
+   "category": "blur",
+   "level": 2,
+   "seed": 104,
+   "status": "ok",
+   "latency_ms": 18.231700001706486,
+   "detected_corners": [
+    [
+     207.36000061035156,
+     40.959999084472656
+    ],
+    [
+     463.3599853515625,
+     67.83999633789062
+    ],
+    [
+     448.0,
+     430.0799865722656
+    ],
+    [
+     175.36000061035156,
+     424.9599914550781
+    ]
+   ],
+   "detected": true,
+   "iou": 0.9591598272849349,
+   "corner_err": 0.005784809589385986,
+   "ncc": 0.5493695139884949,
+   "ncc_oracle": 0.5672475099563599,
+   "ncc_ratio": 0.968482900931129,
+   "accepted": true,
+   "failure_reasons": []
+  },
+  {
+   "case_id": "blur-L2-s105",
+   "category": "blur",
+   "level": 2,
+   "seed": 105,
+   "status": "ok",
+   "latency_ms": 17.948100001376588,
+   "detected_corners": [
+    [
+     432.6400146484375,
+     42.2400016784668
+    ],
+    [
+     468.4800109863281,
+     412.1600036621094
+    ],
+    [
+     202.24000549316406,
+     431.3599853515625
+    ],
+    [
+     181.75999450683594,
+     71.68000030517578
+    ]
+   ],
+   "detected": true,
+   "iou": 0.9498115612708417,
+   "corner_err": 0.0072467816062271595,
+   "ncc": 0.5014675855636597,
+   "ncc_oracle": 0.5194260478019714,
+   "ncc_ratio": 0.9654263348665211,
+   "accepted": false,
+   "failure_reasons": [
+    "low_iou"
+   ],
+   "artifact_dir": "D:\\cool\\artifacts\\experiments\\verify-20261014-140401-659875.artifacts\\stages\\blur-L2-s105"
+  },
+  {
+   "case_id": "noise-L0-s100",
+   "category": "noise",
+   "level": 0,
+   "seed": 100,
+   "status": "ok",
+   "latency_ms": 12.898700000732788,
+   "detected_corners": [
+    [
+     197.1199951171875,
+     52.47999954223633
+    ],
+    [
+     471.0400085449219,
+     62.720001220703125
+    ],
+    [
+     441.6000061035156,
+     432.6400146484375
+    ],
+    [
+     186.8800048828125,
+     428.79998779296875
+    ]
+   ],
+   "detected": true,
+   "iou": 0.9696301434972002,
+   "corner_err": 0.004668436478823423,
+   "ncc": 0.7077465057373047,
+   "ncc_oracle": 0.97076016664505,
+   "ncc_ratio": 0.7290642220964615,
+   "accepted": true,
+   "failure_reasons": []
+  },
+  {
+   "case_id": "noise-L0-s101",
+   "category": "noise",
+   "level": 0,
+   "seed": 101,
+   "status": "ok",
+   "latency_ms": 18.903800000771298,
+   "detected_corners": [
+    [
+     450.55999755859375,
+     51.20000076293945
+    ],
+    [
+     460.79998779296875,
+     432.6400146484375
+    ],
+    [
+     192.0,
+     418.55999755859375
+    ],
+    [
+     188.16000366210938,
+     56.31999969482422
+    ]
+   ],
+   "detected": true,
+   "iou": 0.9740151385507557,
+   "corner_err": 0.003720037406310439,
+   "ncc": 0.730765700340271,
+   "ncc_oracle": 0.9717126488685608,
+   "ncc_ratio": 0.7520388884421307,
+   "accepted": true,
+   "failure_reasons": []
+  },
+  {
+   "case_id": "noise-L0-s102",
+   "category": "noise",
+   "level": 0,
+   "seed": 102,
+   "status": "ok",
+   "latency_ms": 14.339100000142935,
+   "detected_corners": [
+    [
+     206.0800018310547,
+     49.91999816894531
+    ],
+    [
+     453.1199951171875,
+     67.83999633789062
+    ],
+    [
+     440.32000732421875,
+     437.760009765625
+    ],
+    [
+     174.0800018310547,
+     416.0
+    ]
+   ],
+   "detected": true,
+   "iou": 0.9696508807022222,
+   "corner_err": 0.004193378612399101,
+   "ncc": 0.7313974499702454,
+   "ncc_oracle": 0.9693007469177246,
+   "ncc_ratio": 0.7545619378670789,
+   "accepted": true,
+   "failure_reasons": []
+  },
+  {
+   "case_id": "noise-L0-s103",
+   "category": "noise",
+   "level": 0,
+   "seed": 103,
+   "status": "ok",
+   "latency_ms": 17.53850000022794,
+   "detected_corners": [
+    [
+     203.52000427246094,
+     40.959999084472656
+    ],
+    [
+     451.8399963378906,
+     66.55999755859375
+    ],
+    [
+     439.0400085449219,
+     437.760009765625
+    ],
+    [
+     176.63999938964844,
+     408.32000732421875
+    ]
+   ],
+   "detected": true,
+   "iou": 0.9730210679677508,
+   "corner_err": 0.0037677253130823374,
+   "ncc": 0.7671252489089966,
+   "ncc_oracle": 0.9703772664070129,
+   "ncc_ratio": 0.7905433025542823,
+   "accepted": true,
+   "failure_reasons": []
+  },
+  {
+   "case_id": "noise-L0-s104",
+   "category": "noise",
+   "level": 0,
+   "seed": 104,
+   "status": "ok",
+   "latency_ms": 17.64970000112953,
+   "detected_corners": [
+    [
+     193.27999877929688,
+     46.08000183105469
+    ],
+    [
+     449.2799987792969,
+     58.880001068115234
+    ],
+    [
+     445.44000244140625,
+     428.79998779296875
+    ],
+    [
+     183.0399932861328,
+     424.9599914550781
+    ]
+   ],
+   "detected": true,
+   "iou": 0.9699134762765084,
+   "corner_err": 0.004436383955180645,
+   "ncc": 0.7342089414596558,
+   "ncc_oracle": 0.9703240394592285,
+   "ncc_ratio": 0.7566636624491319,
+   "accepted": true,
+   "failure_reasons": []
+  },
+  {
+   "case_id": "noise-L0-s105",
+   "category": "noise",
+   "level": 0,
+   "seed": 105,
+   "status": "ok",
+   "latency_ms": 14.05960000010964,
+   "detected_corners": [
+    [
+     194.55999755859375,
+     42.2400016784668
+    ],
+    [
+     462.0799865722656,
+     62.720001220703125
+    ],
+    [
+     450.55999755859375,
+     426.239990234375
+    ],
+    [
+     189.44000244140625,
+     428.79998779296875
+    ]
+   ],
+   "detected": true,
+   "iou": 0.9716856882326297,
+   "corner_err": 0.004033233039081097,
+   "ncc": 0.7959225177764893,
+   "ncc_oracle": 0.9713464379310608,
+   "ncc_ratio": 0.8194012833070976,
+   "accepted": true,
+   "failure_reasons": []
+  },
+  {
+   "case_id": "noise-L1-s100",
+   "category": "noise",
+   "level": 1,
+   "seed": 100,
+   "status": "ok",
+   "latency_ms": 13.016000000789063,
+   "detected_corners": [
+    [
+     451.8399963378906,
+     57.599998474121094
+    ],
+    [
+     433.9200134277344,
+     417.2799987792969
+    ],
+    [
+     175.36000061035156,
+     423.67999267578125
+    ],
+    [
+     183.0399932861328,
+     60.15999984741211
+    ]
+   ],
+   "detected": true,
+   "iou": 0.9507186837190506,
+   "corner_err": 0.007269817404448986,
+   "ncc": 0.5250347852706909,
+   "ncc_oracle": 0.9662344455718994,
+   "ncc_ratio": 0.5433823930380901,
+   "accepted": true,
+   "failure_reasons": []
+  },
+  {
+   "case_id": "noise-L1-s101",
+   "category": "noise",
+   "level": 1,
+   "seed": 101,
+   "status": "ok",
+   "latency_ms": 13.884899999538902,
+   "detected_corners": [
+    [
+     435.20001220703125,
+     39.68000030517578
+    ],
+    [
+     458.239990234375,
+     422.3999938964844
+    ],
+    [
+     199.67999267578125,
+     427.5199890136719
+    ],
+    [
+     167.67999267578125,
+     72.95999908447266
+    ]
+   ],
+   "detected": true,
+   "iou": 0.95023116178901,
+   "corner_err": 0.00701858289539814,
+   "ncc": 0.6148309707641602,
+   "ncc_oracle": 0.9664886593818665,
+   "ncc_ratio": 0.6361491827098988,
+   "accepted": true,
+   "failure_reasons": []
+  },
+  {
+   "case_id": "noise-L1-s102",
+   "category": "noise",
+   "level": 1,
+   "seed": 102,
+   "status": "ok",
+   "latency_ms": 22.470500000054017,
+   "detected_corners": [
+    [
+     451.8399963378906,
+     56.31999969482422
+    ],
+    [
+     460.79998779296875,
+     418.55999755859375
+    ],
+    [
+     206.0800018310547,
+     436.4800109863281
+    ],
+    [
+     180.47999572753906,
+     60.15999984741211
+    ]
+   ],
+   "detected": true,
+   "iou": 0.9568157809312087,
+   "corner_err": 0.006425223313271999,
+   "ncc": 0.47902482748031616,
+   "ncc_oracle": 0.9666370153427124,
+   "ncc_ratio": 0.4955581256222453,
+   "accepted": true,
+   "failure_reasons": []
+  },
+  {
+   "case_id": "noise-L1-s103",
+   "category": "noise",
+   "level": 1,
+   "seed": 103,
+   "status": "ok",
+   "latency_ms": 18.4506000005058,
+   "detected_corners": [
+    [
+     431.3599853515625,
+     55.040000915527344
+    ],
+    [
+     471.0400085449219,
+     410.8800048828125
+    ],
+    [
+     202.24000549316406,
+     432.6400146484375
+    ],
+    [
+     165.1199951171875,
+     72.95999908447266
+    ]
+   ],
+   "detected": true,
+   "iou": 0.955125392419034,
+   "corner_err": 0.006422626320272684,
+   "ncc": 0.6216249465942383,
+   "ncc_oracle": 0.9674410223960876,
+   "ncc_ratio": 0.6425455735323717,
+   "accepted": true,
+   "failure_reasons": []
+  },
+  {
+   "case_id": "noise-L1-s104",
+   "category": "noise",
+   "level": 1,
+   "seed": 104,
+   "status": "ok",
+   "latency_ms": 14.504200000374112,
+   "detected_corners": [
+    [
+     197.1199951171875,
+     52.47999954223633
+    ],
+    [
+     464.6400146484375,
+     64.0
+    ],
+    [
+     454.3999938964844,
+     424.9599914550781
+    ],
+    [
+     179.1999969482422,
+     428.79998779296875
+    ]
+   ],
+   "detected": true,
+   "iou": 0.9517275213445231,
+   "corner_err": 0.007116860710084438,
+   "ncc": 0.5719075798988342,
+   "ncc_oracle": 0.9674781560897827,
+   "ncc_ratio": 0.5911322920305404,
+   "accepted": true,
+   "failure_reasons": []
+  },
+  {
+   "case_id": "noise-L1-s105",
+   "category": "noise",
+   "level": 1,
+   "seed": 105,
+   "status": "ok",
+   "latency_ms": 12.364000000161468,
+   "detected_corners": [
+    [
+     204.8000030517578,
+     56.31999969482422
+    ],
+    [
+     446.7200012207031,
+     65.27999877929688
+    ],
+    [
+     442.8800048828125,
+     433.9200134277344
+    ],
+    [
+     192.0,
+     417.2799987792969
+    ]
+   ],
+   "detected": true,
+   "iou": 0.9485967397775484,
+   "corner_err": 0.006909879855811596,
+   "ncc": 0.6348400712013245,
+   "ncc_oracle": 0.9662319421768188,
+   "ncc_ratio": 0.6570265828421037,
+   "accepted": false,
+   "failure_reasons": [
+    "low_iou"
+   ],
+   "artifact_dir": "D:\\cool\\artifacts\\experiments\\verify-20261014-140401-659875.artifacts\\stages\\noise-L1-s105"
+  },
+  {
+   "case_id": "noise-L2-s100",
+   "category": "noise",
+   "level": 2,
+   "seed": 100,
+   "status": "ok",
+   "latency_ms": 14.82679999935499,
+   "detected_corners": [
+    [
+     446.2173767089844,
+     487.910400390625
+    ],
+    [
+     32.599403381347656,
+     474.00726318359375
+    ],
+    [
+     47.562156677246094,
+     28.865957260131836
+    ],
+    [
+     461.18011474609375,
+     42.769081115722656
+    ]
+   ],
+   "detected": true,
+   "iou": 0.5448543708925709,
+   "corner_err": 0.11316146701574326,
+   "ncc": -0.026675602421164513,
+   "ncc_oracle": 0.9580149054527283,
+   "ncc_ratio": -0.02784466323992991,
+   "accepted": false,
+   "failure_reasons": [
+    "low_iou",
+    "corner_error"
+   ],
+   "artifact_dir": "D:\\cool\\artifacts\\experiments\\verify-20261014-140401-659875.artifacts\\stages\\noise-L2-s100"
+  },
+  {
+   "case_id": "noise-L2-s101",
+   "category": "noise",
+   "level": 2,
+   "seed": 101,
+   "status": "ok",
+   "latency_ms": 13.330599998880643,
+   "detected_corners": [
+    [
+     46.28220748901367,
+     450.0360107421875
+    ],
+    [
+     15.360644340515137,
+     60.4240837097168
+    ],
+    [
+     437.2972717285156,
+     26.937049865722656
+    ],
+    [
+     468.2188415527344,
+     416.5489807128906
+    ]
+   ],
+   "detected": true,
+   "iou": 0.5828051092468819,
+   "corner_err": 0.10767719149589539,
+   "ncc": -0.050585366785526276,
+   "ncc_oracle": 0.9605754613876343,
+   "ncc_ratio": -0.052661523033756596,
+   "accepted": false,
+   "failure_reasons": [
+    "low_iou",
+    "corner_error"
+   ],
+   "artifact_dir": "D:\\cool\\artifacts\\experiments\\verify-20261014-140401-659875.artifacts\\stages\\noise-L2-s101"
+  },
+  {
+   "case_id": "noise-L2-s102",
+   "category": "noise",
+   "level": 2,
+   "seed": 102,
+   "status": "ok",
+   "latency_ms": 21.704300001147203,
+   "detected_corners": [
+    [
+     424.9481201171875,
+     422.7606201171875
+    ],
+    [
+     183.8983612060547,
+     403.3036804199219
+    ],
+    [
+     211.07656860351562,
+     66.59595489501953
+    ],
+    [
+     452.1263427734375,
+     86.05290985107422
+    ]
+   ],
+   "detected": true,
+   "iou": 0.782953761376062,
+   "corner_err": 0.03308165818452835,
+   "ncc": 0.10535471141338348,
+   "ncc_oracle": 0.9598954916000366,
+   "ncc_ratio": 0.10975643946172636,
+   "accepted": false,
+   "failure_reasons": [
+    "low_iou",
+    "corner_error"
+   ],
+   "artifact_dir": "D:\\cool\\artifacts\\experiments\\verify-20261014-140401-659875.artifacts\\stages\\noise-L2-s102"
+  },
+  {
+   "case_id": "noise-L2-s103",
+   "category": "noise",
+   "level": 2,
+   "seed": 103,
+   "status": "ok",
+   "latency_ms": 19.65080000081798,
+   "detected_corners": [
+    [
+     445.1730041503906,
+     470.4459228515625
+    ],
+    [
+     98.30590057373047,
+     459.375732421875
+    ],
+    [
+     111.65449523925781,
+     41.11921691894531
+    ],
+    [
+     458.5216064453125,
+     52.189414978027344
+    ]
+   ],
+   "detected": true,
+   "iou": 0.6718866318913581,
+   "corner_err": 0.06820295006036758,
+   "ncc": -0.04269738122820854,
+   "ncc_oracle": 0.9577959775924683,
+   "ncc_ratio": -0.04457878528111319,
+   "accepted": false,
+   "failure_reasons": [
+    "low_iou",
+    "corner_error"
+   ],
+   "artifact_dir": "D:\\cool\\artifacts\\experiments\\verify-20261014-140401-659875.artifacts\\stages\\noise-L2-s103"
+  },
+  {
+   "case_id": "noise-L2-s104",
+   "category": "noise",
+   "level": 2,
+   "seed": 104,
+   "status": "ok",
+   "latency_ms": 12.5742000000173,
+   "detected_corners": [
+    [
+     430.0799865722656,
+     37.119998931884766
+    ],
+    [
+     463.3599853515625,
+     421.1199951171875
+    ],
+    [
+     138.24000549316406,
+     404.4800109863281
+    ],
+    [
+     121.5999984741211,
+     52.47999954223633
+    ]
+   ],
+   "detected": true,
+   "iou": 0.7746102375697979,
+   "corner_err": 0.044101372361183167,
+   "ncc": -0.14706003665924072,
+   "ncc_oracle": 0.9587363600730896,
+   "ncc_ratio": -0.1533894434211607,
+   "accepted": false,
+   "failure_reasons": [
+    "low_iou",
+    "corner_error"
+   ],
+   "artifact_dir": "D:\\cool\\artifacts\\experiments\\verify-20261014-140401-659875.artifacts\\stages\\noise-L2-s104"
+  },
+  {
+   "case_id": "noise-L2-s105",
+   "category": "noise",
+   "level": 2,
+   "seed": 105,
+   "status": "ok",
+   "latency_ms": 15.456299999641487,
+   "detected_corners": [
+    [
+     450.55999755859375,
+     409.6000061035156
+    ],
+    [
+     189.44000244140625,
+     435.20001220703125
+    ],
+    [
+     195.83999633789062,
+     57.599998474121094
+    ],
+    [
+     445.44000244140625,
+     51.20000076293945
+    ]
+   ],
+   "detected": true,
+   "iou": 0.9327245071199332,
+   "corner_err": 0.011704954318702221,
+   "ncc": -0.14117431640625,
+   "ncc_oracle": 0.9579082131385803,
+   "ncc_ratio": -0.14737770745663953,
+   "accepted": false,
+   "failure_reasons": [
+    "low_iou",
+    "corner_error"
+   ],
+   "artifact_dir": "D:\\cool\\artifacts\\experiments\\verify-20261014-140401-659875.artifacts\\stages\\noise-L2-s105"
+  },
+  {
+   "case_id": "lowres-L0-s100",
+   "category": "lowres",
+   "level": 0,
+   "seed": 100,
+   "status": "ok",
+   "latency_ms": 9.224899999026093,
+   "detected_corners": [
+    [
+     149.0,
+     38.0
+    ],
+    [
+     334.0,
+     40.0
+    ],
+    [
+     331.0,
+     315.0
+    ],
+    [
+     138.0,
+     310.0
+    ]
+   ],
+   "detected": true,
+   "iou": 0.97795470011257,
+   "corner_err": 0.003117443760856986,
+   "ncc": 0.8337437510490417,
+   "ncc_oracle": 0.9440030455589294,
+   "ncc_ratio": 0.8832002767060938,
+   "accepted": true,
+   "failure_reasons": []
+  },
+  {
+   "case_id": "lowres-L0-s101",
+   "category": "lowres",
+   "level": 0,
+   "seed": 101,
+   "status": "ok",
+   "latency_ms": 9.525999999823398,
+   "detected_corners": [
+    [
+     331.0,
+     33.0
+    ],
+    [
+     337.0,
+     311.0
+    ],
+    [
+     142.0,
+     316.0
+    ],
+    [
+     140.0,
+     42.0
+    ]
+   ],
+   "detected": true,
+   "iou": 0.9743276931668317,
+   "corner_err": 0.003843723563477397,
+   "ncc": 0.8012439608573914,
+   "ncc_oracle": 0.9466686248779297,
+   "ncc_ratio": 0.8463827149238304,
+   "accepted": true,
+   "failure_reasons": []
+  },
+  {
+   "case_id": "lowres-L0-s102",
+   "category": "lowres",
+   "level": 0,
+   "seed": 102,
+   "status": "ok",
+   "latency_ms": 13.392700000622426,
+   "detected_corners": [
+    [
+     328.0,
+     34.0
+    ],
+    [
+     347.0,
+     320.0
+    ],
+    [
+     146.0,
+     327.0
+    ],
+    [
+     140.0,
+     52.0
+    ]
+   ],
+   "detected": true,
+   "iou": 0.9771786901431789,
+   "corner_err": 0.003357543144375086,
+   "ncc": 0.807121217250824,
+   "ncc_oracle": 0.9465991854667664,
+   "ncc_ratio": 0.8526536147956159,
+   "accepted": true,
+   "failure_reasons": []
+  },
+  {
+   "case_id": "lowres-L0-s103",
+   "category": "lowres",
+   "level": 0,
+   "seed": 103,
+   "status": "ok",
+   "latency_ms": 17.234700000699377,
+   "detected_corners": [
+    [
+     151.0,
+     32.0
+    ],
+    [
+     353.0,
+     44.0
+    ],
+    [
+     334.0,
+     321.0
+    ],
+    [
+     124.0,
+     311.0
+    ]
+   ],
+   "detected": true,
+   "iou": 0.9789279871109756,
+   "corner_err": 0.0031262149568647146,
+   "ncc": 0.8217563629150391,
+   "ncc_oracle": 0.9455648064613342,
+   "ncc_ratio": 0.8690640316768622,
+   "accepted": true,
+   "failure_reasons": []
+  },
+  {
+   "case_id": "lowres-L0-s104",
+   "category": "lowres",
+   "level": 0,
+   "seed": 104,
+   "status": "ok",
+   "latency_ms": 12.711499999568332,
+   "detected_corners": [
+    [
+     151.0,
+     33.0
+    ],
+    [
+     349.0,
+     47.0
+    ],
+    [
+     334.0,
+     322.0
+    ],
+    [
+     134.0,
+     320.0
+    ]
+   ],
+   "detected": true,
+   "iou": 0.9775889522708185,
+   "corner_err": 0.0032548706512898207,
+   "ncc": 0.8077927231788635,
+   "ncc_oracle": 0.950189471244812,
+   "ncc_ratio": 0.8501385751208134,
+   "accepted": true,
+   "failure_reasons": []
+  },
+  {
+   "case_id": "lowres-L0-s105",
+   "category": "lowres",
+   "level": 0,
+   "seed": 105,
+   "status": "ok",
+   "latency_ms": 10.366999998950632,
+   "detected_corners": [
+    [
+     326.0,
+     30.0
+    ],
+    [
+     343.0,
+     319.0
+    ],
+    [
+     149.0,
+     323.0
+    ],
+    [
+     135.0,
+     55.0
+    ]
+   ],
+   "detected": true,
+   "iou": 0.9757731555260727,
+   "corner_err": 0.0033945373725146055,
+   "ncc": 0.8063966035842896,
+   "ncc_oracle": 0.9456095695495605,
+   "ncc_ratio": 0.8527796561623368,
+   "accepted": true,
+   "failure_reasons": []
+  },
+  {
+   "case_id": "lowres-L1-s100",
+   "category": "lowres",
+   "level": 1,
+   "seed": 100,
+   "status": "ok",
+   "latency_ms": 4.833599999983562,
+   "detected_corners": [
+    [
+     200.0,
+     37.0
+    ],
+    [
+     216.0,
+     186.0
+    ],
+    [
+     105.0,
+     202.0
+    ],
+    [
+     101.0,
+     43.0
+    ]
+   ],
+   "detected": true,
+   "iou": 0.657880766635375,
+   "corner_err": 0.0531110018491745,
+   "ncc": 0.0815475732088089,
+   "ncc_oracle": 0.899860143661499,
+   "ncc_ratio": 0.09062249704381252,
+   "accepted": false,
+   "failure_reasons": [
+    "low_iou",
+    "corner_error"
+   ],
+   "artifact_dir": "D:\\cool\\artifacts\\experiments\\verify-20261014-140401-659875.artifacts\\stages\\lowres-L1-s100"
+  },
+  {
+   "case_id": "lowres-L1-s101",
+   "category": "lowres",
+   "level": 1,
+   "seed": 101,
+   "status": "ok",
+   "latency_ms": 5.514100001164479,
+   "detected_corners": [
+    [
+     219.0,
+     26.0
+    ],
+    [
+     228.0,
+     206.0
+    ],
+    [
+     94.0,
+     216.0
+    ],
+    [
+     88.0,
+     29.0
+    ]
+   ],
+   "detected": true,
+   "iou": 0.965255927343319,
+   "corner_err": 0.005235991440713406,
+   "ncc": 0.7147738933563232,
+   "ncc_oracle": 0.8969375491142273,
+   "ncc_ratio": 0.7969048615059096,
+   "accepted": true,
+   "failure_reasons": []
+  },
+  {
+   "case_id": "lowres-L1-s102",
+   "category": "lowres",
+   "level": 1,
+   "seed": 102,
+   "status": "ok",
+   "latency_ms": 5.2692000008391915,
+   "detected_corners": [
+    [
+     95.0,
+     24.0
+    ],
+    [
+     221.0,
+     31.0
+    ],
+    [
+     222.0,
+     210.0
+    ],
+    [
+     99.0,
+     216.0
+    ]
+   ],
+   "detected": true,
+   "iou": 0.9608376397525593,
+   "corner_err": 0.005397608503699303,
+   "ncc": 0.7719328999519348,
+   "ncc_oracle": 0.8977704048156738,
+   "ncc_ratio": 0.8598333112912366,
+   "accepted": true,
+   "failure_reasons": []
+  },
+  {
+   "case_id": "lowres-L1-s103",
+   "category": "lowres",
+   "level": 1,
+   "seed": 103,
+   "status": "ok",
+   "latency_ms": 4.717499999969732,
+   "detected_corners": [
+    [
+     228.0,
+     24.0
+    ],
+    [
+     233.0,
+     208.0
+    ],
+    [
+     95.0,
+     214.0
+    ],
+    [
+     87.0,
+     31.0
+    ]
+   ],
+   "detected": true,
+   "iou": 0.9619207100079821,
+   "corner_err": 0.005797982681542635,
+   "ncc": 0.6941348910331726,
+   "ncc_oracle": 0.8983790278434753,
+   "ncc_ratio": 0.7726525993148092,
+   "accepted": true,
+   "failure_reasons": []
+  },
+  {
+   "case_id": "lowres-L1-s104",
+   "category": "lowres",
+   "level": 1,
+   "seed": 104,
+   "status": "ok",
+   "latency_ms": 4.170000000158325,
+   "detected_corners": [
+    [
+     225.0,
+     28.0
+    ],
+    [
+     222.0,
+     209.0
+    ],
+    [
+     93.0,
+     214.0
+    ],
+    [
+     93.0,
+     31.0
+    ]
+   ],
+   "detected": true,
+   "iou": 0.9583470310209378,
+   "corner_err": 0.006234171334654093,
+   "ncc": 0.6761981248855591,
+   "ncc_oracle": 0.8992648124694824,
+   "ncc_ratio": 0.7519454953748751,
+   "accepted": true,
+   "failure_reasons": []
+  },
+  {
+   "case_id": "lowres-L1-s105",
+   "category": "lowres",
+   "level": 1,
+   "seed": 105,
+   "status": "ok",
+   "latency_ms": 4.477500000575674,
+   "detected_corners": [
+    [
+     96.0,
+     26.0
+    ],
+    [
+     233.0,
+     35.0
+    ],
+    [
+     225.0,
+     218.0
+    ],
+    [
+     90.0,
+     204.0
+    ]
+   ],
+   "detected": true,
+   "iou": 0.9641355676326584,
+   "corner_err": 0.005377007648348808,
+   "ncc": 0.678871750831604,
+   "ncc_oracle": 0.9044704437255859,
+   "ncc_ratio": 0.7505737258094107,
+   "accepted": true,
+   "failure_reasons": []
+  },
+  {
+   "case_id": "lowres-L2-s100",
+   "category": "lowres",
+   "level": 2,
+   "seed": 100,
+   "status": "ok",
+   "latency_ms": 2.9842999992979458,
+   "detected_corners": [
+    [
+     62.0,
+     19.0
+    ],
+    [
+     159.0,
+     20.0
+    ],
+    [
+     154.0,
+     145.0
+    ],
+    [
+     69.0,
+     146.0
+    ]
+   ],
+   "detected": true,
+   "iou": 0.9534213096216128,
+   "corner_err": 0.007005138788372278,
+   "ncc": 0.4964804947376251,
+   "ncc_oracle": 0.8125014901161194,
+   "ncc_ratio": 0.611051795937839,
+   "accepted": true,
+   "failure_reasons": []
+  },
+  {
+   "case_id": "lowres-L2-s101",
+   "category": "lowres",
+   "level": 2,
+   "seed": 101,
+   "status": "ok",
+   "latency_ms": 2.924200000052224,
+   "detected_corners": [
+    [
+     157.0,
+     18.0
+    ],
+    [
+     154.0,
+     147.0
+    ],
+    [
+     60.0,
+     144.0
+    ],
+    [
+     65.0,
+     22.0
+    ]
+   ],
+   "detected": true,
+   "iou": 0.9522112637604139,
+   "corner_err": 0.007539703045040369,
+   "ncc": 0.5818149447441101,
+   "ncc_oracle": 0.8229653239250183,
+   "ncc_ratio": 0.7069738272436862,
+   "accepted": true,
+   "failure_reasons": []
+  },
+  {
+   "case_id": "lowres-L2-s102",
+   "category": "lowres",
+   "level": 2,
+   "seed": 102,
+   "status": "ok",
+   "latency_ms": 2.58169999870006,
+   "detected_corners": [
+    [
+     71.0,
+     16.0
+    ],
+    [
+     155.0,
+     19.0
+    ],
+    [
+     158.0,
+     147.0
+    ],
+    [
+     65.0,
+     149.0
+    ]
+   ],
+   "detected": true,
+   "iou": 0.9570561410547999,
+   "corner_err": 0.006583936046808958,
+   "ncc": 0.5575416088104248,
+   "ncc_oracle": 0.8317038416862488,
+   "ncc_ratio": 0.6703607472583387,
+   "accepted": true,
+   "failure_reasons": []
+  },
+  {
+   "case_id": "lowres-L2-s103",
+   "category": "lowres",
+   "level": 2,
+   "seed": 103,
+   "status": "ok",
+   "latency_ms": 2.716599999985192,
+   "detected_corners": [
+    [
+     157.0,
+     21.0
+    ],
+    [
+     161.0,
+     145.0
+    ],
+    [
+     66.0,
+     152.0
+    ],
+    [
+     62.0,
+     23.0
+    ]
+   ],
+   "detected": true,
+   "iou": 0.9478836932570862,
+   "corner_err": 0.007614980451762676,
+   "ncc": 0.6569361686706543,
+   "ncc_oracle": 0.8169964551925659,
+   "ncc_ratio": 0.8040869265654458,
+   "accepted": false,
+   "failure_reasons": [
+    "low_iou"
+   ],
+   "artifact_dir": "D:\\cool\\artifacts\\experiments\\verify-20261014-140401-659875.artifacts\\stages\\lowres-L2-s103"
+  },
+  {
+   "case_id": "lowres-L2-s104",
+   "category": "lowres",
+   "level": 2,
+   "seed": 104,
+   "status": "ok",
+   "latency_ms": 2.6330000000598375,
+   "detected_corners": [
+    [
+     73.0,
+     19.0
+    ],
+    [
+     160.0,
+     21.0
+    ],
+    [
+     156.0,
+     149.0
+    ],
+    [
+     58.0,
+     146.0
+    ]
+   ],
+   "detected": true,
+   "iou": 0.9548404511610157,
+   "corner_err": 0.006496322341263294,
+   "ncc": 0.673749566078186,
+   "ncc_oracle": 0.8363487720489502,
+   "ncc_ratio": 0.8055844506444167,
+   "accepted": true,
+   "failure_reasons": []
+  },
+  {
+   "case_id": "lowres-L2-s105",
+   "category": "lowres",
+   "level": 2,
+   "seed": 105,
+   "status": "ok",
+   "latency_ms": 4.3244000007689465,
+   "detected_corners": [
+    [
+     67.0,
+     14.0
+    ],
+    [
+     163.0,
+     19.0
+    ],
+    [
+     158.0,
+     150.0
+    ],
+    [
+     62.0,
+     147.0
+    ]
+   ],
+   "detected": true,
+   "iou": 0.9667312508426619,
+   "corner_err": 0.005277083721011877,
+   "ncc": 0.7685565948486328,
+   "ncc_oracle": 0.8344660997390747,
+   "ncc_ratio": 0.9210159586937674,
+   "accepted": true,
+   "failure_reasons": []
+  },
+  {
+   "case_id": "jpeg-L0-s100",
+   "category": "jpeg",
+   "level": 0,
+   "seed": 100,
+   "status": "ok",
+   "latency_ms": 17.259800000829273,
+   "detected_corners": [
+    [
+     441.6000061035156,
+     44.79999923706055
+    ],
+    [
+     441.6000061035156,
+     435.20001220703125
+    ],
+    [
+     176.63999938964844,
+     432.6400146484375
+    ],
+    [
+     175.36000061035156,
+     58.880001068115234
+    ]
+   ],
+   "detected": true,
+   "iou": 0.9856171201064723,
+   "corner_err": 0.002127652522176504,
+   "ncc": 0.871415913105011,
+   "ncc_oracle": 0.9701127409934998,
+   "ncc_ratio": 0.8982625176251035,
+   "accepted": true,
+   "failure_reasons": []
+  },
+  {
+   "case_id": "jpeg-L0-s101",
+   "category": "jpeg",
+   "level": 0,
+   "seed": 101,
+   "status": "ok",
+   "latency_ms": 14.59669999894686,
+   "detected_corners": [
+    [
+     454.3999938964844,
+     56.31999969482422
+    ],
+    [
+     451.8399963378906,
+     416.0
+    ],
+    [
+     190.72000122070312,
+     428.79998779296875
+    ],
+    [
+     183.0399932861328,
+     58.880001068115234
+    ]
+   ],
+   "detected": true,
+   "iou": 0.9857821477568913,
+   "corner_err": 0.0021090104710310698,
+   "ncc": 0.9033178091049194,
+   "ncc_oracle": 0.9681066274642944,
+   "ncc_ratio": 0.9330767742711641,
+   "accepted": true,
+   "failure_reasons": []
+  },
+  {
+   "case_id": "jpeg-L0-s102",
+   "category": "jpeg",
+   "level": 0,
+   "seed": 102,
+   "status": "ok",
+   "latency_ms": 13.063899999906425,
+   "detected_corners": [
+    [
+     442.8800048828125,
+     51.20000076293945
+    ],
+    [
+     445.44000244140625,
+     433.9200134277344
+    ],
+    [
+     180.47999572753906,
+     421.1199951171875
+    ],
+    [
+     177.9199981689453,
+     52.47999954223633
+    ]
+   ],
+   "detected": true,
+   "iou": 0.9844007086014914,
+   "corner_err": 0.0023011132143437862,
+   "ncc": 0.8823958039283752,
+   "ncc_oracle": 0.9684997797012329,
+   "ncc_ratio": 0.9110955133108865,
+   "accepted": true,
+   "failure_reasons": []
+  },
+  {
+   "case_id": "jpeg-L0-s103",
+   "category": "jpeg",
+   "level": 0,
+   "seed": 103,
+   "status": "ok",
+   "latency_ms": 17.52670000132639,
+   "detected_corners": [
+    [
+     185.60000610351562,
+     40.959999084472656
+    ],
+    [
+     468.4800109863281,
+     48.63999938964844
+    ],
+    [
+     442.8800048828125,
+     423.67999267578125
+    ],
+    [
+     179.1999969482422,
+     414.7200012207031
+    ]
+   ],
+   "detected": true,
+   "iou": 0.9841249540666364,
+   "corner_err": 0.0023592463694512844,
+   "ncc": 0.8934925198554993,
+   "ncc_oracle": 0.9692586064338684,
+   "ncc_ratio": 0.9218308859210129,
+   "accepted": true,
+   "failure_reasons": []
+  },
+  {
+   "case_id": "jpeg-L0-s104",
+   "category": "jpeg",
+   "level": 0,
+   "seed": 104,
+   "status": "ok",
+   "latency_ms": 20.51019999998971,
+   "detected_corners": [
+    [
+     456.9599914550781,
+     60.15999984741211
+    ],
+    [
+     460.79998779296875,
+     427.5199890136719
+    ],
+    [
+     181.75999450683594,
+     424.9599914550781
+    ],
+    [
+     186.8800048828125,
+     65.27999877929688
+    ]
+   ],
+   "detected": true,
+   "iou": 0.9849392381536305,
+   "corner_err": 0.002265308750793338,
+   "ncc": 0.8511462807655334,
+   "ncc_oracle": 0.9679241180419922,
+   "ncc_ratio": 0.87935228072146,
+   "accepted": true,
+   "failure_reasons": []
+  },
+  {
+   "case_id": "jpeg-L0-s105",
+   "category": "jpeg",
+   "level": 0,
+   "seed": 105,
+   "status": "ok",
+   "latency_ms": 12.78910000110045,
+   "detected_corners": [
+    [
+     444.1600036621094,
+     52.47999954223633
+    ],
+    [
+     455.67999267578125,
+     426.239990234375
+    ],
+    [
+     186.8800048828125,
+     431.3599853515625
+    ],
+    [
+     176.63999938964844,
+     60.15999984741211
+    ]
+   ],
+   "detected": true,
+   "iou": 0.9857841534159327,
+   "corner_err": 0.002057374455034733,
+   "ncc": 0.8587228655815125,
+   "ncc_oracle": 0.9694527387619019,
+   "ncc_ratio": 0.8857810507381684,
+   "accepted": true,
+   "failure_reasons": []
+  },
+  {
+   "case_id": "jpeg-L1-s100",
+   "category": "jpeg",
+   "level": 1,
+   "seed": 100,
+   "status": "ok",
+   "latency_ms": 16.855500000019674,
+   "detected_corners": [
+    [
+     200.9600067138672,
+     53.7599983215332
+    ],
+    [
+     456.9599914550781,
+     64.0
+    ],
+    [
+     455.67999267578125,
+     442.8800048828125
+    ],
+    [
+     172.8000030517578,
+     408.32000732421875
+    ]
+   ],
+   "detected": true,
+   "iou": 0.9848618939706889,
+   "corner_err": 0.002271774923428893,
+   "ncc": 0.8759092092514038,
+   "ncc_oracle": 0.9633628726005554,
+   "ncc_ratio": 0.9092204341308334,
+   "accepted": true,
+   "failure_reasons": []
+  },
+  {
+   "case_id": "jpeg-L1-s101",
+   "category": "jpeg",
+   "level": 1,
+   "seed": 101,
+   "status": "ok",
+   "latency_ms": 13.020899999901303,
+   "detected_corners": [
+    [
+     430.0799865722656,
+     37.119998931884766
+    ],
+    [
+     469.760009765625,
+     416.0
+    ],
+    [
+     198.39999389648438,
+     435.20001220703125
+    ],
+    [
+     163.83999633789062,
+     64.0
+    ]
+   ],
+   "detected": true,
+   "iou": 0.985739110553023,
+   "corner_err": 0.002136999974027276,
+   "ncc": 0.8279844522476196,
+   "ncc_oracle": 0.9630075693130493,
+   "ncc_ratio": 0.8597901809206475,
+   "accepted": true,
+   "failure_reasons": []
+  },
+  {
+   "case_id": "jpeg-L1-s102",
+   "category": "jpeg",
+   "level": 1,
+   "seed": 102,
+   "status": "ok",
+   "latency_ms": 12.051099998643622,
+   "detected_corners": [
+    [
+     451.8399963378906,
+     42.2400016784668
+    ],
+    [
+     453.1199951171875,
+     421.1199951171875
+    ],
+    [
+     189.44000244140625,
+     424.9599914550781
+    ],
+    [
+     188.16000366210938,
+     61.439998626708984
+    ]
+   ],
+   "detected": true,
+   "iou": 0.9858189542629237,
+   "corner_err": 0.002128368942067027,
+   "ncc": 0.8476057648658752,
+   "ncc_oracle": 0.9645116925239563,
+   "ncc_ratio": 0.8787926278507221,
+   "accepted": true,
+   "failure_reasons": []
+  },
+  {
+   "case_id": "jpeg-L1-s103",
+   "category": "jpeg",
+   "level": 1,
+   "seed": 103,
+   "status": "ok",
+   "latency_ms": 11.01340000059281,
+   "detected_corners": [
+    [
+     444.1600036621094,
+     37.119998931884766
+    ],
+    [
+     462.0799865722656,
+     416.0
+    ],
+    [
+     193.27999877929688,
+     441.6000061035156
+    ],
+    [
+     170.24000549316406,
+     57.599998474121094
+    ]
+   ],
+   "detected": true,
+   "iou": 0.9870637776333265,
+   "corner_err": 0.0020411259029060602,
+   "ncc": 0.8988608121871948,
+   "ncc_oracle": 0.9646103978157043,
+   "ncc_ratio": 0.9318381952160218,
+   "accepted": true,
+   "failure_reasons": []
+  },
+  {
+   "case_id": "jpeg-L1-s104",
+   "category": "jpeg",
+   "level": 1,
+   "seed": 104,
+   "status": "ok",
+   "latency_ms": 9.362999999211752,
+   "detected_corners": [
+    [
+     185.60000610351562,
+     48.63999938964844
+    ],
+    [
+     453.1199951171875,
+     51.20000076293945
+    ],
+    [
+     453.1199951171875,
+     426.239990234375
+    ],
+    [
+     194.55999755859375,
+     423.67999267578125
+    ]
+   ],
+   "detected": true,
+   "iou": 0.9871491572730864,
+   "corner_err": 0.0021017456892877817,
+   "ncc": 0.7841836214065552,
+   "ncc_oracle": 0.9669286012649536,
+   "ncc_ratio": 0.8110046805738003,
+   "accepted": true,
+   "failure_reasons": []
+  },
+  {
+   "case_id": "jpeg-L1-s105",
+   "category": "jpeg",
+   "level": 1,
+   "seed": 105,
+   "status": "ok",
+   "latency_ms": 14.193299999533338,
+   "detected_corners": [
+    [
+     193.27999877929688,
+     48.63999938964844
+    ],
+    [
+     471.0400085449219,
+     69.12000274658203
+    ],
+    [
+     440.32000732421875,
+     428.79998779296875
+    ],
+    [
+     165.1199951171875,
+     423.67999267578125
+    ]
+   ],
+   "detected": true,
+   "iou": 0.9863205287862283,
+   "corner_err": 0.0020759240724146366,
+   "ncc": 0.8827654719352722,
+   "ncc_oracle": 0.9640490412712097,
+   "ncc_ratio": 0.9156852339910471,
+   "accepted": true,
+   "failure_reasons": []
+  },
+  {
+   "case_id": "jpeg-L2-s100",
+   "category": "jpeg",
+   "level": 2,
+   "seed": 100,
+   "status": "ok",
+   "latency_ms": 10.72579999890877,
+   "detected_corners": [
+    [
+     454.95147705078125,
+     431.1407775878906
+    ],
+    [
+     -5.55154275894165,
+     420.36883544921875
+    ],
+    [
+     3.3029494285583496,
+     41.83822250366211
+    ],
+    [
+     463.8060302734375,
+     52.61017608642578
+    ]
+   ],
+   "detected": true,
+   "iou": 0.5789923287070406,
+   "corner_err": 0.12077423930168152,
+   "ncc": 0.16204822063446045,
+   "ncc_oracle": 0.9537993669509888,
+   "ncc_ratio": 0.16989759717757008,
+   "accepted": false,
+   "failure_reasons": [
+    "low_iou",
+    "corner_error"
+   ],
+   "artifact_dir": "D:\\cool\\artifacts\\experiments\\verify-20261014-140401-659875.artifacts\\stages\\jpeg-L2-s100"
+  },
+  {
+   "case_id": "jpeg-L2-s101",
+   "category": "jpeg",
+   "level": 2,
+   "seed": 101,
+   "status": "ok",
+   "latency_ms": 9.190199998556636,
+   "detected_corners": [
+    [
+     638.7199096679688,
+     435.1999206542969
+    ],
+    [
+     -1.3324155215027784e-14,
+     435.1999206542969
+    ],
+    [
+     1.3324155215027784e-14,
+     0.0
+    ],
+    [
+     638.7199096679688,
+     0.0
+    ]
+   ],
+   "detected": true,
+   "iou": 0.3551288384239331,
+   "corner_err": 0.24084289371967316,
+   "ncc": -0.1026969701051712,
+   "ncc_oracle": 0.9501516222953796,
+   "ncc_ratio": -0.1080848231959816,
+   "accepted": false,
+   "failure_reasons": [
+    "low_iou",
+    "corner_error"
+   ],
+   "artifact_dir": "D:\\cool\\artifacts\\experiments\\verify-20261014-140401-659875.artifacts\\stages\\jpeg-L2-s101"
+  },
+  {
+   "case_id": "jpeg-L2-s102",
+   "category": "jpeg",
+   "level": 2,
+   "seed": 102,
+   "status": "ok",
+   "latency_ms": 10.193699999945238,
+   "detected_corners": [
+    [
+     13.511737823486328,
+     462.6641540527344
+    ],
+    [
+     -2.625722646713257,
+     72.1375961303711
+    ],
+    [
+     635.0054931640625,
+     45.78919982910156
+    ],
+    [
+     651.1429443359375,
+     436.3157043457031
+    ]
+   ],
+   "detected": true,
+   "iou": 0.40495517045342305,
+   "corner_err": 0.22826263308525085,
+   "ncc": -0.1438446193933487,
+   "ncc_oracle": 0.9541285037994385,
+   "ncc_ratio": -0.15076021607209567,
+   "accepted": false,
+   "failure_reasons": [
+    "low_iou",
+    "corner_error"
+   ],
+   "artifact_dir": "D:\\cool\\artifacts\\experiments\\verify-20261014-140401-659875.artifacts\\stages\\jpeg-L2-s102"
+  },
+  {
+   "case_id": "jpeg-L2-s103",
+   "category": "jpeg",
+   "level": 2,
+   "seed": 103,
+   "status": "ok",
+   "latency_ms": 8.225600000514532,
+   "detected_corners": [
+    [
+     310.3897705078125,
+     567.935546875
+    ],
+    [
+     -8.293437957763672,
+     222.6954345703125
+    ],
+    [
+     336.25555419921875,
+     -95.34980773925781
+    ],
+    [
+     654.938720703125,
+     249.89031982421875
+    ]
+   ],
+   "detected": true,
+   "iou": 0.47730617575399015,
+   "corner_err": 0.2834738492965698,
+   "ncc": -0.1791383922100067,
+   "ncc_oracle": 0.9562866687774658,
+   "ncc_ratio": -0.18732708303778875,
+   "accepted": false,
+   "failure_reasons": [
+    "low_iou",
+    "corner_error"
+   ],
+   "artifact_dir": "D:\\cool\\artifacts\\experiments\\verify-20261014-140401-659875.artifacts\\stages\\jpeg-L2-s103"
+  },
+  {
+   "case_id": "jpeg-L2-s104",
+   "category": "jpeg",
+   "level": 2,
+   "seed": 104,
+   "status": "ok",
+   "latency_ms": 7.6611999993474456,
+   "detected_corners": [
+    [
+     455.6121826171875,
+     431.8589172363281
+    ],
+    [
+     95.52012634277344,
+     426.2325134277344
+    ],
+    [
+     101.3265151977539,
+     54.62322235107422
+    ],
+    [
+     461.4185791015625,
+     60.24966812133789
+    ]
+   ],
+   "detected": true,
+   "iou": 0.7131974209633414,
+   "corner_err": 0.0635332465171814,
+   "ncc": 0.3001716732978821,
+   "ncc_oracle": 0.9524735808372498,
+   "ncc_ratio": 0.3151496055502381,
+   "accepted": false,
+   "failure_reasons": [
+    "low_iou",
+    "corner_error"
+   ],
+   "artifact_dir": "D:\\cool\\artifacts\\experiments\\verify-20261014-140401-659875.artifacts\\stages\\jpeg-L2-s104"
+  },
+  {
+   "case_id": "jpeg-L2-s105",
+   "category": "jpeg",
+   "level": 2,
+   "seed": 105,
+   "status": "ok",
+   "latency_ms": 7.683700001507532,
+   "detected_corners": [
+    [
+     5.465234279632568,
+     441.424560546875
+    ],
+    [
+     -10.125117301940918,
+     69.48309326171875
+    ],
+    [
+     451.6723937988281,
+     50.126319885253906
+    ],
+    [
+     467.2627258300781,
+     422.0677795410156
+    ]
+   ],
+   "detected": true,
+   "iou": 0.5980685369118128,
+   "corner_err": 0.11646226793527603,
+   "ncc": 0.3188326060771942,
+   "ncc_oracle": 0.9524526000022888,
+   "ncc_ratio": 0.3347490532089765,
+   "accepted": false,
+   "failure_reasons": [
+    "low_iou",
+    "corner_error"
+   ],
+   "artifact_dir": "D:\\cool\\artifacts\\experiments\\verify-20261014-140401-659875.artifacts\\stages\\jpeg-L2-s105"
+  },
+  {
+   "case_id": "lowcontrast-L0-s100",
+   "category": "lowcontrast",
+   "level": 0,
+   "seed": 100,
+   "status": "ok",
+   "latency_ms": 10.666600001059123,
+   "detected_corners": [
+    [
+     451.8399963378906,
+     52.47999954223633
+    ],
+    [
+     468.4800109863281,
+     416.0
+    ],
+    [
+     206.0800018310547,
+     437.760009765625
+    ],
+    [
+     179.1999969482422,
+     65.27999877929688
+    ]
+   ],
+   "detected": true,
+   "iou": 0.9752753289738602,
+   "corner_err": 0.0037710387259721756,
+   "ncc": 0.7604180574417114,
+   "ncc_oracle": 0.9704402089118958,
+   "ncc_ratio": 0.783580534337431,
+   "accepted": true,
+   "failure_reasons": []
+  },
+  {
+   "case_id": "lowcontrast-L0-s101",
+   "category": "lowcontrast",
+   "level": 0,
+   "seed": 101,
+   "status": "ok",
+   "latency_ms": 10.60680000045977,
+   "detected_corners": [
+    [
+     450.55999755859375,
+     40.959999084472656
+    ],
+    [
+     456.9599914550781,
+     422.3999938964844
+    ],
+    [
+     192.0,
+     423.67999267578125
+    ],
+    [
+     193.27999877929688,
+     57.599998474121094
+    ]
+   ],
+   "detected": true,
+   "iou": 0.9756891238479721,
+   "corner_err": 0.00347148603759706,
+   "ncc": 0.7751750946044922,
+   "ncc_oracle": 0.9704151153564453,
+   "ncc_ratio": 0.7988077291229753,
+   "accepted": true,
+   "failure_reasons": []
+  },
+  {
+   "case_id": "lowcontrast-L0-s102",
+   "category": "lowcontrast",
+   "level": 0,
+   "seed": 102,
+   "status": "ok",
+   "latency_ms": 9.138199999142671,
+   "detected_corners": [
+    [
+     456.9599914550781,
+     57.599998474121094
+    ],
+    [
+     464.6400146484375,
+     427.5199890136719
+    ],
+    [
+     195.83999633789062,
+     437.760009765625
+    ],
+    [
+     176.63999938964844,
+     64.0
+    ]
+   ],
+   "detected": true,
+   "iou": 0.9766120535116359,
+   "corner_err": 0.003383275819942355,
+   "ncc": 0.8021314740180969,
+   "ncc_oracle": 0.9697819948196411,
+   "ncc_ratio": 0.8271255584274653,
+   "accepted": true,
+   "failure_reasons": []
+  },
+  {
+   "case_id": "lowcontrast-L0-s103",
+   "category": "lowcontrast",
+   "level": 0,
+   "seed": 103,
+   "status": "ok",
+   "latency_ms": 10.818700000527315,
+   "detected_corners": [
+    [
+     204.8000030517578,
+     46.08000183105469
+    ],
+    [
+     467.20001220703125,
+     66.55999755859375
+    ],
+    [
+     450.55999755859375,
+     424.9599914550781
+    ],
+    [
+     186.8800048828125,
+     416.0
+    ]
+   ],
+   "detected": true,
+   "iou": 0.9742535768572202,
+   "corner_err": 0.0037804499734193087,
+   "ncc": 0.7779066562652588,
+   "ncc_oracle": 0.9694107174873352,
+   "ncc_ratio": 0.8024531215020548,
+   "accepted": true,
+   "failure_reasons": []
+  },
+  {
+   "case_id": "lowcontrast-L0-s104",
+   "category": "lowcontrast",
+   "level": 0,
+   "seed": 104,
+   "status": "ok",
+   "latency_ms": 9.300100000473321,
+   "detected_corners": [
+    [
+     439.0400085449219,
+     46.08000183105469
+    ],
+    [
+     444.1600036621094,
+     418.55999755859375
+    ],
+    [
+     197.1199951171875,
+     421.1199951171875
+    ],
+    [
+     172.8000030517578,
+     52.47999954223633
+    ]
+   ],
+   "detected": true,
+   "iou": 0.9774261455344514,
+   "corner_err": 0.0034812106750905514,
+   "ncc": 0.777155339717865,
+   "ncc_oracle": 0.9695085883140564,
+   "ncc_ratio": 0.8015971690042608,
+   "accepted": true,
+   "failure_reasons": []
+  },
+  {
+   "case_id": "lowcontrast-L0-s105",
+   "category": "lowcontrast",
+   "level": 0,
+   "seed": 105,
+   "status": "ok",
+   "latency_ms": 12.152100000093924,
+   "detected_corners": [
+    [
+     195.83999633789062,
+     49.91999816894531
+    ],
+    [
+     454.3999938964844,
+     55.040000915527344
+    ],
+    [
+     439.0400085449219,
+     437.760009765625
+    ],
+    [
+     179.1999969482422,
+     417.2799987792969
+    ]
+   ],
+   "detected": true,
+   "iou": 0.9780425140507293,
+   "corner_err": 0.0030926810577511787,
+   "ncc": 0.8207615613937378,
+   "ncc_oracle": 0.9713183045387268,
+   "ncc_ratio": 0.844997523014366,
+   "accepted": true,
+   "failure_reasons": []
+  },
+  {
+   "case_id": "lowcontrast-L1-s100",
+   "category": "lowcontrast",
+   "level": 1,
+   "seed": 100,
+   "status": "ok",
+   "latency_ms": 11.730500000339816,
+   "detected_corners": [
+    [
+     188.16000366210938,
+     40.959999084472656
+    ],
+    [
+     477.44000244140625,
+     57.599998474121094
+    ],
+    [
+     432.6400146484375,
+     442.8800048828125
+    ],
+    [
+     174.0800018310547,
+     410.8800048828125
+    ]
+   ],
+   "detected": true,
+   "iou": 0.979599540660989,
+   "corner_err": 0.002958548255264759,
+   "ncc": 0.844130277633667,
+   "ncc_oracle": 0.9693663716316223,
+   "ncc_ratio": 0.8708062321295922,
+   "accepted": true,
+   "failure_reasons": []
+  },
+  {
+   "case_id": "lowcontrast-L1-s101",
+   "category": "lowcontrast",
+   "level": 1,
+   "seed": 101,
+   "status": "ok",
+   "latency_ms": 10.649300000295625,
+   "detected_corners": [
+    [
+     450.55999755859375,
+     58.880001068115234
+    ],
+    [
+     460.79998779296875,
+     422.3999938964844
+    ],
+    [
+     198.39999389648438,
+     418.55999755859375
+    ],
+    [
+     189.44000244140625,
+     58.880001068115234
+    ]
+   ],
+   "detected": true,
+   "iou": 0.9751365516179019,
+   "corner_err": 0.003483591368421912,
+   "ncc": 0.8097089529037476,
+   "ncc_oracle": 0.9680051207542419,
+   "ncc_ratio": 0.8364717660510365,
+   "accepted": true,
+   "failure_reasons": []
+  },
+  {
+   "case_id": "lowcontrast-L1-s102",
+   "category": "lowcontrast",
+   "level": 1,
+   "seed": 102,
+   "status": "ok",
+   "latency_ms": 10.044500000731205,
+   "detected_corners": [
+    [
+     194.55999755859375,
+     55.040000915527344
+    ],
+    [
+     442.8800048828125,
+     62.720001220703125
+    ],
+    [
+     458.239990234375,
+     421.1199951171875
+    ],
+    [
+     176.63999938964844,
+     430.0799865722656
+    ]
+   ],
+   "detected": true,
+   "iou": 0.9733037276492961,
+   "corner_err": 0.003840127494186163,
+   "ncc": 0.761654257774353,
+   "ncc_oracle": 0.9687127470970154,
+   "ncc_ratio": 0.786253985050611,
+   "accepted": true,
+   "failure_reasons": []
+  },
+  {
+   "case_id": "lowcontrast-L1-s103",
+   "category": "lowcontrast",
+   "level": 1,
+   "seed": 103,
+   "status": "ok",
+   "latency_ms": 8.710500000233878,
+   "detected_corners": [
+    [
+     422.0582275390625,
+     412.3720703125
+    ],
+    [
+     194.89776611328125,
+     399.0878601074219
+    ],
+    [
+     213.8458251953125,
+     75.07589721679688
+    ],
+    [
+     441.00628662109375,
+     88.36011505126953
+    ]
+   ],
+   "detected": true,
+   "iou": 0.7409083098135961,
+   "corner_err": 0.04012763127684593,
+   "ncc": 0.09952519088983536,
+   "ncc_oracle": 0.9700015783309937,
+   "ncc_ratio": 0.10260312262695553,
+   "accepted": false,
+   "failure_reasons": [
+    "low_iou",
+    "corner_error"
+   ],
+   "artifact_dir": "D:\\cool\\artifacts\\experiments\\verify-20261014-140401-659875.artifacts\\stages\\lowcontrast-L1-s103"
+  },
+  {
+   "case_id": "lowcontrast-L1-s104",
+   "category": "lowcontrast",
+   "level": 1,
+   "seed": 104,
+   "status": "ok",
+   "latency_ms": 9.345700000267243,
+   "detected_corners": [
+    [
+     197.1199951171875,
+     55.040000915527344
+    ],
+    [
+     450.55999755859375,
+     56.31999969482422
+    ],
+    [
+     442.8800048828125,
+     421.1199951171875
+    ],
+    [
+     185.60000610351562,
+     423.67999267578125
+    ]
+   ],
+   "detected": true,
+   "iou": 0.9732510518679067,
+   "corner_err": 0.0036150948144495487,
+   "ncc": 0.797423243522644,
+   "ncc_oracle": 0.9686129093170166,
+   "ncc_ratio": 0.8232630763561876,
+   "accepted": true,
+   "failure_reasons": []
+  },
+  {
+   "case_id": "lowcontrast-L1-s105",
+   "category": "lowcontrast",
+   "level": 1,
+   "seed": 105,
+   "status": "ok",
+   "latency_ms": 10.075399999550427,
+   "detected_corners": [
+    [
+     216.32000732421875,
+     80.63999938964844
+    ],
+    [
+     422.3999938964844,
+     93.44000244140625
+    ],
+    [
+     409.6000061035156,
+     394.239990234375
+    ],
+    [
+     208.63999938964844,
+     386.55999755859375
+    ]
+   ],
+   "detected": true,
+   "iou": 0.6654273635943695,
+   "corner_err": 0.051185231655836105,
+   "ncc": 0.0847976952791214,
+   "ncc_oracle": 0.9674323797225952,
+   "ncc_ratio": 0.0876523228460025,
+   "accepted": false,
+   "failure_reasons": [
+    "low_iou",
+    "corner_error"
+   ],
+   "artifact_dir": "D:\\cool\\artifacts\\experiments\\verify-20261014-140401-659875.artifacts\\stages\\lowcontrast-L1-s105"
+  },
+  {
+   "case_id": "lowcontrast-L2-s100",
+   "category": "lowcontrast",
+   "level": 2,
+   "seed": 100,
+   "status": "ok",
+   "latency_ms": 10.411699999167467,
+   "detected_corners": [
+    [
+     190.72000122070312,
+     46.08000183105469
+    ],
+    [
+     445.44000244140625,
+     58.880001068115234
+    ],
+    [
+     437.760009765625,
+     430.0799865722656
+    ],
+    [
+     166.39999389648438,
+     439.0400085449219
+    ]
+   ],
+   "detected": true,
+   "iou": 0.9224608715971655,
+   "corner_err": 0.01177708525210619,
+   "ncc": 0.3948931396007538,
+   "ncc_oracle": 0.9632070660591125,
+   "ncc_ratio": 0.40997741141624783,
+   "accepted": false,
+   "failure_reasons": [
+    "low_iou",
+    "corner_error"
+   ],
+   "artifact_dir": "D:\\cool\\artifacts\\experiments\\verify-20261014-140401-659875.artifacts\\stages\\lowcontrast-L2-s100"
+  },
+  {
+   "case_id": "lowcontrast-L2-s101",
+   "category": "lowcontrast",
+   "level": 2,
+   "seed": 101,
+   "status": "ok",
+   "latency_ms": 10.044700000435114,
+   "detected_corners": [
+    [
+     190.72000122070312,
+     47.36000061035156
+    ],
+    [
+     463.3599853515625,
+     60.15999984741211
+    ],
+    [
+     472.32000732421875,
+     417.2799987792969
+    ],
+    [
+     200.9600067138672,
+     449.2799987792969
+    ]
+   ],
+   "detected": true,
+   "iou": 0.9084351645745199,
+   "corner_err": 0.018212120980024338,
+   "ncc": -0.001826106570661068,
+   "ncc_oracle": 0.9635483026504517,
+   "ncc_ratio": -0.0018951894426444008,
+   "accepted": false,
+   "failure_reasons": [
+    "low_iou",
+    "corner_error"
+   ],
+   "artifact_dir": "D:\\cool\\artifacts\\experiments\\verify-20261014-140401-659875.artifacts\\stages\\lowcontrast-L2-s101"
+  },
+  {
+   "case_id": "lowcontrast-L2-s102",
+   "category": "lowcontrast",
+   "level": 2,
+   "seed": 102,
+   "status": "ok",
+   "latency_ms": 11.0765999997966,
+   "detected_corners": [
+    [
+     470.9051208496094,
+     482.3984375
+    ],
+    [
+     155.44915771484375,
+     459.6748352050781
+    ],
+    [
+     186.87127685546875,
+     23.46240234375
+    ],
+    [
+     502.3272399902344,
+     46.18595886230469
+    ]
+   ],
+   "detected": true,
+   "iou": 0.733254904591862,
+   "corner_err": 0.05881631001830101,
+   "ncc": -0.096858911216259,
+   "ncc_oracle": 0.9628810286521912,
+   "ncc_ratio": -0.10059281295825184,
+   "accepted": false,
+   "failure_reasons": [
+    "low_iou",
+    "corner_error"
+   ],
+   "artifact_dir": "D:\\cool\\artifacts\\experiments\\verify-20261014-140401-659875.artifacts\\stages\\lowcontrast-L2-s102"
+  },
+  {
+   "case_id": "lowcontrast-L2-s103",
+   "category": "lowcontrast",
+   "level": 2,
+   "seed": 103,
+   "status": "ok",
+   "latency_ms": 11.814800000138348,
+   "detected_corners": [
+    [
+     474.4231262207031,
+     464.1046142578125
+    ],
+    [
+     164.7569580078125,
+     446.9643859863281
+    ],
+    [
+     187.71609497070312,
+     32.16908264160156
+    ],
+    [
+     497.38226318359375,
+     49.30927658081055
+    ]
+   ],
+   "detected": true,
+   "iou": 0.7773127091306696,
+   "corner_err": 0.05275343731045723,
+   "ncc": -0.08755464851856232,
+   "ncc_oracle": 0.9642590880393982,
+   "ncc_ratio": -0.09079992048255911,
+   "accepted": false,
+   "failure_reasons": [
+    "low_iou",
+    "corner_error"
+   ],
+   "artifact_dir": "D:\\cool\\artifacts\\experiments\\verify-20261014-140401-659875.artifacts\\stages\\lowcontrast-L2-s103"
+  },
+  {
+   "case_id": "lowcontrast-L2-s104",
+   "category": "lowcontrast",
+   "level": 2,
+   "seed": 104,
+   "status": "ok",
+   "latency_ms": 11.507999999594176,
+   "detected_corners": [
+    [
+     473.6000061035156,
+     453.1199951171875
+    ],
+    [
+     153.60000610351562,
+     453.1199951171875
+    ],
+    [
+     153.60000610351562,
+     39.68000030517578
+    ],
+    [
+     473.6000061035156,
+     39.68000030517578
+    ]
+   ],
+   "detected": true,
+   "iou": 0.7620647520290814,
+   "corner_err": 0.04495775327086449,
+   "ncc": -0.07731139659881592,
+   "ncc_oracle": 0.9644644856452942,
+   "ncc_ratio": -0.08015992060826292,
+   "accepted": false,
+   "failure_reasons": [
+    "low_iou",
+    "corner_error"
+   ],
+   "artifact_dir": "D:\\cool\\artifacts\\experiments\\verify-20261014-140401-659875.artifacts\\stages\\lowcontrast-L2-s104"
+  },
+  {
+   "case_id": "lowcontrast-L2-s105",
+   "category": "lowcontrast",
+   "level": 2,
+   "seed": 105,
+   "status": "ok",
+   "latency_ms": 11.34730000012496,
+   "detected_corners": [
+    [
+     165.40310668945312,
+     454.1754150390625
+    ],
+    [
+     135.05445861816406,
+     54.12526321411133
+    ],
+    [
+     471.5674743652344,
+     28.59668731689453
+    ],
+    [
+     501.9161071777344,
+     428.6468505859375
+    ]
+   ],
+   "detected": true,
+   "iou": 0.7551426028364819,
+   "corner_err": 0.04958782717585564,
+   "ncc": -0.055578168481588364,
+   "ncc_oracle": 0.9627487659454346,
+   "ncc_ratio": -0.057728631235387476,
+   "accepted": false,
+   "failure_reasons": [
+    "low_iou",
+    "corner_error"
+   ],
+   "artifact_dir": "D:\\cool\\artifacts\\experiments\\verify-20261014-140401-659875.artifacts\\stages\\lowcontrast-L2-s105"
+  }
+ ],
+ "summary": {
+  "n": 168,
+  "passed": 130,
+  "pass_rate": 0.7738095238095238,
+  "by_category": {
+   "blur": {
+    "n": 18,
+    "passed": 14,
+    "pass_rate": 0.7777777777777778
+   },
+   "clean": {
+    "n": 6,
+    "passed": 5,
+    "pass_rate": 0.8333333333333334
+   },
+   "illumination": {
+    "n": 18,
+    "passed": 16,
+    "pass_rate": 0.8888888888888888
+   },
+   "jpeg": {
+    "n": 18,
+    "passed": 12,
+    "pass_rate": 0.6666666666666666
+   },
+   "lowcontrast": {
+    "n": 18,
+    "passed": 10,
+    "pass_rate": 0.5555555555555556
+   },
+   "lowres": {
+    "n": 18,
+    "passed": 16,
+    "pass_rate": 0.8888888888888888
+   },
+   "noise": {
+    "n": 18,
+    "passed": 11,
+    "pass_rate": 0.6111111111111112
+   },
+   "perspective": {
+    "n": 18,
+    "passed": 15,
+    "pass_rate": 0.8333333333333334
+   },
+   "rotation": {
+    "n": 18,
+    "passed": 18,
+    "pass_rate": 1.0
+   },
+   "shadow": {
+    "n": 18,
+    "passed": 13,
+    "pass_rate": 0.7222222222222222
+   }
+  },
+  "failure_reasons": {
+   "low_iou": 38,
+   "corner_error": 35
+  },
+  "failed_case_ids": [
+   "clean-L0-s101",
+   "perspective-L0-s101",
+   "perspective-L0-s103",
+   "perspective-L1-s100",
+   "illumination-L1-s103",
+   "illumination-L2-s103",
+   "shadow-L0-s100",
+   "shadow-L1-s104",
+   "shadow-L2-s100",
+   "shadow-L2-s103",
+   "shadow-L2-s104",
+   "blur-L1-s102",
+   "blur-L2-s100",
+   "blur-L2-s102",
+   "blur-L2-s105",
+   "noise-L1-s105",
+   "noise-L2-s100",
+   "noise-L2-s101",
+   "noise-L2-s102",
+   "noise-L2-s103",
+   "noise-L2-s104",
+   "noise-L2-s105",
+   "lowres-L1-s100",
+   "lowres-L2-s103",
+   "jpeg-L2-s100",
+   "jpeg-L2-s101",
+   "jpeg-L2-s102",
+   "jpeg-L2-s103",
+   "jpeg-L2-s104",
+   "jpeg-L2-s105",
+   "lowcontrast-L1-s103",
+   "lowcontrast-L1-s105",
+   "lowcontrast-L2-s100",
+   "lowcontrast-L2-s101",
+   "lowcontrast-L2-s102",
+   "lowcontrast-L2-s103",
+   "lowcontrast-L2-s104",
+   "lowcontrast-L2-s105"
+  ]
+ },
+ "artifact_dir": "D:\\cool\\artifacts\\experiments\\verify-20261014-140401-659875.artifacts",
+ "execution": {
+  "status": "completed"
+ },
+ "correctness": {
+  "evaluated": true,
+  "acceptance_passed": false,
+  "metrics": {
+   "pass_rate": 0.7738095238095238
+  }
+ },
+ "measurements": {
+  "latency_ms_median": 12.711499999568332,
+  "note": "single-pass latency; use benchmark for steady state"
+ }
+}

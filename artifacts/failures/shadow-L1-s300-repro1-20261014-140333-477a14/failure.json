@@ -1,0 +1,142 @@
+{
+ "case": {
+  "case_id": "shadow-L1-s300",
+  "category": "shadow",
+  "level": 1,
+  "seed": 300,
+  "width": 640,
+  "height": 480,
+  "param": 0.5,
+  "corners": [
+   [
+    186.52186584472656,
+    54.999263763427734
+   ],
+   [
+    449.98272705078125,
+    60.490543365478516
+   ],
+   [
+    448.13848876953125,
+    434.6522521972656
+   ],
+   [
+    196.67074584960938,
+    422.2793884277344
+   ]
+  ],
+  "homography": [
+   [
+    0.6377876801276532,
+    0.0348833583357021,
+    186.52186584472656
+   ],
+   [
+    0.010735914934124392,
+    0.6929478385504355,
+    54.999263763427734
+   ],
+   [
+    -5.0035765039345904e-05,
+    8.505554858830787e-05,
+    1.0
+   ]
+  ],
+  "generator_version": "1.0",
+  "image": "images/shadow-L1-s300.png",
+  "page": "pages/shadow-L1-s300.png"
+ },
+ "expected": {
+  "corners": [
+   [
+    186.52186584472656,
+    54.999263763427734
+   ],
+   [
+    449.98272705078125,
+    60.490543365478516
+   ],
+   [
+    448.13848876953125,
+    434.6522521972656
+   ],
+   [
+    196.67074584960938,
+    422.2793884277344
+   ]
+  ],
+  "criteria": "see coolguard.metrics"
+ },
+ "actual": {
+  "detected_corners": [
+   [
+    404.4800109863281,
+    419.8399963378906
+   ],
+   [
+    186.8800048828125,
+    419.8399963378906
+   ],
+   [
+    186.8800048828125,
+    55.040000915527344
+   ],
+   [
+    404.4800109863281,
+    55.040000915527344
+   ]
+  ],
+  "iou": 0.7907558791718874,
+  "corner_err": 0.03199414908885956,
+  "ncc": -0.12317033857107162,
+  "failure_reasons": [
+   "low_iou",
+   "corner_error"
+  ],
+  "accepted": false
+ },
+ "candidate": "candidates\\scanner_v1.py",
+ "candidate_sha256": "3580d6c7a7ffaa6f0e16a76095d9aa1dcbc75b74de81ca68e43d045373643056",
+ "runtime": {
+  "python": "3.13.2",
+  "python_executable": "D:\\cool\\.venv\\Scripts\\python.exe",
+  "opencv_version": "5.0.0",
+  "opencv_is_v5": true,
+  "opencv_module_path": "D:\\cool\\.venv\\Lib\\site-packages\\cv2\\__init__.py",
+  "platform": "Windows-11-10.0.26300-SP0",
+  "architecture": "AMD64",
+  "cpu_baseline": "SSE SSE2 SSE3",
+  "available_ops": {
+   "resize": true,
+   "adaptiveThreshold": true,
+   "findContours": true,
+   "getPerspectiveTransform": true,
+   "warpPerspective": true,
+   "createCLAHE": true,
+   "Canny": true,
+   "GaussianBlur": true,
+   "threshold": true,
+   "approxPolyDP": true,
+   "intersectConvexConvex": true
+  },
+  "num_threads": 16,
+  "cool": {
+   "verified": false,
+   "evidence": {
+    "cv2_file_under_opt_cool": false,
+    "build_mentions_kleidicv": false,
+    "custom_hal": "YES (ipp (ver 0.0.1))"
+   },
+   "note": "COOL is considered verified only when cv2 is imported from /opt/cool on an aarch64 host; this does not by itself prove which kernels accelerated a given workload."
+  },
+  "aws_instance_type": "not-applicable-or-unset"
+ },
+ "source_experiment": "suite-20261014-140331-19f44d",
+ "repro_experiments": [
+  "repro1-20261014-140333-477a14",
+  "repro2-20261014-140333-f345da"
+ ],
+ "reproduce_command": "python -m coolguard.cli run --candidate candidates\\scanner_v1.py --corpus D:\\cool\\artifacts\\corpora\\targeted-shadow --cases shadow-L1-s300",
+ "reproduced_failure": true,
+ "deterministic_across_two_runs": true
+}

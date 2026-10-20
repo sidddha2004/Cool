@@ -1,0 +1,27 @@
+[env] OpenCV 5.0.0 on AMD64, COOL verified: False
+[baseline v1/dev] 99/112  weakest: [('shadow', 0.417), ('lowcontrast', 0.667), ('illumination', 0.917)]
+[decision 1] generate_targeted_cases | evidence: shadow pass=0.4166666666666667 mode=under_detection area_ratio=0.6739161684678296
+    why: 'shadow' has the lowest pass rate (42%); confirm on fresh seeds before attributing the failure to the pipeline
+    executed: 12 targeted cases; v1 passes 5/12 -> failure generalises
+[decision 2] inspect_stage_then_propose_change | evidence: shadow pass=0.4166666666666667 mode=under_detection area_ratio=0.6178293439548045
+    why: detected area is 62% of the true page; inspect the threshold stage to see which page regions are lost, then change the binarisation/segmentation step
+    executed: failure bundle D:\cool\artifacts\failures\shadow-L1-s300-repro1-20261014-140333-477a14 (reproduced=True, deterministic=True)
+[baselines] dev=suite-20261014-140320-13f3f3, targeted-shadow=suite-20261014-140331-19f44d, heldout=suite-20261014-140334-57b2c7
+[verify scanner_v2.py] REJECT  (dev 99/112, targeted-shadow 12/12, heldout 153/168)  regressions=27 cats=['blur', 'noise']
+    next: reject_candidate - candidate breaks cases that the baseline passed (or crashed); reject and revise using the regressed categories as evidence
+[verify scanner_v3.py] REJECT  (dev 88/112, targeted-shadow 8/12, heldout 130/168)  regressions=48 cats=['blur', 'clean', 'illumination', 'jpeg', 'lowcontrast', 'lowres', 'noise', 'perspective', 'shadow']
+    next: reject_candidate - candidate breaks cases that the baseline passed (or crashed); reject and revise using the regressed categories as evidence
+[verify scanner_v4.py] PARTIAL  (dev 107/112, targeted-shadow 8/12, heldout 162/168)  regressions=0 cats=[]
+    next: revise_candidate - no regressions but target failures remain; investigate unresolved cases
+[verify scanner_v5.py] PARTIAL  (dev 111/112, targeted-shadow 12/12, heldout 166/168)  regressions=0 cats=[]
+    next: revise_candidate - no regressions but target failures remain; investigate unresolved cases
+[verify scanner_v6.py] PARTIAL  (dev 112/112, targeted-shadow 12/12, heldout 166/168)  regressions=0 cats=[]
+    next: revise_candidate - no regressions but target failures remain; investigate unresolved cases
+[verify scanner_v7.py] ACCEPT  (dev 112/112, targeted-shadow 12/12, heldout 168/168)  regressions=0 cats=[]
+    next: preserve_for_review - no regressions and all target failures fixed; preserved for human review (automated pass != production-ready)
+[final corpus, unseen during iteration] baseline 151/168 -> scanner_v7.py 168/168; fixed=17 regressions=0
+[local bench] v1 median 4.38 ms vs scanner_v7.py 17.28 ms (ratio 3.95); like_for_like=False caveats=['outputs differ (max corner delta 473.6000061035156 px > 0.5): not like-for-like; see correctness']
+[cool/graviton] status=BLOCKED verified_on_graviton=False reason=config/remote.json not found (no COOL Graviton instance configured)
+
+TRACE: artifacts/traces/loop-20261014-140254-292656.jsonl
+Candidate preserved for HUMAN REVIEW (nothing committed or deployed): candidates/scanner_v7.py

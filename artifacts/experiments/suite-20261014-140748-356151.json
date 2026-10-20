@@ -1,0 +1,90 @@
+{
+ "experiment_id": "suite-20261014-140748-356151",
+ "kind": "visual_regression",
+ "trace_id": null,
+ "code_revision": "3580d6c7a7ffaa6f0e16a76095d9aa1dcbc75b74de81ca68e43d045373643056",
+ "candidate": "candidates\\scanner_v1.py",
+ "dataset_id": "1.0:unit-corrupt",
+ "configuration_hash": "0494f21bddec3a06",
+ "configuration": {
+  "work_max_side": 500,
+  "blur": 5,
+  "epsilon": 0.02
+ },
+ "runtime": {
+  "python": "3.13.2",
+  "python_executable": "D:\\cool\\.venv\\Scripts\\python.exe",
+  "opencv_version": "5.0.0",
+  "opencv_is_v5": true,
+  "opencv_module_path": "D:\\cool\\.venv\\Lib\\site-packages\\cv2\\__init__.py",
+  "platform": "Windows-11-10.0.26300-SP0",
+  "architecture": "AMD64",
+  "cpu_baseline": "SSE SSE2 SSE3",
+  "available_ops": {
+   "resize": true,
+   "adaptiveThreshold": true,
+   "findContours": true,
+   "getPerspectiveTransform": true,
+   "warpPerspective": true,
+   "createCLAHE": true,
+   "Canny": true,
+   "GaussianBlur": true,
+   "threshold": true,
+   "approxPolyDP": true,
+   "intersectConvexConvex": true
+  },
+  "num_threads": 16,
+  "cool": {
+   "verified": false,
+   "evidence": {
+    "cv2_file_under_opt_cool": false,
+    "build_mentions_kleidicv": false,
+    "custom_hal": "YES (ipp (ver 0.0.1))"
+   },
+   "note": "COOL is considered verified only when cv2 is imported from /opt/cool on an aarch64 host; this does not by itself prove which kernels accelerated a given workload."
+  },
+  "aws_instance_type": "not-applicable-or-unset"
+ },
+ "command": "D:\\cool\\.venv\\Scripts\\python.exe -m coolguard.worker --candidate D:\\cool\\candidates\\scanner_v1.py --corpus D:\\cool\\artifacts\\corpora\\unit-corrupt --out D:\\cool\\artifacts\\experiments\\suite-20261014-140748-356151.artifacts --config {} --save-stages failures",
+ "results": [
+  {
+   "case_id": "clean-L0-s0",
+   "category": "clean",
+   "level": 0,
+   "seed": 0,
+   "status": "infrastructure_error",
+   "error": "could not load case images"
+  }
+ ],
+ "summary": {
+  "n": 1,
+  "passed": 0,
+  "pass_rate": 0.0,
+  "by_category": {
+   "clean": {
+    "n": 1,
+    "passed": 0,
+    "pass_rate": 0.0
+   }
+  },
+  "failure_reasons": {},
+  "failed_case_ids": [
+   "clean-L0-s0"
+  ]
+ },
+ "artifact_dir": "D:\\cool\\artifacts\\experiments\\suite-20261014-140748-356151.artifacts",
+ "execution": {
+  "status": "completed"
+ },
+ "correctness": {
+  "evaluated": true,
+  "acceptance_passed": false,
+  "metrics": {
+   "pass_rate": 0.0
+  }
+ },
+ "measurements": {
+  "latency_ms_median": null,
+  "note": "single-pass latency; use benchmark for steady state"
+ }
+}

@@ -1,0 +1,376 @@
+{
+ "experiment_id": "suite-20261014-140743-524dc8",
+ "kind": "visual_regression",
+ "trace_id": null,
+ "code_revision": "3580d6c7a7ffaa6f0e16a76095d9aa1dcbc75b74de81ca68e43d045373643056",
+ "candidate": "candidates\\scanner_v1.py",
+ "dataset_id": "1.0:unit-gate",
+ "configuration_hash": "0494f21bddec3a06",
+ "configuration": {
+  "work_max_side": 500,
+  "blur": 5,
+  "epsilon": 0.02
+ },
+ "runtime": {
+  "python": "3.13.2",
+  "python_executable": "D:\\cool\\.venv\\Scripts\\python.exe",
+  "opencv_version": "5.0.0",
+  "opencv_is_v5": true,
+  "opencv_module_path": "D:\\cool\\.venv\\Lib\\site-packages\\cv2\\__init__.py",
+  "platform": "Windows-11-10.0.26300-SP0",
+  "architecture": "AMD64",
+  "cpu_baseline": "SSE SSE2 SSE3",
+  "available_ops": {
+   "resize": true,
+   "adaptiveThreshold": true,
+   "findContours": true,
+   "getPerspectiveTransform": true,
+   "warpPerspective": true,
+   "createCLAHE": true,
+   "Canny": true,
+   "GaussianBlur": true,
+   "threshold": true,
+   "approxPolyDP": true,
+   "intersectConvexConvex": true
+  },
+  "num_threads": 16,
+  "cool": {
+   "verified": false,
+   "evidence": {
+    "cv2_file_under_opt_cool": false,
+    "build_mentions_kleidicv": false,
+    "custom_hal": "YES (ipp (ver 0.0.1))"
+   },
+   "note": "COOL is considered verified only when cv2 is imported from /opt/cool on an aarch64 host; this does not by itself prove which kernels accelerated a given workload."
+  },
+  "aws_instance_type": "not-applicable-or-unset"
+ },
+ "command": "D:\\cool\\.venv\\Scripts\\python.exe -m coolguard.worker --candidate D:\\cool\\candidates\\scanner_v1.py --corpus D:\\cool\\artifacts\\corpora\\unit-gate --out D:\\cool\\artifacts\\experiments\\suite-20261014-140743-524dc8.artifacts --config {} --save-stages failures",
+ "results": [
+  {
+   "case_id": "clean-L0-s0",
+   "category": "clean",
+   "level": 0,
+   "seed": 0,
+   "status": "ok",
+   "latency_ms": 20.409700000527664,
+   "detected_corners": [
+    [
+     200.9600067138672,
+     46.08000183105469
+    ],
+    [
+     186.8800048828125,
+     426.239990234375
+    ],
+    [
+     437.760009765625,
+     428.79998779296875
+    ],
+    [
+     467.20001220703125,
+     66.55999755859375
+    ]
+   ],
+   "detected": true,
+   "iou": 0.9815155676810166,
+   "corner_err": 0.002618140773847699,
+   "ncc": 0.8872120976448059,
+   "ncc_oracle": 0.970450222492218,
+   "ncc_ratio": 0.9142273112848098,
+   "accepted": true,
+   "failure_reasons": []
+  },
+  {
+   "case_id": "clean-L0-s1",
+   "category": "clean",
+   "level": 0,
+   "seed": 1,
+   "status": "ok",
+   "latency_ms": 5.320100000972161,
+   "detected_corners": [
+    [
+     195.83999633789062,
+     55.040000915527344
+    ],
+    [
+     175.36000061035156,
+     419.8399963378906
+    ],
+    [
+     439.0400085449219,
+     430.0799865722656
+    ],
+    [
+     467.20001220703125,
+     56.31999969482422
+    ]
+   ],
+   "detected": true,
+   "iou": 0.9812293400294924,
+   "corner_err": 0.0026317897718399763,
+   "ncc": 0.8657359480857849,
+   "ncc_oracle": 0.972251832485199,
+   "ncc_ratio": 0.8904441412806124,
+   "accepted": true,
+   "failure_reasons": []
+  },
+  {
+   "case_id": "shadow-L0-s0",
+   "category": "shadow",
+   "level": 0,
+   "seed": 0,
+   "status": "ok",
+   "latency_ms": 5.116400001497823,
+   "detected_corners": [
+    [
+     167.67999267578125,
+     48.63999938964844
+    ],
+    [
+     183.0399932861328,
+     433.9200134277344
+    ],
+    [
+     460.79998779296875,
+     414.7200012207031
+    ],
+    [
+     439.0400085449219,
+     55.040000915527344
+    ]
+   ],
+   "detected": true,
+   "iou": 0.9804912067625726,
+   "corner_err": 0.0028115296736359596,
+   "ncc": 0.7640674114227295,
+   "ncc_oracle": 0.873208224773407,
+   "ncc_ratio": 0.8750116979498229,
+   "accepted": true,
+   "failure_reasons": []
+  },
+  {
+   "case_id": "shadow-L0-s1",
+   "category": "shadow",
+   "level": 0,
+   "seed": 1,
+   "status": "ok",
+   "latency_ms": 2.1833999999216758,
+   "detected_corners": [
+    [
+     437.760009765625,
+     52.47999954223633
+    ],
+    [
+     176.63999938964844,
+     62.720001220703125
+    ],
+    [
+     179.1999969482422,
+     435.20001220703125
+    ],
+    [
+     445.44000244140625,
+     418.55999755859375
+    ]
+   ],
+   "detected": true,
+   "iou": 0.9783527932243553,
+   "corner_err": 0.003346504643559456,
+   "ncc": 0.7404767870903015,
+   "ncc_oracle": 0.8765448927879333,
+   "ncc_ratio": 0.8447676704100637,
+   "accepted": true,
+   "failure_reasons": []
+  },
+  {
+   "case_id": "shadow-L1-s0",
+   "category": "shadow",
+   "level": 1,
+   "seed": 0,
+   "status": "ok",
+   "latency_ms": 3.772699999899487,
+   "detected_corners": [
+    [
+     465.9200134277344,
+     51.20000076293945
+    ],
+    [
+     177.9199981689453,
+     56.31999969482422
+    ],
+    [
+     190.72000122070312,
+     299.5199890136719
+    ],
+    [
+     454.3999938964844,
+     203.52000427246094
+    ]
+   ],
+   "detected": true,
+   "iou": 0.5260276470206823,
+   "corner_err": 0.11475677788257599,
+   "ncc": 0.06902043521404266,
+   "ncc_oracle": 0.7368351221084595,
+   "ncc_ratio": 0.09367147838520529,
+   "accepted": false,
+   "failure_reasons": [
+    "low_iou",
+    "corner_error"
+   ],
+   "artifact_dir": "D:\\cool\\artifacts\\experiments\\suite-20261014-140743-524dc8.artifacts\\stages\\shadow-L1-s0"
+  },
+  {
+   "case_id": "shadow-L1-s1",
+   "category": "shadow",
+   "level": 1,
+   "seed": 1,
+   "status": "ok",
+   "latency_ms": 5.873199999768985,
+   "detected_corners": [
+    [
+     187.4091796875,
+     421.4427795410156
+    ],
+    [
+     185.00621032714844,
+     53.78897476196289
+    ],
+    [
+     458.7472229003906,
+     51.999813079833984
+    ],
+    [
+     461.15020751953125,
+     419.65362548828125
+    ]
+   ],
+   "detected": true,
+   "iou": 0.9560958461381558,
+   "corner_err": 0.008619802072644234,
+   "ncc": 0.4839645326137543,
+   "ncc_oracle": 0.7842496633529663,
+   "ncc_ratio": 0.6171051837556696,
+   "accepted": true,
+   "failure_reasons": []
+  },
+  {
+   "case_id": "shadow-L2-s0",
+   "category": "shadow",
+   "level": 2,
+   "seed": 0,
+   "status": "ok",
+   "latency_ms": 3.7215000011201482,
+   "detected_corners": [
+    [
+     190.2344970703125,
+     369.3462219238281
+    ],
+    [
+     171.90402221679688,
+     57.7280158996582
+    ],
+    [
+     448.18096923828125,
+     41.476436614990234
+    ],
+    [
+     466.5114440917969,
+     353.0946350097656
+    ]
+   ],
+   "detected": true,
+   "iou": 0.8013284034342288,
+   "corner_err": 0.045707445591688156,
+   "ncc": 0.018065443262457848,
+   "ncc_oracle": 0.6104273200035095,
+   "ncc_ratio": 0.029594748908607145,
+   "accepted": false,
+   "failure_reasons": [
+    "low_iou",
+    "corner_error"
+   ],
+   "artifact_dir": "D:\\cool\\artifacts\\experiments\\suite-20261014-140743-524dc8.artifacts\\stages\\shadow-L2-s0"
+  },
+  {
+   "case_id": "shadow-L2-s1",
+   "category": "shadow",
+   "level": 2,
+   "seed": 1,
+   "status": "ok",
+   "latency_ms": 3.1534000008832663,
+   "detected_corners": [
+    [
+     441.6000061035156,
+     46.08000183105469
+    ],
+    [
+     179.1999969482422,
+     61.439998626708984
+    ],
+    [
+     193.27999877929688,
+     280.32000732421875
+    ],
+    [
+     441.6000061035156,
+     90.87999725341797
+    ]
+   ],
+   "detected": true,
+   "iou": 0.343024277061665,
+   "corner_err": 0.15072748064994812,
+   "ncc": 0.0033443421125411987,
+   "ncc_oracle": 0.5674801468849182,
+   "ncc_ratio": 0.005893320023439362,
+   "accepted": false,
+   "failure_reasons": [
+    "low_iou",
+    "corner_error"
+   ],
+   "artifact_dir": "D:\\cool\\artifacts\\experiments\\suite-20261014-140743-524dc8.artifacts\\stages\\shadow-L2-s1"
+  }
+ ],
+ "summary": {
+  "n": 8,
+  "passed": 5,
+  "pass_rate": 0.625,
+  "by_category": {
+   "clean": {
+    "n": 2,
+    "passed": 2,
+    "pass_rate": 1.0
+   },
+   "shadow": {
+    "n": 6,
+    "passed": 3,
+    "pass_rate": 0.5
+   }
+  },
+  "failure_reasons": {
+   "low_iou": 3,
+   "corner_error": 3
+  },
+  "failed_case_ids": [
+   "shadow-L1-s0",
+   "shadow-L2-s0",
+   "shadow-L2-s1"
+  ]
+ },
+ "artifact_dir": "D:\\cool\\artifacts\\experiments\\suite-20261014-140743-524dc8.artifacts",
+ "execution": {
+  "status": "completed"
+ },
+ "correctness": {
+  "evaluated": true,
+  "acceptance_passed": false,
+  "metrics": {
+   "pass_rate": 0.625
+  }
+ },
+ "measurements": {
+  "latency_ms_median": 5.116400001497823,
+  "note": "single-pass latency; use benchmark for steady state"
+ }
+}
